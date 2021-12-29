@@ -1,0 +1,29 @@
+PODS:
+  - Kingfisher (7.1.2)
+  - SwiftBloc (1.0.4)
+
+DEPENDENCIES:
+  - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`)
+  - SwiftBloc (from `https://github.com/camapblue/SwiftBloc`)
+
+EXTERNAL SOURCES:
+  Kingfisher:
+    :git: https://github.com/onevcat/Kingfisher.git
+  SwiftBloc:
+    :git: https://github.com/camapblue/SwiftBloc
+
+CHECKOUT OPTIONS:
+  Kingfisher:
+    :commit: 0a2924c703902d444002d017b6e9491c819b1f9f
+    :git: https://github.com/onevcat/Kingfisher.git
+  SwiftBloc:
+    :commit: 8e55d0357dd50b69b2f9d0975f29ca41864ba3c9
+    :git: https://github.com/camapblue/SwiftBloc
+
+SPEC CHECKSUMS:
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  SwiftBloc: 111892f93d14cb17bf60777d03691a3ef2c99063
+
+PODFILE CHECKSUM: 2f5a55930c2d1cac628ce599498449ae4f81a305
+
+COCOAPODS: 1.11.2

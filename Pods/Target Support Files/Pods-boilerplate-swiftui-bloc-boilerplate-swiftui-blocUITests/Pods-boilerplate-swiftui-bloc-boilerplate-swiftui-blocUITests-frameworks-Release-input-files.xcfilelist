@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/SwiftBloc/SwiftBloc.framework
