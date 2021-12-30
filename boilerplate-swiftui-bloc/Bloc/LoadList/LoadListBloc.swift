@@ -6,6 +6,7 @@
 //
 
 import Combine
+import SwiftUI
 
 class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState> {
     private var loadListService: LoadListService<T>
@@ -18,23 +19,27 @@ class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState> {
     
     override func mapEventToState(event: LoadListEvent) -> AnyPublisher<LoadListState, Never> {
         if event is LoadListStarted {
-            return mapEventStartedToState(event: event as! LoadListStarted)
+            mapEventStartedToState(event: event as! LoadListStarted)
         }
-        return Just(LoadListLoadPageFailure()).eraseToAnyPublisher()
+        return emitter.eraseToAnyPublisher()
     }
     
-    func mapEventStartedToState(event: LoadListStarted) -> AnyPublisher<LoadListState, Never> {
-        return Future { [unowned self] promise in
-            promise(.success(LoadListLoadPageInProgress()))
-            
-            try! self.loadListService.loadItems(params: event.params)
-                .sink(receiveCompletion: { error in
-                    promise(.success(LoadListLoadPageFailure()))
-                }, receiveValue: { items in
-                    let nextState = LoadListLoadPageSuccess(items: items, nextPage: items.count, isFinish: true)
-                    promise(.success(nextState))
-                })
-                .store(in: &self.disposables)
-        }.eraseToAnyPublisher()
+    private func mapEventStartedToState(event: LoadListStarted) {
+        emitter.send(LoadListLoadPageInProgress())
+        
+        try! self.loadListService.loadItems(params: event.params)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { [weak self] completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(_):
+                    self?.emitter.send(LoadListLoadPageFailure())
+                }
+            }, receiveValue: { [weak self] items in
+                let nextState = LoadListLoadPageSuccess(items: items, nextPage: items.count, isFinish: true)
+                self?.emitter.send(nextState)
+            })
+            .store(in: &self.disposables)
     }
 }

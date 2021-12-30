@@ -12,6 +12,7 @@ class ContactRepositoryImpl: ContactRepository {
     
     private var contactDao: ContactDao!
     private var contactApi: ContactApi!
+    private var disposables = Set<AnyCancellable>()
     
     init(contactDao: ContactDao, contactApi: ContactApi) {
         self.contactApi = contactApi
@@ -34,13 +35,18 @@ class ContactRepositoryImpl: ContactRepository {
             }
             
             self.contactApi.fetchContacts(withSize: size)
-                .sink { completion in
-                    
-                } receiveValue: { value in
-                    self.contactDao.cacheContacts(contacts: value)
-                    promise(.success(value))
-                }.cancel()
-
+                .sink(receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure(let error):
+                        promise(.failure(error))
+                    }
+                }, receiveValue: { items in
+                    self.contactDao.cacheContacts(contacts: items)
+                    promise(.success(items))
+                })
+                .store(in: &self.disposables)
         }
     }
 }

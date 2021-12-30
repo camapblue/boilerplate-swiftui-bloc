@@ -13,6 +13,7 @@ struct SplashView: View {
     
     init(contactListBloc: LoadListBloc<Contact>) {
         self.contactListBloc = contactListBloc
+        contactListBloc.add(event: LoadListStarted())
     }
     
     var body: some View {
