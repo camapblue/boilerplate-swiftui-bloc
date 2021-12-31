@@ -49,4 +49,14 @@ class ContactRepositoryImpl: ContactRepository {
                 .store(in: &self.disposables)
         }
     }
+    
+    func edit(contact: Contact) -> Future<Contact, Error> {
+        return Future { promise in
+            if (contact.id == "bug") {
+                promise(.failure(ApiError.unknown))
+                return
+            }
+            promise(.success(contact))
+        }
+    }
 }

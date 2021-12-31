@@ -11,21 +11,23 @@ import SwiftBloc
 class BlocManager {
     static let shared = BlocManager()
     
-    var blocs: [String: [Any]] = [:]
+    class WeakRef {
+        weak var ref: AnyObject?
+    }
     
-    func newBloc<B: BaseBloc<E, S>, E: Event, S: State>(_ type: B.Type, key: String,  constructor: @escaping () -> B) -> BaseBloc<E, S> {
-        if var blocsFound = self.blocs.first(where: { $0.key == "\(B.self)" })?.value {
-            if let found = blocsFound.first(where: { ($0 as! B).key == key }) as? B {
-                return found
-            }
-            let newInstance = constructor()
-            blocsFound.append(newInstance)
-            return newInstance
+    var blocs: [String: WeakRef] = [:]
+    
+    func newBloc<B: BaseBloc<E, S>, E: Event, S: State>(key: String,  constructor: @escaping () -> B) -> BaseBloc<E, S> {
+        if let blocFound = self.blocs.first(where: { $0.key == key })?.value.ref as? B {
+            print("BLOC FOUND = \(key)")
+            return blocFound
         }
         
+        print("NEW BLOC INSTANCE = \(key)")
         let newInstance = constructor()
-        
-        self.blocs["\(B.self)"] = [newInstance]
+        let weakRef = WeakRef()
+        weakRef.ref = newInstance
+        self.blocs[key] = weakRef
         
         return newInstance
     }

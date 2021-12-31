@@ -10,6 +10,15 @@
 		8C39492B2ACC67FD39218881 /* Pods_boilerplate_swiftui_blocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */; };
 		8FAB86C475C7BE245E2A7DF1 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */; };
 		A338C112E30A58B52547CEE9 /* Pods_boilerplate_swiftui_bloc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18071E88F94CFBA285B235 /* Pods_boilerplate_swiftui_bloc.framework */; };
+		A61AC64F277EC5C300246A64 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC64E277EC5C300246A64 /* ContactListView.swift */; };
+		A61AC652277EDC4100246A64 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC651277EDC4100246A64 /* LazyView.swift */; };
+		A61AC654277EE3FB00246A64 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC653277EE3FB00246A64 /* ContactDetailView.swift */; };
+		A61AC657277EE42F00246A64 /* ContactBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC656277EE42F00246A64 /* ContactBloc.swift */; };
+		A61AC659277EE43900246A64 /* ContactEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC658277EE43900246A64 /* ContactEvent.swift */; };
+		A61AC65B277EE44300246A64 /* ContactState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC65A277EE44300246A64 /* ContactState.swift */; };
+		A61AC661277EE97C00246A64 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC660277EE97C00246A64 /* AvatarView.swift */; };
+		A61AC663277EEC3700246A64 /* ContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC662277EEC3700246A64 /* ContactExtension.swift */; };
+		A61AC666277EECED00246A64 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC665277EECED00246A64 /* Date+Extension.swift */; };
 		A640711827799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640711727799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift */; };
 		A640711C27799CA400F3A9CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A640711B27799CA400F3A9CC /* Assets.xcassets */; };
 		A640711F27799CA400F3A9CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A640711E27799CA400F3A9CC /* Preview Assets.xcassets */; };
@@ -73,6 +82,15 @@
 		51BB6A82F1769CC2DD04FF63 /* Pods-boilerplate-swiftui-blocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-blocTests.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CDC487647CFEBA59D54D779 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A61AC64E277EC5C300246A64 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
+		A61AC651277EDC4100246A64 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
+		A61AC653277EE3FB00246A64 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		A61AC656277EE42F00246A64 /* ContactBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBloc.swift; sourceTree = "<group>"; };
+		A61AC658277EE43900246A64 /* ContactEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEvent.swift; sourceTree = "<group>"; };
+		A61AC65A277EE44300246A64 /* ContactState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactState.swift; sourceTree = "<group>"; };
+		A61AC660277EE97C00246A64 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		A61AC662277EEC3700246A64 /* ContactExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactExtension.swift; sourceTree = "<group>"; };
+		A61AC665277EECED00246A64 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		A640711427799CA100F3A9CC /* boilerplate-swiftui-bloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "boilerplate-swiftui-bloc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A640711727799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boilerplate_swiftui_blocApp.swift; sourceTree = "<group>"; };
 		A640711B27799CA400F3A9CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +167,56 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A61AC649277EB3C500246A64 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A61AC64A277EB47700246A64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A61AC662277EEC3700246A64 /* ContactExtension.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A61AC64D277EC5AE00246A64 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				A61AC64E277EC5C300246A64 /* ContactListView.swift */,
+				A61AC653277EE3FB00246A64 /* ContactDetailView.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		A61AC650277EDC3200246A64 /* LazyView */ = {
+			isa = PBXGroup;
+			children = (
+				A61AC651277EDC4100246A64 /* LazyView.swift */,
+			);
+			path = LazyView;
+			sourceTree = "<group>";
+		};
+		A61AC655277EE41B00246A64 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				A61AC656277EE42F00246A64 /* ContactBloc.swift */,
+				A61AC658277EE43900246A64 /* ContactEvent.swift */,
+				A61AC65A277EE44300246A64 /* ContactState.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		A61AC65F277EE96F00246A64 /* AvatarView */ = {
+			isa = PBXGroup;
+			children = (
+				A61AC660277EE97C00246A64 /* AvatarView.swift */,
+			);
+			path = AvatarView;
+			sourceTree = "<group>";
+		};
 		A640710B27799CA100F3A9CC = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +242,7 @@
 		A640711627799CA100F3A9CC /* boilerplate-swiftui-bloc */ = {
 			isa = PBXGroup;
 			children = (
+				A61AC64A277EB47700246A64 /* Model */,
 				A66372D4277C58D50017BD47 /* CommonUI */,
 				A66372C5277C1F3B0017BD47 /* Extensions */,
 				A6DBC38C277AED0600F90A05 /* Utils */,
@@ -237,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				A66372C6277C1F540017BD47 /* String+Extenstion.swift */,
+				A61AC665277EECED00246A64 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,6 +314,8 @@
 		A66372D4277C58D50017BD47 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				A61AC65F277EE96F00246A64 /* AvatarView */,
+				A61AC650277EDC3200246A64 /* LazyView */,
 				A66372D8277C5EEB0017BD47 /* Loading */,
 				A66372D5277C59280017BD47 /* LoadList */,
 			);
@@ -269,6 +341,8 @@
 		A6DBC385277AE9E600F90A05 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A61AC64D277EC5AE00246A64 /* Contact */,
+				A61AC649277EB3C500246A64 /* Common */,
 				A66372BD277C0D400017BD47 /* Launching */,
 			);
 			path = Modules;
@@ -277,6 +351,7 @@
 		A6DBC386277AEAC400F90A05 /* Bloc */ = {
 			isa = PBXGroup;
 			children = (
+				A61AC655277EE41B00246A64 /* Contact */,
 				A66372C2277C1B2E0017BD47 /* LoadList */,
 				A66372B9277C0CD60017BD47 /* BaseBloc.swift */,
 				A66372BB277C0D080017BD47 /* BlocManager.swift */,
@@ -572,16 +647,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A61AC652277EDC4100246A64 /* LazyView.swift in Sources */,
 				A66372C9277C1FB40017BD47 /* ContactListServiceImpl.swift in Sources */,
 				A640711827799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift in Sources */,
 				A66372BA277C0CD60017BD47 /* BaseBloc.swift in Sources */,
+				A61AC654277EE3FB00246A64 /* ContactDetailView.swift in Sources */,
 				A66372BC277C0D080017BD47 /* BlocManager.swift in Sources */,
 				A66372DA277C5EFB0017BD47 /* LoadingView.swift in Sources */,
 				A66372D7277C59380017BD47 /* LoadListView.swift in Sources */,
 				A66372D3277C57F80017BD47 /* Keys.swift in Sources */,
 				A66372CD277C21D30017BD47 /* LoadListEvent.swift in Sources */,
+				A61AC663277EEC3700246A64 /* ContactExtension.swift in Sources */,
 				A66372CF277C21DD0017BD47 /* LoadListState.swift in Sources */,
+				A61AC64F277EC5C300246A64 /* ContactListView.swift in Sources */,
 				A66372C1277C0DB80017BD47 /* Services.swift in Sources */,
+				A61AC661277EE97C00246A64 /* AvatarView.swift in Sources */,
+				A61AC666277EECED00246A64 /* Date+Extension.swift in Sources */,
+				A61AC659277EE43900246A64 /* ContactEvent.swift in Sources */,
+				A61AC65B277EE44300246A64 /* ContactState.swift in Sources */,
+				A61AC657277EE42F00246A64 /* ContactBloc.swift in Sources */,
 				A6DBC391277B079700F90A05 /* ContactServiceImpl.swift in Sources */,
 				A66372C4277C1B510017BD47 /* LoadListService.swift in Sources */,
 				A66372CB277C21C70017BD47 /* LoadListBloc.swift in Sources */,
