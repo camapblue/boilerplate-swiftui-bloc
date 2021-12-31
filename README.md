@@ -159,60 +159,36 @@ and the constructor in DI class:
 Here is list all of key folders or files in code structure:
 ```
 .
-|-- assets                              *store all assets that are font, icon, image, video or animation*
-|   |-- animations                      *support .flr file to play vector animation*
-|   |-- fonts                           *prefer .ttf file font*
-|   |-- icons                           *support .svg file*
-|   |-- images                          *support .png file and need 3 sizes with the same name*               
-|       |-- 2.0x      
-|       |   |-- image.png               *2x size image file, calculate by pixel*
-|       |-- 3.0x
-|       |   |-- image.png               *3x size image file, calculate by pixel*
-|       |-- image.png                   *1x size image file, calculate by pixel*
-|-- common                              *local package that includes all common things can be used in other project*
-|   |-- lib
-|       |-- extension                   *all common extension such as string, int, color, ...*
-|       |-- logging                     *interface & class that support logging*
 |-- environments                        *setup all configs that based on the environment, using .ENV file*
 |   |-- dev                             *Development environment*
 |   |-- prod                            *Production environment*
 |   |-- qc                              *Testing environment*
-|-- lib
-|   |-- blocs                           *all blocs that need in project*
-|       |-- language                    *each bloc has a folder with name of bloc only*
-|           |-- language_bloc.dart      *the Bloc class that extends of BaseBloc*
-|           |-- language_event.dart     *define all Event class, must follow the naming convention strongly*
-|           |-- language_state.dart     *define all State class that extends of Equatable, must follow the naming convention*
-|           |-- language.dart           *the index file that export all files in bloc folder*
-|   |-- configs
-|       |-- configs.dart                *Configs class, a singleton instance to get data from environment configs*
-|   |-- constants                       *define all constant values such Keys, Strings, ...*
-|   |-- i18n                            *define all localization strings that json format*
-|   |-- models                          *define all extension entities and all entities that need in UI layer*
-|   |-- modules                         *define all UI widgets that categorized by module or epic*
-|   |-- services                        *define all service classes*
-|   |-- utils                           *define all utility classes*
-|   |-- widgets                         *define all common widgets and can use across modules but not use bloc inside*
-|   |-- localization.dart               *the class that implement the localiztion feature*
-|   |-- main.dart                       *the main class that app launch from*
-|   |-- provider.dart                   *the singleton class that supports DI for service classes*
-|   |-- routes.dart                     *define the root routes of app*
-|-- repository
-|   |-- lib
-|   |   |-- client                      *define all client classes*
-|   |   |-- dao                         *define all dao classes*
-|   |   |-- exception                   *define all exceptions that return from RestfulAPI*
-|   |   |-- model                       *define all basic entities*
-|   |   |-- repository                  *define all repository classes*
-|   |   |-- configs.dart                *Configs class for data layer, all config values from environment*
-|   |   |-- repository.dart             *Repository class, singleton class that support DI for data layer*
-|   |-- test                            *unit testing for repository, require testing for repositorry only*
-|-- storybook                           *define all widgets that add in storybook*
-|-- test                                *unit testing for service & bloc, widget is optional*
-|-- pubspec.yaml                        *dependencies configuration for flutter app*
-|-- run-tests.sh                        *shell script to run unit test & show coverage*                        
-|-- run.sh                              *shell script to run app with environment support*
-|-- storybook.sh                        *shell script to run storybook*
+|-- boilerplate-swiftui-bloc            *store all assets that are font, icon, image, video or animation*
+|   |-- boilerplate-swiftui-bloc
+|   |   |-- Bloc                            *all blocs that need in project*
+|   |       |-- language                    *each bloc has a folder with name of bloc only*
+|   |           |-- language_bloc.dart      *the Bloc class that extends of BaseBloc*
+|   |           |-- language_event.dart     *define all Event class, must follow the naming convention strongly*
+|   |           |-- language_state.dart     *define all State class that extends of Equatable, must follow the naming convention*
+|   |           |-- language.dart           *the index file that export all files in bloc folder*
+|   |   |-- Extensions                      *All foundation extensions class, such as String, Int, Date, ...
+|   |   |-- Global                          *define all constant values such Keys, Strings, ...*
+|   |   |-- Model                           *define all extension entities and all entities that need in UI layer*
+|   |   |-- Modules                         *define all UI Views that categorized by module or epic*
+|   |   |-- Service                         *define all service classes*
+|   |   |-- Utils                           *define all utility classes*
+|   |   |-- CommonUI                        *define all common Views and can use across modules but not use bloc inside*
+|   |   |-- boilerplate_swiftui_blocApp.swift                       *the main class that app launch from*
+|   |-- boilerplate-swiftui-blocTests
+|-- Repository
+|   |-- Repository
+|   |   |-- Api                         *define all api classes*
+|   |   |-- Dao                         *define all dao classes*
+|   |   |-- Enum                        *define all enum*
+|   |   |-- Model                       *define all basic entities*
+|   |   |-- Repository                  *define all repository classes*
+|   |   |-- Repository.swift            *Repository class, singleton class that support DI for data layer*
+|   |-- RepositoryTests                 *unit testing for repository, require testing for repositorry only*
 ```
 
 ## Storybook
