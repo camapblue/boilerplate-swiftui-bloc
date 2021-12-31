@@ -19,6 +19,6 @@ class Blocs {
                 service: Services().contactListService()
             )
         }
-        return bloc as! LoadListBloc<Contact>
+        return bloc
     }
 }

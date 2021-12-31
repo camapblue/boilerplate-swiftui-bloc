@@ -9,25 +9,25 @@ import SwiftUI
 import Repository
 
 struct SplashView: View {
-    private var contactListBloc: LoadListBloc<Contact>
-    
-    init(contactListBloc: LoadListBloc<Contact>) {
-        self.contactListBloc = contactListBloc
-        contactListBloc.add(event: LoadListStarted())
-    }
+    @EnvironmentObject private var contactListBloc: LoadListBloc<Contact>
     
     var body: some View {
         NavigationView {
-            LoadListView<Contact, Text>(bloc: contactListBloc) { contact in
+            LoadListView<Contact, Text>() { contact in
                 Text(contact.firstName)
             } itemKey: { $0.id }
-
+        }.onAppear {
+            contactListBloc.add(event: LoadListStarted())
         }
     }
 }
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView(contactListBloc: Blocs().contactListBloc())
+        BlocProvider {
+            SplashView()
+        } create: {
+            Blocs().contactListBloc()
+        }
     }
 }

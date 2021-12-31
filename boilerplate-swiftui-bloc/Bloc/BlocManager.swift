@@ -13,7 +13,7 @@ class BlocManager {
     
     var blocs: [String: [Any]] = [:]
     
-    func newBloc<B: BaseBloc<E, S>, E: Event, S: State>(_ type: B.Type, key: String,  constructor: @escaping () -> B) -> BaseBloc<E, S> {
+    func newBloc<B: BaseBloc<E, S>, E: Event, S: State>(_ type: B.Type, key: String,  constructor: @escaping () -> B) -> B {
         if var blocsFound = self.blocs.first(where: { $0.key == "\(B.self)" })?.value {
             if let found = blocsFound.first(where: { ($0 as! B).key == key }) as? B {
                 return found
