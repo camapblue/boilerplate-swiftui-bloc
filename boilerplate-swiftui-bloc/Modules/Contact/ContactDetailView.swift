@@ -58,7 +58,13 @@ struct ContactDetailView: View {
                     Spacer()
                 }
             }
+            .navigationTitle(contact.firstName)
         }, base: self.contactBloc)
+        .onAppear {
+            print("Contact Detail appeared!")
+        }.onDisappear {
+            print("Contact Detail disappeared!")
+        }
     }
 }
 

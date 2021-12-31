@@ -27,13 +27,12 @@ struct ContactListView: View {
                     ) {
                         Text(contact.firstName)
                     }
-                    .navigationTitle(contact.firstName)
                 )
             } itemKey: { $0.id }
+            .navigationTitle("Contacts")
         } create: {
             self.contactListBloc 
         }
-       
         .onAppear {
             print("Contact List appeared!")
             contactListBloc.add(event: LoadListStarted())
