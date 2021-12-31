@@ -17,7 +17,7 @@ class BlocManager {
     
     var blocs: [String: WeakRef] = [:]
     
-    func newBloc<B: BaseBloc<E, S>, E: Event, S: State>(key: String,  constructor: @escaping () -> B) -> BaseBloc<E, S> {
+    func newBloc<B: BaseBloc<E, S>, E: Event, S: State>(key: String,  constructor: @escaping () -> B) -> B {
         if let blocFound = self.blocs.first(where: { $0.key == key })?.value.ref as? B {
             print("BLOC FOUND = \(key)")
             return blocFound

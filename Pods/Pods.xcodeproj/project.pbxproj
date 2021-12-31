@@ -149,10 +149,10 @@
 		152D815C83A907FD65569D0EEAD41915 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/Image/ImageProcessor.swift; sourceTree = "<group>"; };
 		20D10BB4E5C66E99CD7AD3DA5BC96D4C /* ImageProgressive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProgressive.swift; path = Sources/Image/ImageProgressive.swift; sourceTree = "<group>"; };
 		20D892F02502D999854FCAEE8E305AF4 /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/Cache/CacheSerializer.swift; sourceTree = "<group>"; };
-		20DA9AAE1C3B41B9CFA8F30557C71D49 /* Pods-boilerplate-swiftui-bloc */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-boilerplate-swiftui-bloc"; path = Pods_boilerplate_swiftui_bloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20DA9AAE1C3B41B9CFA8F30557C71D49 /* Pods_boilerplate_swiftui_bloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B8D6E9C0662DDF8E2614106FDD9312 /* KFImageRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImageRenderer.swift; path = Sources/SwiftUI/KFImageRenderer.swift; sourceTree = "<group>"; };
 		2458C6C911C9BA798AE07D05FF08D115 /* Transition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transition.swift; path = Sources/Model/Transition.swift; sourceTree = "<group>"; };
-		284432E908669F9F167E855699CDD9F6 /* SwiftBloc */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftBloc; path = SwiftBloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		284432E908669F9F167E855699CDD9F6 /* SwiftBloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftBloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AADA9AD29CE982689056DC163F925A3 /* Pods-boilerplate-swiftui-bloc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-boilerplate-swiftui-bloc.release.xcconfig"; sourceTree = "<group>"; };
 		2C31A9B8D70909768BA407BD786D29DE /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Views/Indicator.swift; sourceTree = "<group>"; };
 		3579E421B65D145270CEC80B63378883 /* ImageDataProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProcessor.swift; path = Sources/Networking/ImageDataProcessor.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		99CE5BB494D7186C7AD4A05ED7FDD800 /* ImageFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFormat.swift; path = Sources/Image/ImageFormat.swift; sourceTree = "<group>"; };
 		9A3FD1435B85760AF73D8D48ECF199B3 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests-dummy.m"; sourceTree = "<group>"; };
 		9D3BAA15F0935C8E9FDAE7E9ADBDC49D /* Extensions+View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Extensions+View.swift"; path = "Sources/Decorator/Extensions+View.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A453E05E68C9DFD6D98D54CF288107E5 /* Base.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base.swift; path = Sources/Base.swift; sourceTree = "<group>"; };
 		A55B255F25B78369E95C89E6EDB2AD9F /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
 		A6393515D1275E3B4499ECD6E71CB5E4 /* MemoryStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryStorage.swift; path = Sources/Cache/MemoryStorage.swift; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		C0B1F7144E294112C736D5483994FB19 /* Pods-boilerplate-swiftui-bloc-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-boilerplate-swiftui-bloc-Info.plist"; sourceTree = "<group>"; };
 		C22D35FAB263F13D3593BB2C017E79E5 /* Kingfisher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.release.xcconfig; sourceTree = "<group>"; };
 		C23418560779C83E08B515DFBB6B61C9 /* RetryStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryStrategy.swift; path = Sources/Networking/RetryStrategy.swift; sourceTree = "<group>"; };
-		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C427944553F6376C5A07B47EC56213A0 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/General/ImageSource/Resource.swift; sourceTree = "<group>"; };
 		C4BA20A62483E4FBCB019040C4B91947 /* KF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KF.swift; path = Sources/General/KF.swift; sourceTree = "<group>"; };
 		C74408671B8F428DF4E5E370457A4DA3 /* KFOptionsSetter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFOptionsSetter.swift; path = Sources/General/KFOptionsSetter.swift; sourceTree = "<group>"; };
@@ -309,11 +309,11 @@
 		00BA6D8FC79CF30B812AF297635436DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
-				20DA9AAE1C3B41B9CFA8F30557C71D49 /* Pods-boilerplate-swiftui-bloc */,
+				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
+				20DA9AAE1C3B41B9CFA8F30557C71D49 /* Pods_boilerplate_swiftui_bloc.framework */,
 				76EA3EDB4EC8962DDA1B73F394C9650B /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests */,
 				56A48B46E437C20EABF350664B7BA22B /* Pods-boilerplate-swiftui-blocTests */,
-				284432E908669F9F167E855699CDD9F6 /* SwiftBloc */,
+				284432E908669F9F167E855699CDD9F6 /* SwiftBloc.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -384,7 +384,6 @@
 				2458C6C911C9BA798AE07D05FF08D115 /* Transition.swift */,
 				843D5FA7AD3A7736325C62D6D5BFEBEE /* Support Files */,
 			);
-			name = SwiftBloc;
 			path = SwiftBloc;
 			sourceTree = "<group>";
 		};
@@ -504,7 +503,6 @@
 				8171333213214C6C5FE088A373D151D7 /* WKInterfaceImage+Kingfisher.swift */,
 				A1ED93DE944EED75B06B8A05D1248631 /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -617,7 +615,7 @@
 			);
 			name = SwiftBloc;
 			productName = SwiftBloc;
-			productReference = 284432E908669F9F167E855699CDD9F6 /* SwiftBloc */;
+			productReference = 284432E908669F9F167E855699CDD9F6 /* SwiftBloc.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B423D64BA2604384F4B409EB2A8FB467 /* Pods-boilerplate-swiftui-bloc */ = {
@@ -637,7 +635,7 @@
 			);
 			name = "Pods-boilerplate-swiftui-bloc";
 			productName = Pods_boilerplate_swiftui_bloc;
-			productReference = 20DA9AAE1C3B41B9CFA8F30557C71D49 /* Pods-boilerplate-swiftui-bloc */;
+			productReference = 20DA9AAE1C3B41B9CFA8F30557C71D49 /* Pods_boilerplate_swiftui_bloc.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C17B029D1AC9A38B47BF7AA7DCC960EF /* Pods-boilerplate-swiftui-blocTests */ = {
@@ -674,7 +672,7 @@
 			);
 			name = Kingfisher;
 			productName = Kingfisher;
-			productReference = C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */;
+			productReference = C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */

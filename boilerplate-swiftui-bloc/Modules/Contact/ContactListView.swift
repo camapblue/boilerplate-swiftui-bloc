@@ -17,18 +17,23 @@ struct ContactListView: View {
     }
     
     var body: some View {
-        LoadListView<Contact>(bloc: contactListBloc) { contact in
-            AnyView(
-                NavigationLink(
-                    destination: LazyView(
-                        ContactDetailView(contact: contact)
-                    )
-                ) {
-                    Text(contact.firstName)
-                }
-                .navigationTitle(contact.firstName)
-            )
-        } itemKey: { $0.id }
+        BlocProvider {
+            LoadListView<Contact>() { contact in
+                AnyView(
+                    NavigationLink(
+                        destination: LazyView(
+                            ContactDetailView(contact: contact)
+                        )
+                    ) {
+                        Text(contact.firstName)
+                    }
+                    .navigationTitle(contact.firstName)
+                )
+            } itemKey: { $0.id }
+        } create: {
+            self.contactListBloc 
+        }
+       
         .onAppear {
             print("Contact List appeared!")
             contactListBloc.add(event: LoadListStarted())

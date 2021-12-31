@@ -22,12 +22,11 @@ struct ItemData<T: Equatable>: Identifiable {
 }
 
 struct LoadListView<T: Equatable>: View {
-    private var bloc: LoadListBloc<T>
+    @EnvironmentObject private var bloc: LoadListBloc<T>
     private var itemBuilder: ItemBuilder<T>
     private var itemKey: ItemKey<T>
     
-    init(bloc: LoadListBloc<T>, itemBuilder: @escaping ItemBuilder<T>, itemKey: @escaping ItemKey<T>) {
-        self.bloc = bloc
+    init(itemBuilder: @escaping ItemBuilder<T>, itemKey: @escaping ItemKey<T>) {
         self.itemBuilder = itemBuilder
         self.itemKey = itemKey
     }
