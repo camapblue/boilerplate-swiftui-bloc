@@ -23,6 +23,7 @@ class ContactApiImpl: ContactApi {
                             let list = json["results"] as! [Dictionary<String, Any>]
                             let contacts = list.map { Contact(dictionary: $0) }
                             promise(.success(contacts))
+                            return
                         }
                         promise(.success([Contact]()))
                     } else {

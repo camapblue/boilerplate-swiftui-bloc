@@ -18,4 +18,9 @@ class ContactListServiceImpl: LoadListService<Contact> {
     override func loadItems() throws -> Future<[Contact], Error> {
         return self.contactRepository.fetchContacts()
     }
+    
+    override func loadItems(params: [String: AnyObject]?) throws -> Future<[Contact], Error> {
+        // TODO: Add params
+        return self.contactRepository.fetchContacts()
+    }
 }

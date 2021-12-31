@@ -8,21 +8,24 @@
 import Foundation
 import SwiftBloc
 
-typealias BlocConstructor = () -> BaseBloc<Event, State>
-
 class BlocManager {
     static let shared = BlocManager()
     
-    var blocs: [BaseBloc] = [BaseBloc<Event, State>]()
+    var blocs: [String: [Any]] = [:]
     
-    func newBloc(key: String, constructor: BlocConstructor) -> BaseBloc<Event, State> {
-        if let found = self.blocs.firstIndex(where: { $0.key == key }) {
-          return blocs[found]
+    func newBloc<B: BaseBloc<E, S>, E: Event, S: State>(_ type: B.Type, key: String,  constructor: @escaping () -> B) -> BaseBloc<E, S> {
+        if var blocsFound = self.blocs.first(where: { $0.key == "\(B.self)" })?.value {
+            if let found = blocsFound.first(where: { ($0 as! B).key == key }) as? B {
+                return found
+            }
+            let newInstance = constructor()
+            blocsFound.append(newInstance)
+            return newInstance
         }
-
+        
         let newInstance = constructor()
-    
-        self.blocs.append(newInstance)
+        
+        self.blocs["\(B.self)"] = [newInstance]
         
         return newInstance
     }

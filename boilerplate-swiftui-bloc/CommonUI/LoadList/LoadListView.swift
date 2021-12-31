@@ -36,12 +36,12 @@ struct LoadListView<T: Equatable, V: View>: View {
         BlocView(builder: { (bloc) in
             let isLoading = bloc.state is LoadListLoadPageInProgress
                 || bloc.state is LoadListLoadPageInitial
-            let items = (bloc.state as! LoadListLoadPageSuccess<T>).items
+            let items = (bloc.state as? LoadListLoadPageSuccess<T>)?.items
                 .map { ItemData(data: $0, itemKey: itemKey) }
             
             ZStack {
                 VStack {
-                    List(items, id: \.id) { item in
+                    List(items ?? [], id: \.id) { item in
                         itemBuilder(item.data)
                     }
                     Spacer()
