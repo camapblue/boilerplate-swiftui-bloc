@@ -19,7 +19,7 @@ class Blocs {
                 contact: contact,
                 service: Services().contactService()
             )
-        } as! ContactBloc
+        }
     }
     
     // Load List
@@ -31,6 +31,6 @@ class Blocs {
                 service: Services().contactListService()
             )
         }
-        return bloc as! LoadListBloc<Contact>
+        return bloc
     }
 }

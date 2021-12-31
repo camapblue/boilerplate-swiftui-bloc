@@ -42,6 +42,7 @@
 		A66372DA277C5EFB0017BD47 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372D9277C5EFB0017BD47 /* LoadingView.swift */; };
 		A6DBC38E277B076D00F90A05 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBC38D277B076D00F90A05 /* ContactService.swift */; };
 		A6DBC391277B079700F90A05 /* ContactServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBC390277B079700F90A05 /* ContactServiceImpl.swift */; };
+		CA60748E277EFA6A00C3E78A /* BlocProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60748D277EFA6A00C3E78A /* BlocProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		A6DBC38D277B076D00F90A05 /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		A6DBC390277B079700F90A05 /* ContactServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactServiceImpl.swift; sourceTree = "<group>"; };
 		C2F6579F3AB5B6AEFB312177 /* Pods-boilerplate-swiftui-bloc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc.release.xcconfig"; sourceTree = "<group>"; };
+		CA60748D277EFA6A00C3E78A /* BlocProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlocProvider.swift; sourceTree = "<group>"; };
 		CE112867221D3CD80C94A050 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -355,6 +357,7 @@
 				A66372C2277C1B2E0017BD47 /* LoadList */,
 				A66372B9277C0CD60017BD47 /* BaseBloc.swift */,
 				A66372BB277C0D080017BD47 /* BlocManager.swift */,
+				CA60748D277EFA6A00C3E78A /* BlocProvider.swift */,
 				A66372D0277C57610017BD47 /* Blocs.swift */,
 				A66372D2277C57F80017BD47 /* Keys.swift */,
 			);
@@ -666,6 +669,7 @@
 				A61AC659277EE43900246A64 /* ContactEvent.swift in Sources */,
 				A61AC65B277EE44300246A64 /* ContactState.swift in Sources */,
 				A61AC657277EE42F00246A64 /* ContactBloc.swift in Sources */,
+				CA60748E277EFA6A00C3E78A /* BlocProvider.swift in Sources */,
 				A6DBC391277B079700F90A05 /* ContactServiceImpl.swift in Sources */,
 				A66372C4277C1B510017BD47 /* LoadListService.swift in Sources */,
 				A66372CB277C21C70017BD47 /* LoadListBloc.swift in Sources */,
