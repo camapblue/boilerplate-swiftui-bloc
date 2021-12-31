@@ -25,10 +25,12 @@ struct LoadListView<T: Equatable>: View {
     @EnvironmentObject private var bloc: LoadListBloc<T>
     private var itemBuilder: ItemBuilder<T>
     private var itemKey: ItemKey<T>
+    private var autoStart: Bool
     
-    init(itemBuilder: @escaping ItemBuilder<T>, itemKey: @escaping ItemKey<T>) {
+    init(itemBuilder: @escaping ItemBuilder<T>, itemKey: @escaping ItemKey<T>, autoStart: Bool = true) {
         self.itemBuilder = itemBuilder
         self.itemKey = itemKey
+        self.autoStart = autoStart
     }
     
     var body: some View {
@@ -49,5 +51,10 @@ struct LoadListView<T: Equatable>: View {
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 0)
             }
         }, base: self.bloc)
+        .onAppear {
+            if autoStart {
+                self.bloc.add(event: LoadListStarted())
+            }
+        }
     }
 }

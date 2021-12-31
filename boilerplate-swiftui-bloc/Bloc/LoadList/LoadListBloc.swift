@@ -42,4 +42,8 @@ class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState> {
             })
             .store(in: &self.disposables)
     }
+    
+    deinit {
+        print("Load List Bloc Deinit")
+    }
 }

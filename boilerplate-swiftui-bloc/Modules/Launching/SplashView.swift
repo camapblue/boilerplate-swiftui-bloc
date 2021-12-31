@@ -16,7 +16,7 @@ struct SplashView: View {
                     Text("Splash View")
                     NavigationLink(
                         destination: LazyView(
-                            ContactListView()
+                            ContactDetailView(contact: Contact.fakeContact())
                         )
                     ) {
                         Text("Contact List")

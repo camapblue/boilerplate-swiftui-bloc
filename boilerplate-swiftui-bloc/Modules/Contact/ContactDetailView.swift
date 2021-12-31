@@ -9,12 +9,23 @@ import SwiftUI
 import Repository
 import SwiftBloc
 
+class ContactDetailViewModel {
+    init() {
+        print("Contact Detail VM init")
+    }
+    
+    deinit {
+        print("Contact Detail VM deinit")
+    }
+}
+
 struct ContactDetailView: View {
-    var contactBloc: ContactBloc
+    var contact: Contact
+    var viewMode = ContactDetailViewModel()
     
     init(contact: Contact) {
         print("CONTACT DETAIL INIT")
-        self.contactBloc = Blocs().contactBloc(contact: contact)
+        self.contact = contact
     }
     
     var body: some View {
@@ -59,7 +70,7 @@ struct ContactDetailView: View {
                 }
             }
             .navigationTitle(contact.firstName)
-        }, base: self.contactBloc)
+        }, base: Blocs().contactBloc(contact: contact))
         .onAppear {
             print("Contact Detail appeared!")
         }.onDisappear {
@@ -72,6 +83,7 @@ struct ContactDetailView_Previews: PreviewProvider {
     static var contact = Contact.fakeContact()
     
     static var previews: some View {
+        print("PREVIEWS NOW")
         return ContactDetailView(contact: contact)
             .frame(width: 375)
     }

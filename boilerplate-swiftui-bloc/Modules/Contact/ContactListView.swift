@@ -8,13 +8,18 @@
 import SwiftUI
 import Repository
 
-struct ContactListView: View {
-    private var contactListBloc: LoadListBloc<Contact>
-    
+class ContactListViewModel {
     init() {
-        print("CONTACT LIST INIT")
-        self.contactListBloc = Blocs().contactListBloc()
+        print("Contact List VM init")
     }
+    
+    deinit {
+        print("Contact List VM deinit")
+    }
+}
+
+struct ContactListView: View {
+    var viewModel = ContactListViewModel()
     
     var body: some View {
         BlocProvider {
@@ -31,11 +36,10 @@ struct ContactListView: View {
             } itemKey: { $0.id }
             .navigationTitle("Contacts")
         } create: {
-            self.contactListBloc 
+            Blocs().contactListBloc()
         }
         .onAppear {
             print("Contact List appeared!")
-            contactListBloc.add(event: LoadListStarted())
         }.onDisappear {
             print("Contact List disappeared!")
         }
