@@ -31,9 +31,4 @@ struct BlocProvider<B: BaseBloc<E, S>, E: Event, S: State, V: View>: BlocProvide
     var body: some View {
         builder().environmentObject(bloc)
     }
-    
-    static func of<ExpectBloc: BaseBloc<E, S>, E: Event, S: State>() -> ExpectBloc {
-        let bloc: EnvironmentObject<ExpectBloc> = EnvironmentObject<ExpectBloc>()
-        return bloc.wrappedValue
-    }
 }
