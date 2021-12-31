@@ -9,25 +9,31 @@ import SwiftUI
 import Repository
 
 struct SplashView: View {
-    @EnvironmentObject private var contactListBloc: LoadListBloc<Contact>
-    
     var body: some View {
         NavigationView {
-            LoadListView<Contact, Text>() { contact in
-                Text(contact.firstName)
-            } itemKey: { $0.id }
-        }.onAppear {
-            contactListBloc.add(event: LoadListStarted())
+            ZStack {
+                VStack {
+                    Text("Splash View")
+                    NavigationLink(
+                        destination: LazyView(
+                            ContactListView()
+                        )
+                    ) {
+                        Text("Contact List")
+                    }
+                    .navigationTitle("Splash")
+                }
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 0)
+            }
+        }
+        .onAppear() {
+            print("Splash Screen Appear")
         }
     }
 }
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        BlocProvider {
-            SplashView()
-        } create: {
-            Blocs().contactListBloc()
-        }
+        SplashView()
     }
 }

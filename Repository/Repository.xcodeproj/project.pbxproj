@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A61AC65E277EE7D900246A64 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC65D277EE7D900246A64 /* ApiError.swift */; };
 		A6637297277BFD270017BD47 /* Repository.h in Headers */ = {isa = PBXBuildFile; fileRef = A6637295277BFD270017BD47 /* Repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A66372B1277BFD970017BD47 /* ContactDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372A3277BFD960017BD47 /* ContactDaoImpl.swift */; };
 		A66372B2277BFD970017BD47 /* ContactDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372A4277BFD960017BD47 /* ContactDao.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A61AC65D277EE7D900246A64 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		A6637292277BFD270017BD47 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6637295277BFD270017BD47 /* Repository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		A6637296277BFD270017BD47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A61AC65C277EE7AD00246A64 /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				A61AC65D277EE7D900246A64 /* ApiError.swift */,
+			);
+			path = Exception;
+			sourceTree = "<group>";
+		};
 		A6637288277BFD270017BD47 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		A6637294277BFD270017BD47 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A61AC65C277EE7AD00246A64 /* Exception */,
 				A66372A5277BFD960017BD47 /* Api */,
 				A66372A1277BFD960017BD47 /* Dao */,
 				A66372A9277BFD960017BD47 /* Enum */,
@@ -224,6 +235,7 @@
 				A66372B4277BFD970017BD47 /* ContactApi.swift in Sources */,
 				A66372B8277BFD970017BD47 /* Repository.swift in Sources */,
 				A66372B5277BFD970017BD47 /* Contact.swift in Sources */,
+				A61AC65E277EE7D900246A64 /* ApiError.swift in Sources */,
 				A66372B2277BFD970017BD47 /* ContactDao.swift in Sources */,
 				A66372B7277BFD970017BD47 /* ContactRepository.swift in Sources */,
 				A66372B3277BFD970017BD47 /* ContactApiImpl.swift in Sources */,

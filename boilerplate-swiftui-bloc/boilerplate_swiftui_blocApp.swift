@@ -11,11 +11,7 @@ import SwiftUI
 struct boilerplate_swiftui_blocApp: App {
     var body: some Scene {
         WindowGroup {
-            BlocProvider {
-                SplashView()
-            } create: {
-                Blocs().contactListBloc()
-            }
+            SplashView()
         }
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftBloc
 
-typealias ItemBuilder<T: Equatable, V: View> = (_ item: T) -> V
+typealias ItemBuilder<T: Equatable> = (_ item: T) -> AnyView
 typealias ItemKey<T: Equatable> = (_ item: T) -> String
 
 struct ItemData<T: Equatable>: Identifiable {
@@ -21,12 +21,12 @@ struct ItemData<T: Equatable>: Identifiable {
     }
 }
 
-struct LoadListView<T: Equatable, V: View>: View {
+struct LoadListView<T: Equatable>: View {
     @EnvironmentObject private var bloc: LoadListBloc<T>
-    private var itemBuilder: ItemBuilder<T, V>
+    private var itemBuilder: ItemBuilder<T>
     private var itemKey: ItemKey<T>
     
-    init(itemBuilder: @escaping ItemBuilder<T, V>, itemKey: @escaping ItemKey<T>) {
+    init(itemBuilder: @escaping ItemBuilder<T>, itemKey: @escaping ItemKey<T>) {
         self.itemBuilder = itemBuilder
         self.itemKey = itemKey
     }
@@ -48,8 +48,6 @@ struct LoadListView<T: Equatable, V: View>: View {
                 .loadingOverlay(isLoading: isLoading)
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 0)
             }
-        }, action: { (bloc) in
-            
         }, base: self.bloc)
     }
 }

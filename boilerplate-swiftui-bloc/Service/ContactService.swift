@@ -10,5 +10,5 @@ import Combine
 import Repository
 
 protocol ContactService {
-    func getCachedContacts() -> Future<[Contact], Error>
+    func edit(contact: Contact) -> Future<Contact, Error>
 }

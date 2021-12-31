@@ -16,7 +16,7 @@ class ContactServiceImpl: ContactService {
         self.contactRepository = contactRepository
     }
     
-    func getCachedContacts() -> Future<[Contact], Error> {
-        return self.contactRepository.fetchContacts()
+    func edit(contact: Contact) -> Future<Contact, Error> {
+        return contactRepository.edit(contact: contact)
     }
 }

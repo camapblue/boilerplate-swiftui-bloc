@@ -10,6 +10,12 @@ import Foundation
 class Keys {
     
     class Bloc {
+        // list
         static let contactList = "contact_list_bloc_key"
+        
+        // single with key
+        static func contactBlocById(id: String) -> String {
+            return "contact_bloc_key_\(id)"
+        }
     }
 }

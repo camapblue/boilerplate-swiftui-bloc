@@ -36,4 +36,8 @@ class BaseBloc<E: Equatable, S: Equatable>: Bloc<E, S> {
         
         super.init(initialState: inititalState)
     }
+    
+    deinit {
+        print("DEINIT BASE BLOC KEY = \(key)")
+    }
 }

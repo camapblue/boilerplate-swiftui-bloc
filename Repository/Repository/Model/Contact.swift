@@ -8,22 +8,22 @@
 import Foundation
 
 public class Contact: Codable, Equatable {
-    public var id: String
+    public private(set) var id: String
     
-    public var firstName: String
-    var lastName: String
+    public private(set) var firstName: String
+    public private(set) var lastName: String
     
-    var street: String
-    var city: String
-    var state: String
-    var country: String
+    public private(set) var street: String
+    public private(set) var city: String
+    public private(set) var state: String
+    public private(set) var country: String
     
-    var birthday: Date?
+    public private(set) var birthday: Date?
     
-    var avatar: String
-    var nationality: String
+    public private(set) var avatar: String
+    public private(set) var nationality: String
     
-    static func fakeContact(birthday date: Date? = nil) -> Contact {
+    public static func fakeContact(birthday date: Date? = nil) -> Contact {
         let dic = [
             "name": [
                 "first": "David",
