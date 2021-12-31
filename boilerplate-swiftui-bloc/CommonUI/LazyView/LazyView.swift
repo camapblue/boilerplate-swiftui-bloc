@@ -11,6 +11,7 @@ struct LazyView<Content: View>: View {
     let build: () -> Content
     
     init(_ build: @autoclosure @escaping () -> Content) {
+        print("LAZY VIEW NOW")
         self.build = build
     }
     

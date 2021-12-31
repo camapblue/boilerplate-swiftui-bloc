@@ -18,7 +18,7 @@ class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState> {
     }
     
     override func mapEventToState(event: LoadListEvent) -> AnyPublisher<LoadListState, Never> {
-        if event is LoadListStarted {
+        if event is LoadListStarted && state is LoadListLoadPageInitial {
             mapEventStartedToState(event: event as! LoadListStarted)
         }
         return emitter.eraseToAnyPublisher()

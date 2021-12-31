@@ -11,7 +11,7 @@ import SwiftBloc
 class BlocManager {
     static let shared = BlocManager()
     
-    class WeakRef {
+    final class WeakRef {
         weak var ref: AnyObject?
     }
     

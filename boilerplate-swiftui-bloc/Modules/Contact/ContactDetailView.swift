@@ -10,7 +10,7 @@ import Repository
 import SwiftBloc
 
 struct ContactDetailView: View {
-    private var contactBloc: ContactBloc
+    var contactBloc: ContactBloc
     
     init(contact: Contact) {
         print("CONTACT DETAIL INIT")

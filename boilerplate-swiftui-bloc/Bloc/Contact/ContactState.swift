@@ -14,26 +14,10 @@ class ContactState: State {
     }
 }
 
-class ContactInitial: ContactState {
-    override init(contact: Contact) {
-        super.init(contact: contact)
-    }
-}
+class ContactInitial: ContactState {}
 
-class ContactEditInProgress: ContactState {
-    override init(contact: Contact) {
-        super.init(contact: contact)
-    }
-}
+class ContactEditInProgress: ContactState {}
 
-class ContactEditSuccess: ContactState {
-    override init(contact: Contact) {
-        super.init(contact: contact)
-    }
-}
+class ContactEditSuccess: ContactState {}
 
-class ContactEditFailure: ContactState {
-    override init(contact: Contact) {
-        super.init(contact: contact)
-    }
-}
+class ContactEditFailure: ContactState {}
