@@ -8,6 +8,8 @@
 import Foundation
 
 public protocol ContactDao {
+    func clearCachedContacts()
+    
     func getCachedContacts() -> [Contact]?
     
     func cacheContacts(contacts: [Contact])

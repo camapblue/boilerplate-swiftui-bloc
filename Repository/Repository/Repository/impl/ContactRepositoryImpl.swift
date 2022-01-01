@@ -19,6 +19,10 @@ class ContactRepositoryImpl: ContactRepository {
         self.contactDao = contactDao
     }
     
+    func clearCachedDataIfNeeded() {
+        self.contactDao.clearCachedContacts()
+    }
+    
     func fetchContacts() -> Future<[Contact], Error> {
         return fetchContacts(size: 5)
     }

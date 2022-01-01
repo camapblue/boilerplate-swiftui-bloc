@@ -13,10 +13,13 @@ struct AvatarView: View {
     var size: CGFloat
     
     var body: some View {
-        KFImage.url(URL(string: avatar)!)
-            .placeholder { Image("avatar_placeholder") }
-            .fade(duration: 0.25)
-            .resizing(referenceSize: CGSize(width: size, height: size), mode: .aspectFit)
-            .clipShape(Circle())
+        ZStack {
+            KFImage.url(URL(string: avatar)!)
+                .placeholder { Image("avatar_placeholder").resizable() }
+                .fade(duration: 0.5)
+                .resizing(referenceSize: CGSize(width: size, height: size), mode: .aspectFit)
+                .clipShape(Circle())
+        }
+        .frame(width: size, height: size, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
     }
 }

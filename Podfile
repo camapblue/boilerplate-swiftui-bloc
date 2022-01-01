@@ -9,6 +9,7 @@ target 'boilerplate-swiftui-bloc' do
   
   pod 'Kingfisher', :git => 'https://github.com/onevcat/Kingfisher.git'
   pod 'SwiftBloc', :git => 'https://github.com/camapblue/SwiftBloc'
+  pod 'SwiftUIRefresh', :git => 'https://github.com/timbersoftware/SwiftUIRefresh.git'
 
   target 'boilerplate-swiftui-blocTests' do
     inherit! :search_paths

@@ -19,6 +19,7 @@
 		A61AC661277EE97C00246A64 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC660277EE97C00246A64 /* AvatarView.swift */; };
 		A61AC663277EEC3700246A64 /* ContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC662277EEC3700246A64 /* ContactExtension.swift */; };
 		A61AC666277EECED00246A64 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC665277EECED00246A64 /* Date+Extension.swift */; };
+		A61AC670278054C300246A64 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC66F278054C300246A64 /* Array+Extension.swift */; };
 		A640711827799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640711727799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift */; };
 		A640711C27799CA400F3A9CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A640711B27799CA400F3A9CC /* Assets.xcassets */; };
 		A640711F27799CA400F3A9CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A640711E27799CA400F3A9CC /* Preview Assets.xcassets */; };
@@ -92,6 +93,7 @@
 		A61AC660277EE97C00246A64 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		A61AC662277EEC3700246A64 /* ContactExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactExtension.swift; sourceTree = "<group>"; };
 		A61AC665277EECED00246A64 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		A61AC66F278054C300246A64 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		A640711427799CA100F3A9CC /* boilerplate-swiftui-bloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "boilerplate-swiftui-bloc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A640711727799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boilerplate_swiftui_blocApp.swift; sourceTree = "<group>"; };
 		A640711B27799CA400F3A9CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			children = (
 				A66372C6277C1F540017BD47 /* String+Extenstion.swift */,
 				A61AC665277EECED00246A64 /* Date+Extension.swift */,
+				A61AC66F278054C300246A64 /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				A66372D3277C57F80017BD47 /* Keys.swift in Sources */,
 				A66372CD277C21D30017BD47 /* LoadListEvent.swift in Sources */,
 				A61AC663277EEC3700246A64 /* ContactExtension.swift in Sources */,
+				A61AC670278054C300246A64 /* Array+Extension.swift in Sources */,
 				A66372CF277C21DD0017BD47 /* LoadListState.swift in Sources */,
 				A61AC64F277EC5C300246A64 /* ContactListView.swift in Sources */,
 				A66372C1277C0DB80017BD47 /* Services.swift in Sources */,

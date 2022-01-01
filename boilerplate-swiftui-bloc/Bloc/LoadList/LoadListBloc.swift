@@ -15,8 +15,14 @@ class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState> {
     init(key: String, service: LoadListService<T>) {
         self.loadListService = service
         super.init(key: key, inititalState: LoadListLoadPageInitial())
+        
         self.onEvent(LoadListStarted.self, handler: { [weak self] event, emitter in
             self?.onLoadListStartedEvent(event: event, emitter: emitter)
+        })
+        
+        self.onEvent(LoadListRefreshed.self, handler: { [weak self] event, emitter in
+            self?.loadListService.forceToRefresh()
+            self?.onLoadListStartedEvent(event: LoadListStarted(params: event.params), emitter: emitter)
         })
     }
     
@@ -33,7 +39,8 @@ class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState> {
                     emitter.send(LoadListLoadPageFailure())
                 }
             }, receiveValue: { items in
-                let nextState = LoadListLoadPageSuccess(items: items, nextPage: items.count, isFinish: true)
+                let uniquedItems = items.removingDuplicates()
+                let nextState = LoadListLoadPageSuccess(items: uniquedItems, nextPage: items.count, isFinish: true)
                 emitter.send(nextState)
             })
             .store(in: &self.disposables)

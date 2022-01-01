@@ -15,12 +15,17 @@ class ContactListServiceImpl: LoadListService<Contact> {
         self.contactRepository = contactRepository
     }
     
+    override func forceToRefresh() {
+        contactRepository.clearCachedDataIfNeeded()
+    }
+    
     override func loadItems() throws -> Future<[Contact], Error> {
-        return self.contactRepository.fetchContacts()
+        return contactRepository.fetchContacts()
     }
     
     override func loadItems(params: [String: AnyObject]?) throws -> Future<[Contact], Error> {
         // TODO: Add params
-        return self.contactRepository.fetchContacts()
+        return contactRepository
+            .fetchContacts(size: 20)
     }
 }
