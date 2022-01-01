@@ -79,7 +79,9 @@ open class Bloc<Event, State>: Base<State> where State: Equatable, Event: Equata
                 self.emitted = true
                 return transition.nextState
             }
-            .assign(to: \.state, on: self)
+            .sink(receiveValue: { [weak self] newState in
+                self?.state = newState
+            })
             .store(in: &cancellables)
     }
 }

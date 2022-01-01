@@ -45,8 +45,4 @@ class ContactBloc: BaseBloc<ContactEvent, ContactState> {
             })
             .store(in: &self.disposables)
     }
-    
-    deinit {
-        print("CONTACT BLOC DEINIT")
-    }
 }

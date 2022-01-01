@@ -8,19 +8,7 @@
 import SwiftUI
 import Repository
 
-class ContactListViewModel {
-    init() {
-        print("Contact List VM init")
-    }
-    
-    deinit {
-        print("Contact List VM deinit")
-    }
-}
-
 struct ContactListView: View {
-    var viewModel = ContactListViewModel()
-    
     var body: some View {
         BlocProvider {
             LoadListView<Contact>() { contact in
