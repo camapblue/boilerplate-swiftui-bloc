@@ -18,6 +18,7 @@ class Blocs {
         return BlocManager.shared.newBloc(key: key) {
             return ContactBloc(
                 key: key,
+                closeWithBlocKey: Keys.Bloc.contactList,
                 contact: contact,
                 service: Services().contactService()
             )

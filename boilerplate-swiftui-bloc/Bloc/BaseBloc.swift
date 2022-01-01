@@ -23,14 +23,18 @@ class State: Equatable {
 
 class BaseBloc<E: Equatable, S: Equatable>: Bloc<E, S> {
     var key: String
-    private var closeWithBlocKey: String?
+    var closeWithBlocKey: String?
     var disposables: Set<AnyCancellable>
     
-    init(key: String, inititalState: S, closeWithBlocKey: String? = nil) {
+    init(key: String, closeWithBlocKey: String? = nil, inititalState: S) {
         self.key = key
         self.closeWithBlocKey = closeWithBlocKey
         self.disposables = Set<AnyCancellable>()
         
         super.init(initialState: inititalState)
+    }
+    
+    deinit {
+        BlocManager.shared.disposeBloc(key: key)
     }
 }

@@ -17,12 +17,12 @@ CHECKOUT OPTIONS:
     :commit: 15dde451f97a8ae18ea4f94969b7c8546f034b37
     :git: https://github.com/onevcat/Kingfisher.git
   SwiftBloc:
-    :commit: cec33716e098140aa72d10e5dbfdb3153f1e7e11
+    :commit: 49c91a2ee99a6d94c88ac4f58905d7ab4b690f51
     :git: https://github.com/camapblue/SwiftBloc
 
 SPEC CHECKSUMS:
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
-  SwiftBloc: edfba5147556cc3e1e03134d37da00727cd6e45e
+  SwiftBloc: 11c209f0ecb00e8b8da813323e24f9408476f498
 
 PODFILE CHECKSUM: 2f5a55930c2d1cac628ce599498449ae4f81a305
 

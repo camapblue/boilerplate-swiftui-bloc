@@ -12,10 +12,15 @@ import SwiftBloc
 class ContactBloc: BaseBloc<ContactEvent, ContactState> {
     private var contactService: ContactService
     
-    init(key: String, contact: Contact, service: ContactService) {
+    init(key: String, closeWithBlocKey: String? = nil, contact: Contact, service: ContactService) {
         self.contactService = service
         
-        super.init(key: key, inititalState: ContactInitial(contact: contact))
+        super.init(
+            key: key,
+            closeWithBlocKey: closeWithBlocKey,
+            inititalState: ContactInitial(contact: contact)
+        )
+        
         onEvent(ContactEdited.self, handler: { [weak self] event, emitter in
             self?.onContactEditedEvent(event: event, emitter: emitter)
         })
@@ -41,5 +46,9 @@ class ContactBloc: BaseBloc<ContactEvent, ContactState> {
                 emitter.send(nextState)
             })
             .store(in: &self.disposables)
+    }
+    
+    deinit {
+        print("Contact Bloc Deinit")
     }
 }

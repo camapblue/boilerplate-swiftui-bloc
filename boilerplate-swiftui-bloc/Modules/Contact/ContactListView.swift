@@ -12,17 +12,19 @@ struct ContactListView: View {
     var body: some View {
         BlocProvider {
             LoadListView<Contact>() { contact in
-                AnyView(
-                    NavigationLink(
-                        destination: LazyView(
-                            BlocProvider {
+                let bloc = Blocs().contactBloc(contact: contact)
+                return AnyView(
+                    BlocProvider {
+                        NavigationLink(
+                            destination: LazyView(
                                 ContactDetailView()
-                            } create: {
-                                Blocs().contactBloc(contact: contact)
-                            }
-                        )
-                    ) {
-                        Text(contact.firstName)
+                                    .environmentObject(bloc)
+                            )
+                        ) {
+                            Text(contact.firstName)
+                        }
+                    } create: {
+                        bloc
                     }
                 )
             } itemKey: { $0.id }
