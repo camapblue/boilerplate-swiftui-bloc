@@ -10,11 +10,7 @@ import Repository
 import SwiftBloc
 
 struct ContactDetailView: View {
-    var contact: Contact
-    
-    init(contact: Contact) {
-        self.contact = contact
-    }
+    @EnvironmentObject private var bloc: ContactBloc
     
     var body: some View {
         BlocView(builder: { (bloc) in
@@ -58,7 +54,7 @@ struct ContactDetailView: View {
                 }
             }
             .navigationTitle(contact.firstName)
-        }, base: Blocs().contactBloc(contact: contact))
+        }, base: self.bloc)
         .onAppear {
             print("Contact Detail appeared!")
         }.onDisappear {
@@ -71,7 +67,11 @@ struct ContactDetailView_Previews: PreviewProvider {
     static var contact = Contact.fakeContact()
     
     static var previews: some View {
-        return ContactDetailView(contact: contact)
-            .frame(width: 375)
+        return BlocProvider {
+            ContactDetailView()
+        } create: {
+            Blocs().contactBloc(contact: contact)
+        }
+        .frame(width: 375)
     }
 }

@@ -15,7 +15,11 @@ struct ContactListView: View {
                 AnyView(
                     NavigationLink(
                         destination: LazyView(
-                            ContactDetailView(contact: contact)
+                            BlocProvider {
+                                ContactDetailView()
+                            } create: {
+                                Blocs().contactBloc(contact: contact)
+                            }
                         )
                     ) {
                         Text(contact.firstName)
