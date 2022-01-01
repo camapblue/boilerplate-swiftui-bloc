@@ -12,6 +12,7 @@ import Foundation
 */
 public enum BlocError: Error {
     case noEvent
+    case eventHandlerHasBeenAdded
 }
 /**
  Cubit (more abstract) errors

@@ -7,6 +7,7 @@
 
 import Combine
 import Repository
+import SwiftBloc
 
 class ContactBloc: BaseBloc<ContactEvent, ContactState> {
     private var contactService: ContactService
@@ -15,16 +16,12 @@ class ContactBloc: BaseBloc<ContactEvent, ContactState> {
         self.contactService = service
         
         super.init(key: key, inititalState: ContactInitial(contact: contact))
+        onEvent(ContactEdited.self, handler: { [weak self] event, emitter in
+            self?.onContactEditedEvent(event: event, emitter: emitter)
+        })
     }
     
-    override func mapEventToState(event: ContactEvent) -> AnyPublisher<ContactState, Never> {
-        if event is ContactEdited {
-            mapEventEditedToState(event: event as! ContactEdited)
-        }
-        return emitter.eraseToAnyPublisher()
-    }
-    
-    private func mapEventEditedToState(event: ContactEdited) {
+    private func onContactEditedEvent(event: ContactEdited, emitter: Emitter<ContactState>) {
         emitter.send(ContactEditInProgress(contact: state.contact))
         
         self.contactService.edit(contact: event.contact)
@@ -36,12 +33,12 @@ class ContactBloc: BaseBloc<ContactEvent, ContactState> {
                     break
                 case .failure(_):
                     if let self = self {
-                        self.emitter.send(ContactEditFailure(contact: self.state.contact))
+                        emitter.send(ContactEditFailure(contact: self.state.contact))
                     }
                 }
-            }, receiveValue: { [weak self] updatedContact in
+            }, receiveValue: { updatedContact in
                 let nextState = ContactEditSuccess(contact: updatedContact)
-                self?.emitter.send(nextState)
+                emitter.send(nextState)
             })
             .store(in: &self.disposables)
     }
