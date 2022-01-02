@@ -192,7 +192,42 @@ Here is list all of key folders or files in code structure:
 ```
 
 ## Storybook
+It's used for view all common view (only view that are not based on bloc should be build). It MUST cover all view that in CommonUI.
 
+How to add view into storybook:
+
+Create a story file to add view into. A story file should cover all states of the view, not only the happy case.
+```swift
+    struct AvatarViewStory: View {
+    var body: some View {
+        VStack {
+            Rectangle().fill(Color.clear).frame(height: 128)
+            AvatarView(avatar: "https://randomuser.me/api/portraits/med/women/92.jpg", size: 92)
+            Rectangle().fill(Color.clear).frame(height: 128)
+            AvatarView(avatar: "https://randomuser.me/api/portraits/med/women/64.jpg", size: 64)
+            Rectangle().fill(Color.clear).frame(height: 128)
+            AvatarView(avatar: "https://randomuser.me/api/portraits/med/women/32.jpg", size: 32)
+            Rectangle().fill(Color.clear).frame(height: 128)
+            AvatarView(avatar: "https://randomuser.me/api/portraits/med/women/16.jpg", size: 16)
+            Rectangle().fill(Color.clear).frame(height: 128)
+        }
+    }
+}
+```
+
+Add new story into Storybook.swift in Storybook folder:
+```swift
+     StorybookView(stories: [
+        Story("Avatar View") { AvatarViewStory() }
+    ])
+```
+
+Change configuration to run Storybook in Configs.swift in Constant folder:
+```swift
+    var isStorybook: Bool { true }
+```
+
+then, run app to enjoy Storybook
 
 ## Router
 
