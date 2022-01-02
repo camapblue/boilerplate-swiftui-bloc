@@ -21,4 +21,9 @@ class LoadListNextPage: LoadListEvent {}
 
 class LoadListRefreshed: LoadListEvent {}
 
-class LoadListReloaded: LoadListEvent {}
+class LoadListReloaded<T: Equatable>: LoadListEvent {
+    var items: [T]?
+    init(items: [T]? = nil) {
+        self.items = items
+    }
+}

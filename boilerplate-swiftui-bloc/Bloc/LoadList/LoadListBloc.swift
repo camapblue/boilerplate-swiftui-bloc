@@ -24,6 +24,17 @@ class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState<T>> {
             self?.onLoadListLoadedPageEvent(event: event, emitter: emitter)
         })
         
+        self.onEvent(LoadListReloaded<T>.self, handler: { [weak self] event, emitter in
+            if let allItems = event.items {
+                let nextState = LoadListLoadPageSuccess(
+                    items: allItems, nextPage: allItems.count, isFinished: allItems.isEmpty)
+                emitter.send(nextState)
+            } else {
+                self?.loadListService.forceToRefresh()
+                self?.onLoadListLoadedPageEvent(event: LoadListStarted(params: event.params), emitter: emitter)
+            }
+        })
+        
         self.onEvent(LoadListRefreshed.self, handler: { [weak self] event, emitter in
             self?.loadListService.forceToRefresh()
             self?.onLoadListLoadedPageEvent(event: LoadListStarted(params: event.params), emitter: emitter)
