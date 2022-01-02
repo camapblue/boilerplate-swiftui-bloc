@@ -23,7 +23,7 @@ class ContactListServiceImpl: LoadListService<Contact> {
         return contactRepository.fetchContacts()
     }
     
-    override func loadItems(params: [String: AnyObject]?) throws -> Future<[Contact], Error> {
+    override func loadItems(params: [String: Any]?) throws -> Future<[Contact], Error> {
         // TODO: Add params
         return contactRepository
             .fetchContacts(size: 20)

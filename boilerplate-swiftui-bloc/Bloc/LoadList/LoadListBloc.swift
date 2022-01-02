@@ -9,7 +9,7 @@ import Combine
 import SwiftUI
 import SwiftBloc
 
-class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState> {
+class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState<T>> {
     private var loadListService: LoadListService<T>
     
     init(key: String, service: LoadListService<T>) {
@@ -17,19 +17,32 @@ class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState> {
         super.init(key: key, inititalState: LoadListLoadPageInitial())
         
         self.onEvent(LoadListStarted.self, handler: { [weak self] event, emitter in
-            self?.onLoadListStartedEvent(event: event, emitter: emitter)
+            self?.onLoadListLoadedPageEvent(event: event, emitter: emitter)
+        })
+        
+        self.onEvent(LoadListNextPage.self, handler: { [weak self] event, emitter in
+            self?.onLoadListLoadedPageEvent(event: event, emitter: emitter)
         })
         
         self.onEvent(LoadListRefreshed.self, handler: { [weak self] event, emitter in
             self?.loadListService.forceToRefresh()
-            self?.onLoadListStartedEvent(event: LoadListStarted(params: event.params), emitter: emitter)
+            self?.onLoadListLoadedPageEvent(event: LoadListStarted(params: event.params), emitter: emitter)
         })
     }
     
-    private func onLoadListStartedEvent(event: LoadListStarted, emitter: Emitter<LoadListState>) {
-        emitter.send(LoadListLoadPageInProgress())
+    private func onLoadListLoadedPageEvent(event: LoadListEvent, emitter: Emitter<LoadListState<T>>) {
+        var params = event.params ?? [String: Any]()
+        var allItems = [T]()
+        if event is LoadListStarted {
+            params["index"] = 0
+            emitter.send(LoadListLoadPageInProgress())
+        } else if event is LoadListNextPage, let currentState = state as? LoadListLoadPageSuccess<T> {
+            params["index"] = currentState.nextPage
+            allItems = currentState.items
+            emitter.send(LoadListLoadPageInProgress(items: allItems))
+        }
         
-        try! self.loadListService.loadItems(params: event.params)
+        try! self.loadListService.loadItems(params: params)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -40,7 +53,9 @@ class LoadListBloc<T: Equatable>: BaseBloc<LoadListEvent, LoadListState> {
                 }
             }, receiveValue: { items in
                 let uniquedItems = items.removingDuplicates()
-                let nextState = LoadListLoadPageSuccess(items: uniquedItems, nextPage: items.count, isFinish: true)
+                allItems = allItems + uniquedItems
+                let nextState = LoadListLoadPageSuccess(
+                    items: allItems, nextPage: allItems.count, isFinished: uniquedItems.isEmpty)
                 emitter.send(nextState)
             })
             .store(in: &self.disposables)

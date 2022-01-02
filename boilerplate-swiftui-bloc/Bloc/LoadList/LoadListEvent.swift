@@ -8,9 +8,9 @@
 import Foundation
 
 class LoadListEvent: Event {
-    var params: [String: AnyObject]?
+    var params: [String: Any]?
     
-    init(params: [String: AnyObject]? = nil) {
+    init(params: [String: Any]? = nil) {
         self.params = params
     }
 }

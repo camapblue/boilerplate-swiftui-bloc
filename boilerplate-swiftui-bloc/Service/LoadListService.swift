@@ -13,5 +13,5 @@ open class LoadListService<Item: Equatable> {
     
     func loadItems() throws -> Future<[Item], Error> { throw "not implemented yet" }
     
-    func loadItems(params: [String: AnyObject]?) throws -> Future<[Item], Error> { throw "not implemented yet" }
+    func loadItems(params: [String: Any]?) throws -> Future<[Item], Error> { throw "not implemented yet" }
 }

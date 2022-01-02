@@ -12,7 +12,7 @@ import Repository
 struct ContactListView: View {
     var body: some View {
         BlocProvider {
-            LoadListView<Contact>(pullToRefresh: true) { contact in
+            LoadListView<Contact>(pullToRefresh: true, isLoadMore: false) { contact in
                 let bloc = Blocs().contactBloc(contact: contact)
                 return AnyView(
                     BlocProvider {
@@ -52,7 +52,10 @@ struct ContactRowItem: View {
                 let contact = bloc.state.contact
                 HStack(alignment: .center) {
                     AvatarView(avatar: contact.avatar, size: 32)
-                    Text(contact.firstName)
+                    VStack(alignment: .leading) {
+                        Text(contact.fullName())
+                        Text("age: \(contact.age())")
+                    }
                     Spacer()
                 }
                 .frame(minHeight: 44, maxHeight: 44, alignment: .center)

@@ -7,34 +7,40 @@
 
 import Foundation
 
-class LoadListState: State {
-    var params: [String: AnyObject]?
-    init(params: [String: AnyObject]? = nil) {
+class LoadListState<T: Equatable>: State {
+    var params: [String: Any]?
+    var items: [T]
+    
+    init(params: [String: Any]? = nil, items: [T] = [T]()) {
         self.params = params
+        self.items = items
     }
 }
 
-class LoadListLoadPageInitial: LoadListState { }
+class LoadListLoadPageInitial<T: Equatable>: LoadListState<T> { }
 
-class LoadListLoadPageInProgress: LoadListState { }
+class LoadListLoadPageInProgress<T: Equatable>: LoadListState<T> {
+    init(items: [T] = [T]()) {
+        super.init(items: items)
+    }
+}
 
-class LoadListLoadPageSuccess<T: Equatable>: LoadListState {
-    var items: [T]
+class LoadListLoadPageSuccess<T: Equatable>: LoadListState<T> {
     var nextPage: Int
-    var isFinish: Bool
+    var isFinished: Bool
     
-    init(items: [T], nextPage: Int, isFinish: Bool, params: [String: AnyObject]? = nil) {
-        self.items = items
+    init(items: [T], nextPage: Int, isFinished: Bool, params: [String: Any]? = nil) {
         self.nextPage = nextPage
-        self.isFinish = isFinish
-        super.init(params: params)
+        self.isFinished = isFinished
+        
+        super.init(params: params, items: items)
     }
     
     static func == (lhs: LoadListLoadPageSuccess, rhs: LoadListLoadPageSuccess) -> Bool {
         return lhs.items == rhs.items
-            && lhs.nextPage == rhs.nextPage && lhs.isFinish == rhs.isFinish
+            && lhs.nextPage == rhs.nextPage && lhs.isFinished == rhs.isFinished
     }
 }
 
-class LoadListLoadPageFailure: LoadListState { }
+class LoadListLoadPageFailure<T: Equatable>: LoadListState<T> { }
 
