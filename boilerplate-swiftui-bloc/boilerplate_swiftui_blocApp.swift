@@ -11,7 +11,11 @@ import SwiftUI
 struct boilerplate_swiftui_blocApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            if Configs.shared.isStorybook {
+                Storybook()
+            } else {
+                SplashView()
+            }
         }
     }
 }

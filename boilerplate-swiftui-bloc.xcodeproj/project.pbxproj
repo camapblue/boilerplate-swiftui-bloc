@@ -20,6 +20,11 @@
 		A61AC663277EEC3700246A64 /* ContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC662277EEC3700246A64 /* ContactExtension.swift */; };
 		A61AC666277EECED00246A64 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC665277EECED00246A64 /* Date+Extension.swift */; };
 		A61AC670278054C300246A64 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC66F278054C300246A64 /* Array+Extension.swift */; };
+		A6376FE327818CEA00DFC0D9 /* Storybook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6376FE227818CEA00DFC0D9 /* Storybook.framework */; };
+		A6376FE427818CEA00DFC0D9 /* Storybook.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6376FE227818CEA00DFC0D9 /* Storybook.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A6376FEC278191CE00DFC0D9 /* AvataryViewStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6376FEB278191CE00DFC0D9 /* AvataryViewStory.swift */; };
+		A6376FF02781A14400DFC0D9 /* Storybook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6376FEF2781A14400DFC0D9 /* Storybook.swift */; };
+		A6376FF32781A3D700DFC0D9 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6376FF22781A3D700DFC0D9 /* Configs.swift */; };
 		A640711827799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640711727799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift */; };
 		A640711C27799CA400F3A9CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A640711B27799CA400F3A9CC /* Assets.xcassets */; };
 		A640711F27799CA400F3A9CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A640711E27799CA400F3A9CC /* Preview Assets.xcassets */; };
@@ -71,6 +76,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A663729F277BFD600017BD47 /* Repository.framework in Embed Frameworks */,
+				A6376FE427818CEA00DFC0D9 /* Storybook.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +100,10 @@
 		A61AC662277EEC3700246A64 /* ContactExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactExtension.swift; sourceTree = "<group>"; };
 		A61AC665277EECED00246A64 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		A61AC66F278054C300246A64 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		A6376FE227818CEA00DFC0D9 /* Storybook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Storybook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6376FEB278191CE00DFC0D9 /* AvataryViewStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvataryViewStory.swift; sourceTree = "<group>"; };
+		A6376FEF2781A14400DFC0D9 /* Storybook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storybook.swift; sourceTree = "<group>"; };
+		A6376FF22781A3D700DFC0D9 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		A640711427799CA100F3A9CC /* boilerplate-swiftui-bloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "boilerplate-swiftui-bloc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A640711727799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boilerplate_swiftui_blocApp.swift; sourceTree = "<group>"; };
 		A640711B27799CA400F3A9CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6376FE327818CEA00DFC0D9 /* Storybook.framework in Frameworks */,
 				A663729E277BFD600017BD47 /* Repository.framework in Frameworks */,
 				A338C112E30A58B52547CEE9 /* Pods_boilerplate_swiftui_bloc.framework in Frameworks */,
 			);
@@ -221,6 +232,23 @@
 			path = AvatarView;
 			sourceTree = "<group>";
 		};
+		A6376FE82781919A00DFC0D9 /* Storybook */ = {
+			isa = PBXGroup;
+			children = (
+				A6376FEB278191CE00DFC0D9 /* AvataryViewStory.swift */,
+				A6376FEF2781A14400DFC0D9 /* Storybook.swift */,
+			);
+			path = Storybook;
+			sourceTree = "<group>";
+		};
+		A6376FF12781A3C300DFC0D9 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				A6376FF22781A3D700DFC0D9 /* Configs.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		A640710B27799CA100F3A9CC = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +274,8 @@
 		A640711627799CA100F3A9CC /* boilerplate-swiftui-bloc */ = {
 			isa = PBXGroup;
 			children = (
+				A6376FF12781A3C300DFC0D9 /* Constant */,
+				A6376FE82781919A00DFC0D9 /* Storybook */,
 				A61AC64A277EB47700246A64 /* Model */,
 				A66372D4277C58D50017BD47 /* CommonUI */,
 				A66372C5277C1F3B0017BD47 /* Extensions */,
@@ -404,6 +434,7 @@
 		C82AB96B7BAE02FF0B29DD79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6376FE227818CEA00DFC0D9 /* Storybook.framework */,
 				A663729D277BFD600017BD47 /* Repository.framework */,
 				A663724C277B10910017BD47 /* librepository.a */,
 				2D18071E88F94CFBA285B235 /* Pods_boilerplate_swiftui_bloc.framework */,
@@ -655,6 +686,7 @@
 			files = (
 				A61AC652277EDC4100246A64 /* LazyView.swift in Sources */,
 				A66372C9277C1FB40017BD47 /* ContactListServiceImpl.swift in Sources */,
+				A6376FF32781A3D700DFC0D9 /* Configs.swift in Sources */,
 				A640711827799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift in Sources */,
 				A66372BA277C0CD60017BD47 /* BaseBloc.swift in Sources */,
 				A61AC654277EE3FB00246A64 /* ContactDetailView.swift in Sources */,
@@ -667,6 +699,7 @@
 				A61AC670278054C300246A64 /* Array+Extension.swift in Sources */,
 				A66372CF277C21DD0017BD47 /* LoadListState.swift in Sources */,
 				A61AC64F277EC5C300246A64 /* ContactListView.swift in Sources */,
+				A6376FF02781A14400DFC0D9 /* Storybook.swift in Sources */,
 				A66372C1277C0DB80017BD47 /* Services.swift in Sources */,
 				A61AC661277EE97C00246A64 /* AvatarView.swift in Sources */,
 				A61AC666277EECED00246A64 /* Date+Extension.swift in Sources */,
@@ -678,6 +711,7 @@
 				A66372C4277C1B510017BD47 /* LoadListService.swift in Sources */,
 				A66372CB277C21C70017BD47 /* LoadListBloc.swift in Sources */,
 				A6DBC38E277B076D00F90A05 /* ContactService.swift in Sources */,
+				A6376FEC278191CE00DFC0D9 /* AvataryViewStory.swift in Sources */,
 				A66372BF277C0D400017BD47 /* SplashView.swift in Sources */,
 				A66372C7277C1F540017BD47 /* String+Extenstion.swift in Sources */,
 				A66372D1277C57610017BD47 /* Blocs.swift in Sources */,
