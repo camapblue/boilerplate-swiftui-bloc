@@ -46,9 +46,12 @@
 		A66372D3277C57F80017BD47 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372D2277C57F80017BD47 /* Keys.swift */; };
 		A66372D7277C59380017BD47 /* LoadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372D6277C59380017BD47 /* LoadListView.swift */; };
 		A66372DA277C5EFB0017BD47 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372D9277C5EFB0017BD47 /* LoadingView.swift */; };
+		A6D814642782DFAF00D1A3DF /* ContactBlocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D814632782DFAF00D1A3DF /* ContactBlocTests.swift */; };
+		A6D814672782DFE600D1A3DF /* ContactServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D814662782DFE600D1A3DF /* ContactServiceTests.swift */; };
 		A6DBC38E277B076D00F90A05 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBC38D277B076D00F90A05 /* ContactService.swift */; };
 		A6DBC391277B079700F90A05 /* ContactServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBC390277B079700F90A05 /* ContactServiceImpl.swift */; };
 		CA60748E277EFA6A00C3E78A /* BlocProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60748D277EFA6A00C3E78A /* BlocProvider.swift */; };
+		CEB69978CA8F5B85D7C9C3FC /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2C28CA47A678102258317 /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,7 @@
 /* Begin PBXFileReference section */
 		3A203437182A768CCC9599BE /* Pods-boilerplate-swiftui-bloc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc.debug.xcconfig"; sourceTree = "<group>"; };
 		3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_blocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AA2C28CA47A678102258317 /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift"; path = "MockingbirdMocks/boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift"; sourceTree = "<group>"; };
 		4FE09A187718D31A3E561915 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.debug.xcconfig"; sourceTree = "<group>"; };
 		51BB6A82F1769CC2DD04FF63 /* Pods-boilerplate-swiftui-blocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-blocTests.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CDC487647CFEBA59D54D779 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 		A66372D6277C59380017BD47 /* LoadListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadListView.swift; sourceTree = "<group>"; };
 		A66372D9277C5EFB0017BD47 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A6CF409AE058E14747E5DAE0 /* Pods-boilerplate-swiftui-blocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-blocTests.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6D814632782DFAF00D1A3DF /* ContactBlocTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBlocTests.swift; sourceTree = "<group>"; };
+		A6D814662782DFE600D1A3DF /* ContactServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactServiceTests.swift; sourceTree = "<group>"; };
 		A6DBC38D277B076D00F90A05 /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		A6DBC390277B079700F90A05 /* ContactServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactServiceImpl.swift; sourceTree = "<group>"; };
 		C2F6579F3AB5B6AEFB312177 /* Pods-boilerplate-swiftui-bloc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +190,14 @@
 				DB029C75E985894AEBCBBECB /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		319F778B07E92DF01137373A /* Generated Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4AA2C28CA47A678102258317 /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift */,
+			);
+			name = "Generated Mocks";
 			sourceTree = "<group>";
 		};
 		A61AC649277EB3C500246A64 /* Common */ = {
@@ -262,6 +276,7 @@
 				A640711527799CA100F3A9CC /* Products */,
 				1C87592A8C50BA0F17FF32E6 /* Pods */,
 				C82AB96B7BAE02FF0B29DD79 /* Frameworks */,
+				319F778B07E92DF01137373A /* Generated Mocks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -307,6 +322,8 @@
 		A640712827799CA500F3A9CC /* boilerplate-swiftui-blocTests */ = {
 			isa = PBXGroup;
 			children = (
+				A6D814652782DFD100D1A3DF /* Service */,
+				A6D814622782DF9000D1A3DF /* Bloc */,
 				A640712927799CA500F3A9CC /* boilerplate_swiftui_blocTests.swift */,
 				A640712B27799CA500F3A9CC /* Info.plist */,
 			);
@@ -375,6 +392,22 @@
 				A66372D9277C5EFB0017BD47 /* LoadingView.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		A6D814622782DF9000D1A3DF /* Bloc */ = {
+			isa = PBXGroup;
+			children = (
+				A6D814632782DFAF00D1A3DF /* ContactBlocTests.swift */,
+			);
+			path = Bloc;
+			sourceTree = "<group>";
+		};
+		A6D814652782DFD100D1A3DF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A6D814662782DFE600D1A3DF /* ContactServiceTests.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		A6DBC385277AE9E600F90A05 /* Modules */ = {
@@ -476,6 +509,8 @@
 			buildConfigurationList = A640713C27799CA500F3A9CC /* Build configuration list for PBXNativeTarget "boilerplate-swiftui-blocTests" */;
 			buildPhases = (
 				1CC4A05CBC169E31D0D50604 /* [CP] Check Pods Manifest.lock */,
+				99FE6F5DEA503D7B4B250059 /* Clean Mockingbird Mocks */,
+				09468DB0D9031CF2D2BABCD0 /* Generate Mockingbird Mocks */,
 				A640712127799CA500F3A9CC /* Sources */,
 				A640712227799CA500F3A9CC /* Frameworks */,
 				A640712327799CA500F3A9CC /* Resources */,
@@ -579,6 +614,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		09468DB0D9031CF2D2BABCD0 /* Generate Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"/tmp/Mockingbird-E581045A-0951-49CF-9793-D742EB0B1269",
+			);
+			name = "Generate Mockingbird Mocks";
+			outputPaths = (
+				"$(SRCROOT)/MockingbirdMocks/boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-E581045A-0951-49CF-9793-D742EB0B1269'\n\nmockingbird generate \\\n  --targets 'boilerplate-swiftui-bloc' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift\" \\\n  --support \"${SRCROOT}/MockingbirdSupport\"";
+		};
 		16976B83421FC67C6FB8DF4D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -631,14 +682,33 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		99FE6F5DEA503D7B4B250059 /* Clean Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Clean Mockingbird Mocks";
+			outputPaths = (
+				"/tmp/Mockingbird-E581045A-0951-49CF-9793-D742EB0B1269",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $RANDOM > '/tmp/Mockingbird-E581045A-0951-49CF-9793-D742EB0B1269'\n";
 		};
 		DDD046460448414D800F667A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -648,9 +718,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -724,7 +798,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6D814642782DFAF00D1A3DF /* ContactBlocTests.swift in Sources */,
 				A640712A27799CA500F3A9CC /* boilerplate_swiftui_blocTests.swift in Sources */,
+				A6D814672782DFE600D1A3DF /* ContactServiceTests.swift in Sources */,
+				CEB69978CA8F5B85D7C9C3FC /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

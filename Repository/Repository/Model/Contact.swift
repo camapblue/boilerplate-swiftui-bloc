@@ -52,6 +52,7 @@ public class Contact: Codable, Equatable {
         if let birth = date {
             contact.birthday = birth
         }
+        contact.id = id
         return contact
     }
     

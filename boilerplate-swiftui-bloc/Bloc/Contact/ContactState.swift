@@ -7,17 +7,17 @@
 
 import Repository
 
-class ContactState: State {
-    var contact: Contact
+public class ContactState: State {
+    public var contact: Contact
     init(contact: Contact) {
         self.contact = contact
     }
 }
 
-class ContactInitial: ContactState {}
+public class ContactInitial: ContactState {}
 
-class ContactEditInProgress: ContactState {}
+public class ContactEditInProgress: ContactState {}
 
-class ContactEditSuccess: ContactState {}
+public class ContactEditSuccess: ContactState {}
 
-class ContactEditFailure: ContactState {}
+public class ContactEditFailure: ContactState {}

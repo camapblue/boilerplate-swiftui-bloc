@@ -9,6 +9,6 @@ import Foundation
 import Combine
 import Repository
 
-protocol ContactService {
+public protocol ContactService {
     func edit(contact: Contact) -> Future<Contact, Error>
 }

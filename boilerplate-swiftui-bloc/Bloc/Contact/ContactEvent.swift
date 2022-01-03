@@ -7,9 +7,9 @@
 
 import Repository
 
-class ContactEvent: Event {}
+public class ContactEvent: Event {}
 
-class ContactEdited: ContactEvent {
+public class ContactEdited: ContactEvent {
     var contact: Contact
     init(contact: Contact) {
         self.contact = contact

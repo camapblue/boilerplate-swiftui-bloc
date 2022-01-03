@@ -9,10 +9,10 @@ import Combine
 import Repository
 import SwiftBloc
 
-class ContactBloc: BaseBloc<ContactEvent, ContactState> {
+public class ContactBloc: BaseBloc<ContactEvent, ContactState> {
     private var contactService: ContactService
     
-    init(key: String, closeWithBlocKey: String? = nil, contact: Contact, service: ContactService) {
+    public init(key: String, closeWithBlocKey: String? = nil, contact: Contact, service: ContactService) {
         self.contactService = service
         
         super.init(
@@ -46,9 +46,5 @@ class ContactBloc: BaseBloc<ContactEvent, ContactState> {
                 emitter.send(nextState)
             })
             .store(in: &self.disposables)
-    }
-    
-    deinit {
-        print("Contact Bloc Deinit")
     }
 }

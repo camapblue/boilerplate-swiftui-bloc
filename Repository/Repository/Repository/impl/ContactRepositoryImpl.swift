@@ -28,7 +28,6 @@ public class ContactRepositoryImpl: ContactRepository {
     }
     
     public func fetchContacts(size: Int) -> Future<[Contact], Error> {
-        print("FETCH CONTACTS = \(size)")
         return Future { [weak self] promise in
             guard let self = self else {
                 promise(.success([Contact]()))
@@ -38,12 +37,9 @@ public class ContactRepositoryImpl: ContactRepository {
                 promise(.success(cached))
                 return
             }
-            print("FETCH CONTACT API NOW = \(size)")
-            print("CONTACT API = \(self.contactApi)")
             
             self.contactApi.fetchContacts(withSize: size)
                 .sink(receiveCompletion: { completion in
-                    print("COMPLETION = \(completion)")
                     switch completion {
                     case .finished:
                         break
@@ -51,7 +47,6 @@ public class ContactRepositoryImpl: ContactRepository {
                         promise(.failure(error))
                     }
                 }, receiveValue: { items in
-                    print("GET ITEMS NOW = \(items.count)")
                     self.contactDao.cacheContacts(contacts: items)
                     promise(.success(items))
                 })

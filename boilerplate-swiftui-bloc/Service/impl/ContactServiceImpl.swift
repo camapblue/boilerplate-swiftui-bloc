@@ -9,14 +9,14 @@ import Foundation
 import Combine
 import Repository
 
-class ContactServiceImpl: ContactService {
+public class ContactServiceImpl: ContactService {
     private var contactRepository: ContactRepository!
     
-    init(contactRepository: ContactRepository) {
+    public init(contactRepository: ContactRepository) {
         self.contactRepository = contactRepository
     }
     
-    func edit(contact: Contact) -> Future<Contact, Error> {
+    public func edit(contact: Contact) -> Future<Contact, Error> {
         return contactRepository.edit(contact: contact)
     }
 }

@@ -12,14 +12,15 @@ import Combine
 
 class ContactRepositoryTests: XCTestCase {
     
-    private var contactDao: ContactDao!
-    private var contactApi: ContactApi!
+    private var contactDao: ContactDaoMock!
+    private var contactApi: ContactApiMock!
     private var contactRepository: ContactRepository!
     private var cancellables: Set<AnyCancellable>!
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
+        cancellables = Set<AnyCancellable>()
         contactDao = mock(ContactDao.self)
         contactApi = mock(ContactApi.self)
         contactRepository = ContactRepositoryImpl(contactDao: contactDao, contactApi: contactApi)
@@ -35,7 +36,6 @@ class ContactRepositoryTests: XCTestCase {
         given(contactApi.fetchContacts(withSize: 5)).willReturn(
             Future { promise in
                 let items = [Contact.fakeContact()]
-                print("GET ITEMS = \(items.count)")
                 promise(.success(items))
             }
         )
@@ -49,7 +49,6 @@ class ContactRepositoryTests: XCTestCase {
         contactRepository
             .fetchContacts(size: 5)
             .sink { completion in
-                print("COMPLETION = \(completion)")
                 switch completion {
                 case .finished:
                     break
@@ -57,8 +56,6 @@ class ContactRepositoryTests: XCTestCase {
                     error = encounteredError
                 }
 
-                // Fullfilling our expectation to unblock
-                // our test execution:
                 expectation.fulfill()
             } receiveValue: { value in
                 contacts = value
