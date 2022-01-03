@@ -8,26 +8,27 @@
 import Foundation
 import Combine
 
-class ContactRepositoryImpl: ContactRepository {
+public class ContactRepositoryImpl: ContactRepository {
     
     private var contactDao: ContactDao!
     private var contactApi: ContactApi!
     private var disposables = Set<AnyCancellable>()
     
-    init(contactDao: ContactDao, contactApi: ContactApi) {
+    public init(contactDao: ContactDao, contactApi: ContactApi) {
         self.contactApi = contactApi
         self.contactDao = contactDao
     }
     
-    func clearCachedDataIfNeeded() {
+    public func clearCachedDataIfNeeded() {
         self.contactDao.clearCachedContacts()
     }
     
-    func fetchContacts() -> Future<[Contact], Error> {
+    public func fetchContacts() -> Future<[Contact], Error> {
         return fetchContacts(size: 5)
     }
     
-    func fetchContacts(size: Int) -> Future<[Contact], Error> {
+    public func fetchContacts(size: Int) -> Future<[Contact], Error> {
+        print("FETCH CONTACTS = \(size)")
         return Future { [weak self] promise in
             guard let self = self else {
                 promise(.success([Contact]()))
@@ -37,9 +38,12 @@ class ContactRepositoryImpl: ContactRepository {
                 promise(.success(cached))
                 return
             }
+            print("FETCH CONTACT API NOW = \(size)")
+            print("CONTACT API = \(self.contactApi)")
             
             self.contactApi.fetchContacts(withSize: size)
                 .sink(receiveCompletion: { completion in
+                    print("COMPLETION = \(completion)")
                     switch completion {
                     case .finished:
                         break
@@ -47,6 +51,7 @@ class ContactRepositoryImpl: ContactRepository {
                         promise(.failure(error))
                     }
                 }, receiveValue: { items in
+                    print("GET ITEMS NOW = \(items.count)")
                     self.contactDao.cacheContacts(contacts: items)
                     promise(.success(items))
                 })
@@ -54,7 +59,7 @@ class ContactRepositoryImpl: ContactRepository {
         }
     }
     
-    func edit(contact: Contact) -> Future<Contact, Error> {
+    public func edit(contact: Contact) -> Future<Contact, Error> {
         return Future { promise in
             if (contact.id == "bug") {
                 promise(.failure(ApiError.unknown))

@@ -1,18 +1,21 @@
 PODS:
   - Introspect (0.1.3)
   - Kingfisher (7.1.2)
+  - MockingbirdFramework (0.18.1)
   - SwiftBloc (1.0.7)
   - SwiftUIRefresh (0.0.3):
     - Introspect (~> 0.1.0)
 
 DEPENDENCIES:
   - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`)
+  - MockingbirdFramework (~> 0.18)
   - SwiftBloc (from `https://github.com/camapblue/SwiftBloc`)
   - SwiftUIRefresh (from `https://github.com/timbersoftware/SwiftUIRefresh.git`)
 
 SPEC REPOS:
   trunk:
     - Introspect
+    - MockingbirdFramework
 
 EXTERNAL SOURCES:
   Kingfisher:
@@ -36,9 +39,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Introspect: 2be020f30f084ada52bb4387fff83fa52c5c400e
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  MockingbirdFramework: f68dfb16f5b8bff2ebb6e8fefe565f8a1d573cc7
   SwiftBloc: 11c209f0ecb00e8b8da813323e24f9408476f498
   SwiftUIRefresh: ca6ae2718d25aad5dd68bbf5d2ae36ef6ade98bf
 
-PODFILE CHECKSUM: 6810a590d8f2461395cbda738a17c0ccfc3782a1
+PODFILE CHECKSUM: 5b33e0f6ab3f04c655ac22b8daae20f24b67d20c
 
 COCOAPODS: 1.11.2

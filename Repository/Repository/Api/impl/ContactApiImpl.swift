@@ -8,8 +8,8 @@
 import Foundation
 import Combine
 
-class ContactApiImpl: ContactApi {
-    func fetchContacts(withSize size: Int = 5) -> Future<[Contact], Error> {
+public class ContactApiImpl: ContactApi {
+    public func fetchContacts(withSize size: Int = 5) -> Future<[Contact], Error> {
         let url = URL(string: "https://randomuser.me/api/?results=\(size)")!
         return Future { [weak self] promise in
             guard self != nil else {

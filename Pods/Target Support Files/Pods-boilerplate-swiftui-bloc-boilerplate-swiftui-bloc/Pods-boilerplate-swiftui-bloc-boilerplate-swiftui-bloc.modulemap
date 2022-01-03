@@ -1,0 +1,6 @@
+framework module Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc {
+  umbrella header "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-umbrella.h"
+
+  export *
+  module * { export * }
+}

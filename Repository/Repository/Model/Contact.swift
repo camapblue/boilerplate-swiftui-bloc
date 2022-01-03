@@ -23,7 +23,7 @@ public class Contact: Codable, Equatable {
     public private(set) var avatar: String
     public private(set) var nationality: String
     
-    public static func fakeContact(birthday date: Date? = nil) -> Contact {
+    public static func fakeContact(id: String = "fake_id", birthday date: Date? = nil) -> Contact {
         let dic = [
             "name": [
                 "first": "David",
