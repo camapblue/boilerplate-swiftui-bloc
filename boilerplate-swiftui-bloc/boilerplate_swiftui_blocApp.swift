@@ -11,11 +11,18 @@ import SwiftUI
 struct boilerplate_swiftui_blocApp: App {
     var body: some Scene {
         WindowGroup {
-            if Configs.shared.isStorybook {
-                Storybook()
-            } else {
-                SplashView()
+            NavigationView {
+                RouterView(
+                    router: .main,
+                    root: Configs.shared.isStorybook ? .storyBook : .splash
+                )
             }
+            .environment(\.router, .main)
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
+}
+
+extension NavigationRouter {
+  static var main = NavigationRouter(routes: .all)
 }
