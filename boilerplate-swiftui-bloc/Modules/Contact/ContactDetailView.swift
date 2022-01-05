@@ -22,30 +22,26 @@ struct ContactDetailView: View {
                     AvatarView(avatar: contact.avatar, size: 128)
                     Rectangle().fill(Color.clear).frame(height: 44)
                     Text(contact.fullName())
-                        .font(.custom("Helvetica", size: 24))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
+                        .primaryRegular()
                     Rectangle().fill(Color.clear).frame(height: 44)
                     HStack(alignment: .firstTextBaseline) {
                         Text("address:")
-                            .font(.custom("Helvetica", size: 15))
-                            .foregroundColor(.gray)
+                            .primaryRegular(fontSize: 15, color: .gray)
                             .frame(width: 100, alignment: .trailing)
                         Rectangle().fill(Color.clear).frame(width: 10, height: 20)
                         Text(contact.fullAddress())
-                            .font(.custom("Helvetica", size: 17))
-                            .foregroundColor(.black)
+                            .primaryRegular(fontSize: 17)
                         Spacer()
                     }
                     .frame(minWidth: 0, maxWidth: .infinity)
                     HStack {
                         Text("age:")
-                            .font(.custom("Helvetica", size: 15))
+                            .primaryRegular(fontSize: 15, color: .gray)
                             .foregroundColor(.gray)
                             .frame(width: 100, alignment: .trailing)
                         Rectangle().fill(Color.clear).frame(width: 10, height: 20)
                         Text("\(contact.age())")
-                            .font(.custom("Helvetica", size: 17))
+                            .primaryRegular(fontSize: 17)
                             .foregroundColor(.black)
                         Spacer()
                     }
@@ -55,11 +51,6 @@ struct ContactDetailView: View {
             }
             .navigationTitle(contact.firstName)
         }, base: self.bloc)
-        .onAppear {
-            print("Contact Detail appeared!")
-        }.onDisappear {
-            print("Contact Detail disappeared!")
-        }
     }
 }
 
