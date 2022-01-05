@@ -172,12 +172,16 @@ Here is list all of key folders or files in code structure:
 |   |           |-- language_state.dart     *define all State class that extends of Equatable, must follow the naming convention*
 |   |           |-- language.dart           *the index file that export all files in bloc folder*
 |   |   |-- Extensions                      *All foundation extensions class, such as String, Int, Date, ...
-|   |   |-- Global                          *define all constant values such Keys, Strings, ...*
+|   |   |-- Routing                         *define all Routers in application
+|   |   |-- Theme                           *includes Design Tokens to manage all Styles such as font, size, color, spacing
+|   |   |-- Constant                        *define all constant values such Keys, Strings, ...*
+|   |   |-- Global                          *includes all global task such as Analytics, Messages, ...
 |   |   |-- Model                           *define all extension entities and all entities that need in UI layer*
 |   |   |-- Modules                         *define all UI Views that categorized by module or epic*
 |   |   |-- Service                         *define all service classes*
 |   |   |-- Utils                           *define all utility classes*
 |   |   |-- CommonUI                        *define all common Views and can use across modules but not use bloc inside*
+|   |   |-- 3rdParty                        *includes 3rd party that need to customize such as SwiftUIRouter
 |   |   |-- boilerplate_swiftui_blocApp.swift                       *the main class that app launch from*
 |   |-- boilerplate-swiftui-blocTests
 |-- Repository
@@ -230,7 +234,7 @@ Change configuration to run Storybook in Configs.swift in Constant folder:
 then, run app to enjoy Storybook
 
 ## Router
-
+Define all Routers using in app, includes 
 
 ## Environment
 
