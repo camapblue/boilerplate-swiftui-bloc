@@ -14,9 +14,9 @@ extension NavigationRouteLink {
     static var storyBook: NavigationRouteLink { "/storyBook" }
     static var contactList: NavigationRouteLink { "/contactList" }
     
-    static func contactDetails(with contactBloc: ContactBloc) -> NavigationRouteLink {
-        NavigationRouteLink(path: "/contact/\(contactBloc.key)", meta: [
-            "bloc": contactBloc,
+    static func contactDetails(with contactId: String) -> NavigationRouteLink {
+        NavigationRouteLink(path: "/contact/\(contactId)", meta: [
+            "contactId": contactId,
         ])
     }
 }
@@ -36,7 +36,9 @@ extension Array where Element == NavigationRoute {
         let contactDetails = NavigationRoute(path: "/contact/{id}") { route in
             ContactDetailView()
                 .provideBloc(create: {
-                    route.link.meta["bloc"] as! ContactBloc
+                    BlocManager.shared.blocByKey(
+                        key: Keys.Bloc.contactBlocById(id: route.link.meta["contactId"] as! String)
+                    ) as! ContactBloc
                 })
         }
         

@@ -30,7 +30,7 @@ CHECKOUT OPTIONS:
     :commit: 15dde451f97a8ae18ea4f94969b7c8546f034b37
     :git: https://github.com/onevcat/Kingfisher.git
   SwiftBloc:
-    :commit: 083cc8fa3a60d9e212a646584563966472557fab
+    :commit: 8b1722f3cbf3fd6d0c0b2646a8a85726d03bc7b4
     :git: https://github.com/camapblue/SwiftBloc
   SwiftUIRefresh:
     :commit: fa8fac7b5eb5c729983a8bef65f094b5e0d12014
@@ -43,6 +43,6 @@ SPEC CHECKSUMS:
   SwiftBloc: e97925ca6c2469dbb76aefcb28e9cd616e650e3a
   SwiftUIRefresh: ca6ae2718d25aad5dd68bbf5d2ae36ef6ade98bf
 
-PODFILE CHECKSUM: 3c10bcfcb89f7fc375459c73ecae648f0baab2f9
+PODFILE CHECKSUM: 9c0258c266c03e0c0ecb0f633a10899546fb1c4f
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2
