@@ -234,7 +234,43 @@ Change configuration to run Storybook in Configs.swift in Constant folder:
 then, run app to enjoy Storybook
 
 ## Router
-Define all Routers using in app, includes 
+Define all Routers using in app, includes all parameters, BlocProvider, ...:
+```swift
+    static var all: [NavigationRoute] {
+        let splash = NavigationRoute(path: "/splash", destination: SplashView())
+        let storyBook = NavigationRoute(path: "/storyBook", destination: Storybook())
+        
+        let contactList = NavigationRoute(path: "/contactList") {
+            ContactListView()
+                .provideBloc(create: {
+                    Blocs().contactListBloc()
+                })
+        }
+        
+        let contactDetails = NavigationRoute(path: "/contact/{id}") { route in
+            ContactDetailView()
+                .provideBloc(create: {
+                    BlocManager.shared.blocByKey(
+                        key: Keys.Bloc.contactBlocById(id: route.link.meta["contactId"] as! String)
+                    ) as! ContactBloc
+                })
+        }
+        
+        return [splash, storyBook, contactList, contactDetails]
+    }
+```
+
+Navigate to new screen:
+```swift
+    @Environment(\.router) var router
+
+    Button(action: {
+        router.push(link: .contactDetails(with: contact.id))
+    }, label: {
+        ContactRowItem()
+            .provideBloc(create: { Blocs().contactBloc(contact: contact) })
+    })
+```
 
 ## Environment
 
