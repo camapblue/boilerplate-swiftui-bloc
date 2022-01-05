@@ -105,14 +105,12 @@
 		6A10452C7C1949F05ECA4C7AC8B4936E /* UIKitIntrospectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C695C715E019D7717811C945329D867 /* UIKitIntrospectionViewController.swift */; };
 		6A36F5FD3271AE91E49F202705373AEC /* Mockingbird.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD8D54E194661D1F8E1F8118E26729E /* Mockingbird.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A984A862674F4678026F25418076D78 /* MockingbirdFramework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D75BC92A85A68FF93990C137D14373A /* MockingbirdFramework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BC878B6D048561BFC0A1DC303094304 /* Pods-boilerplate-swiftui-blocTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B2ACF84D28B84F7A9F2050E656EC70 /* Pods-boilerplate-swiftui-blocTests-dummy.m */; };
 		6E128592792A8F749A580A0514632BC7 /* MKBUnsignedIntInvocationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B26DEC9AC3D9C39F250C9EC6F2BACAC6 /* MKBUnsignedIntInvocationHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6ED94C471C21574636FEA30A3486B6C6 /* MKBTypeFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE52AA90D5027C826DEFD3A82643C94 /* MKBTypeFacade.m */; };
 		6FDC885BBA7E3DBC517FCD1D9C135107 /* InvocationForwarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D02D5564459BBF72B7791CA79AF4183 /* InvocationForwarding.swift */; };
 		70FEC06F54286257E1BA1ECA0C99198D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CBBEBD40BDA8A1B6BCBED556D02A7 /* Image.swift */; };
 		711C1A72F1D7C3D742E51A31CA284B63 /* ValueProvider+Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0283D14A1F969EE3CF279B77AA0D05D4 /* ValueProvider+Collections.swift */; };
 		7412FF235C5E515D54FF4B04AC4FF287 /* MKBUnsignedShortInvocationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EDB7ECDAEE665BB24471DEAEA21AF5 /* MKBUnsignedShortInvocationHandler.m */; };
-		7461FA9B5C7D59BD2B32455E44A7FE89 /* Pods-boilerplate-swiftui-blocTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D1D84EC825CB4668EA7B61707FCFF7 /* Pods-boilerplate-swiftui-blocTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75C18001593BDE2E3AF9872E1932E2F5 /* MKBProtocolMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 439D03C42DF955A76FCF67651BD941A2 /* MKBProtocolMock.m */; };
 		76B3648900CCBD35599E0D6C131E8FED /* Introspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43B6EC5FD94B093E5ADAD01C26D8D8 /* Introspect.swift */; };
 		772D2E6BB35A324B7AA3D9DB1D1AE8B2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F87490C44C15BDF73994158E1C16D /* Array+Extensions.swift */; };
@@ -160,11 +158,11 @@
 		AF75494BDD65188935619639652F6246 /* SequenceProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314AC594A8A0F7B8F39BF1CF83C8562F /* SequenceProviders.swift */; };
 		B25E07EA645911443A38DA1E68166156 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF378D98069ED107C235D116E0A6161C /* Box.swift */; };
 		B4D401CAF0811AC102B38F62DA7EAC75 /* ValueProvider+Tuples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717AA9053834C14D831D91F3F7D81115 /* ValueProvider+Tuples.swift */; };
+		B67FA6A6A07414891D7BBC26DA5A3965 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BE167EA9A3CEE64C73B79D3FC21689 /* Foundation.framework */; };
 		BA5C2E64BA0F143474D736F5783A281B /* ValueProvider+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708593D61EAEF7671D391D84CE0F3AD3 /* ValueProvider+Foundation.swift */; };
 		BCB86CA0A8F801EA15ABB57644433A76 /* MKBInvocationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B145FE7D67CF75EDBCCDE70A52E385E /* MKBInvocationHandler.m */; };
 		BCC1871CC24286CCF9C79A1998661C98 /* ArgumentCaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30B48822B96672E96F5444827BAEAC /* ArgumentCaptor.swift */; };
 		BD382E78580D295D10100678D4F66A76 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A926BD56491E43CDDFE1C4896310D33A /* String+MD5.swift */; };
-		BE2C520563BFAAB0CD380FF692F5A9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BE167EA9A3CEE64C73B79D3FC21689 /* Foundation.framework */; };
 		C02640ECE253568ED9CB56AA5610C2FD /* StubbingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFC16D8592E0C8684850EB62A4DD1F0 /* StubbingContext.swift */; };
 		C111042A3FD74F2E3731B00F27A4E9E2 /* MockingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3720203B620292AAC8FAA9197B2246 /* MockingContext.swift */; };
 		C55EB1650CD2AEC365312487AFCA4905 /* MKBClassMock.m in Sources */ = {isa = PBXBuildFile; fileRef = D3120905FC92465E1E723DD8632C21CD /* MKBClassMock.m */; };
@@ -185,6 +183,7 @@
 		D9291A77FE3E05B0DF0E1019571696D9 /* MKBUnsignedLongLongInvocationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F6525B468E30B86ADB35D3EEFD693205 /* MKBUnsignedLongLongInvocationHandler.m */; };
 		D9A81C15BB67E091AD16F709D6CDFD84 /* MKBConcreteMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5990644A30150BEE5A7C9788D372A289 /* MKBConcreteMock.m */; };
 		DAFC6CE6321395CF4523DD66DADBB9BA /* ImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11160EB4E56EEC9D4CDFE4FD8C5F39E /* ImageDrawing.swift */; };
+		DB01FED16E0F37E3A16F52972D96AFEB /* Pods-boilerplate-swiftui-blocTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B2ACF84D28B84F7A9F2050E656EC70 /* Pods-boilerplate-swiftui-blocTests-dummy.m */; };
 		DB48A81BD7FE526409E14A9B26F51070 /* MKBFloatInvocationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E448D3D81EEEF3369B28E3C8624B743 /* MKBFloatInvocationHandler.m */; };
 		DBB8088E14A2ADEDB1CD840BAC835267 /* CPListItem+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5313688E6EB0E531E351839E9AB84FE2 /* CPListItem+Kingfisher.swift */; };
 		DC7AF75AD43D1F2FF3CF1E4BCAE0A639 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BE167EA9A3CEE64C73B79D3FC21689 /* Foundation.framework */; };
@@ -211,6 +210,7 @@
 		EC6A591DAE6B77294886946EE7EBBBAB /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E27209AF12E8E1EFEB71ADD2E411D9A /* PullToRefresh.swift */; };
 		EC7F9DDC3F0A333C45D09FAC005C58EA /* Pods-boilerplate-swiftui-bloc-RepositoryTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 694753745CB5455EE4446DD6AB31A5D8 /* Pods-boilerplate-swiftui-bloc-RepositoryTests-dummy.m */; };
 		ECA9F90E343361BBE7F937FFA6D18C60 /* Stubbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AADAB4335088408FD6B09F4BB8137F /* Stubbing.swift */; };
+		ECF237A456ADD9D0E1AE532A4C1682EB /* Pods-boilerplate-swiftui-blocTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D1D84EC825CB4668EA7B61707FCFF7 /* Pods-boilerplate-swiftui-blocTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED0C8BA7560D7324587B353E0960479F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919410E7302E74E9C8AF2E43232CFCF /* ImageCache.swift */; };
 		EE39647FB5FEBDC5F81E2A7F2444D721 /* ValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16426ACA8D8FF8A9F566EB53768EC50D /* ValueProvider.swift */; };
 		EF9C4588CDA85AED8BBCF77451B2A35B /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689E8E866DDAF44EC2647B689C826CF8 /* ImageProcessor.swift */; };
@@ -239,6 +239,13 @@
 			remoteGlobalIDString = 61D438AB40BE6FBCAA956367F495DF55;
 			remoteInfo = MockingbirdFramework;
 		};
+		2087432AA776359A9D5DEA0F113B8474 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B423D64BA2604384F4B409EB2A8FB467;
+			remoteInfo = "Pods-boilerplate-swiftui-bloc";
+		};
 		487159C0EF4B338A8D5A371CE8C96D54 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -252,13 +259,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 79B7D7E4BAADFFEE04B13B9BF7737A2A;
 			remoteInfo = SwiftBloc;
-		};
-		5C2264001D1ADE70199CE1AD218417FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B423D64BA2604384F4B409EB2A8FB467;
-			remoteInfo = "Pods-boilerplate-swiftui-bloc";
 		};
 		7CA3BBF2C2D81645F274A0D73BE42845 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -274,7 +274,7 @@
 			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
 			remoteInfo = Kingfisher;
 		};
-		8E5149476107340F28469495495DC150 /* PBXContainerItemProxy */ = {
+		85FAD89BD0F1E76A6D04EC07903608E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -287,6 +287,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 97E3685499568DCCBA6C15905F707BDC;
 			remoteInfo = Introspect;
+		};
+		DD3532592756B4DD792502951E8A0274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79B7D7E4BAADFFEE04B13B9BF7737A2A;
+			remoteInfo = SwiftBloc;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -618,6 +625,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B351632254A9BAD97306ABDC49D9F464 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67FA6A6A07414891D7BBC26DA5A3965 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC229B48F50A8DBBDD20E2D2A3A9A898 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -640,14 +655,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ECA8DCF8FC4C710FD299DAED13BBCAC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F1AC22B329E72B4BF4B0FF04C44CF15F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE2C520563BFAAB0CD380FF692F5A9D5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1218,11 +1225,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0A60291E2E789FC76993CB7A29DC0FA /* Headers */ = {
+		D68B3F7B62C104D27F077A1917A2EB78 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7461FA9B5C7D59BD2B32455E44A7FE89 /* Pods-boilerplate-swiftui-blocTests-umbrella.h in Headers */,
+				ECF237A456ADD9D0E1AE532A4C1682EB /* Pods-boilerplate-swiftui-blocTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1351,18 +1358,19 @@
 		};
 		C17B029D1AC9A38B47BF7AA7DCC960EF /* Pods-boilerplate-swiftui-blocTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09055AD18DAE3E0130C85843C596C07C /* Build configuration list for PBXNativeTarget "Pods-boilerplate-swiftui-blocTests" */;
+			buildConfigurationList = F6EBFBC27E3F0371C7206B1F43638A06 /* Build configuration list for PBXNativeTarget "Pods-boilerplate-swiftui-blocTests" */;
 			buildPhases = (
-				D0A60291E2E789FC76993CB7A29DC0FA /* Headers */,
-				9522934B9A92F4CC2AE9B8ADBA0E63ED /* Sources */,
-				F1AC22B329E72B4BF4B0FF04C44CF15F /* Frameworks */,
-				8541E7766129C9B28E095E856DBB649B /* Resources */,
+				D68B3F7B62C104D27F077A1917A2EB78 /* Headers */,
+				103C85BC863BC98D149A99DA574A8273 /* Sources */,
+				B351632254A9BAD97306ABDC49D9F464 /* Frameworks */,
+				C9CA73933D48D0E99720215FBFF01AD7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C0DC9FDD83669217960FEA5A502B97FB /* PBXTargetDependency */,
-				B1175EDDBCDF4E6AD78E950F63FB78F5 /* PBXTargetDependency */,
+				5E359A9A31C3ED92D5CE8D75AC4E2C8F /* PBXTargetDependency */,
+				D844BEF9FB7F45DAD4A9FAC9C23A2E31 /* PBXTargetDependency */,
+				F4A9E57DF66B6BCF19B7AB6DC8D74C4F /* PBXTargetDependency */,
 			);
 			name = "Pods-boilerplate-swiftui-blocTests";
 			productName = Pods_boilerplate_swiftui_blocTests;
@@ -1497,13 +1505,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8541E7766129C9B28E095E856DBB649B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9154F29DA54CFA1566334E5D28F2C2AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1512,6 +1513,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C5A66D00CCBA1409A8491FC061A6BA0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9CA73933D48D0E99720215FBFF01AD7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1535,6 +1543,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		103C85BC863BC98D149A99DA574A8273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB01FED16E0F37E3A16F52972D96AFEB /* Pods-boilerplate-swiftui-blocTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15DE9F74CA1D0E203B3F9AA4D980B1A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1709,14 +1725,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9522934B9A92F4CC2AE9B8ADBA0E63ED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6BC878B6D048561BFC0A1DC303094304 /* Pods-boilerplate-swiftui-blocTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B909D3F6B19A1D2AAFFCA90BC1FFF1FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1800,6 +1808,12 @@
 			target = 97E3685499568DCCBA6C15905F707BDC /* Introspect */;
 			targetProxy = 487159C0EF4B338A8D5A371CE8C96D54 /* PBXContainerItemProxy */;
 		};
+		5E359A9A31C3ED92D5CE8D75AC4E2C8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MockingbirdFramework;
+			target = 61D438AB40BE6FBCAA956367F495DF55 /* MockingbirdFramework */;
+			targetProxy = 85FAD89BD0F1E76A6D04EC07903608E7 /* PBXContainerItemProxy */;
+		};
 		5E509FA025BFA72BF0DCA1D6CB3DC566 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kingfisher;
@@ -1812,17 +1826,17 @@
 			target = DF1043773BCDA1ADFCD6F61A2E539F50 /* SwiftUIRefresh */;
 			targetProxy = 7CA3BBF2C2D81645F274A0D73BE42845 /* PBXContainerItemProxy */;
 		};
-		B1175EDDBCDF4E6AD78E950F63FB78F5 /* PBXTargetDependency */ = {
+		D844BEF9FB7F45DAD4A9FAC9C23A2E31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-boilerplate-swiftui-bloc";
 			target = B423D64BA2604384F4B409EB2A8FB467 /* Pods-boilerplate-swiftui-bloc */;
-			targetProxy = 5C2264001D1ADE70199CE1AD218417FD /* PBXContainerItemProxy */;
+			targetProxy = 2087432AA776359A9D5DEA0F113B8474 /* PBXContainerItemProxy */;
 		};
-		C0DC9FDD83669217960FEA5A502B97FB /* PBXTargetDependency */ = {
+		F4A9E57DF66B6BCF19B7AB6DC8D74C4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MockingbirdFramework;
-			target = 61D438AB40BE6FBCAA956367F495DF55 /* MockingbirdFramework */;
-			targetProxy = 8E5149476107340F28469495495DC150 /* PBXContainerItemProxy */;
+			name = SwiftBloc;
+			target = 79B7D7E4BAADFFEE04B13B9BF7737A2A /* SwiftBloc */;
+			targetProxy = DD3532592756B4DD792502951E8A0274 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1897,43 +1911,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		217C9BA139F568D040FDCA64E694AAE8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3E9B22D29D0DCF12059E632A8946563 /* Pods-boilerplate-swiftui-blocTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		231528393B7084E13F97FF9EF804A1C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2087,6 +2064,44 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5244354C4462D5AD2BBEBBB5AEDC0C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC933339D4DBFC931FA257B3EF494DAC /* Pods-boilerplate-swiftui-blocTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -2283,9 +2298,9 @@
 			};
 			name = Debug;
 		};
-		A8A323C4127CCD084E8441C44ED06C53 /* Release */ = {
+		A439CCA5EDB23B5B2B2D4E3C8DEE0FC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC933339D4DBFC931FA257B3EF494DAC /* Pods-boilerplate-swiftui-blocTests.release.xcconfig */;
+			baseConfigurationReference = E3E9B22D29D0DCF12059E632A8946563 /* Pods-boilerplate-swiftui-blocTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2315,11 +2330,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		A9E2D954DA8B75BB84339887880CCE7B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2686,15 +2700,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		09055AD18DAE3E0130C85843C596C07C /* Build configuration list for PBXNativeTarget "Pods-boilerplate-swiftui-blocTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				217C9BA139F568D040FDCA64E694AAE8 /* Debug */,
-				A8A323C4127CCD084E8441C44ED06C53 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1B4245D565E60AD5C4C309E57C32E817 /* Build configuration list for PBXNativeTarget "Introspect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2781,6 +2786,15 @@
 			buildConfigurations = (
 				C8DEB3594DC27D6BD0BD3EFACB1A6532 /* Debug */,
 				12F9CC252E46831B56806E098D026979 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6EBFBC27E3F0371C7206B1F43638A06 /* Build configuration list for PBXNativeTarget "Pods-boilerplate-swiftui-blocTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A439CCA5EDB23B5B2B2D4E3C8DEE0FC9 /* Debug */,
+				5244354C4462D5AD2BBEBBB5AEDC0C6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

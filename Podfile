@@ -21,6 +21,7 @@ target 'boilerplate-swiftui-bloc' do
     inherit! :search_paths
     # Pods for testing
     pod 'MockingbirdFramework', '~> 0.18'
+    pod 'SwiftBloc', :git => 'https://github.com/camapblue/SwiftBloc'
   end
 
   target 'boilerplate-swiftui-blocUITests' do

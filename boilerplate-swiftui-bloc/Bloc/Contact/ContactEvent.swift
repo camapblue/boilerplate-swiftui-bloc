@@ -11,7 +11,7 @@ public class ContactEvent: Event {}
 
 public class ContactEdited: ContactEvent {
     var contact: Contact
-    init(contact: Contact) {
+    public init(contact: Contact) {
         self.contact = contact
     }
 }

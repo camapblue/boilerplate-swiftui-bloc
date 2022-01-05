@@ -9,8 +9,12 @@ import Repository
 
 public class ContactState: State {
     public var contact: Contact
-    init(contact: Contact) {
+    public init(contact: Contact) {
         self.contact = contact
+    }
+    
+    static public func == (lhs: ContactState, rhs: ContactState) -> Bool {
+        return lhs.contact == rhs.contact
     }
 }
 
