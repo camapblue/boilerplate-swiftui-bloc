@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58B3D86735B9055FE68B918F /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF7914AACE3E78797DAFC61 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */; };
+		30DBA42DB15FB67317351C62 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9582F834E8EC4A0D784E95F /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */; };
 		8C39492B2ACC67FD39218881 /* Pods_boilerplate_swiftui_blocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */; };
 		8FAB86C475C7BE245E2A7DF1 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */; };
 		A61AC64F277EC5C300246A64 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC64E277EC5C300246A64 /* ContactListView.swift */; };
@@ -59,7 +59,6 @@
 		CA27371F27856E0400DE14A3 /* RouterLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371727856E0400DE14A3 /* RouterLink.swift */; };
 		CA27372027856E0400DE14A3 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371827856E0400DE14A3 /* RouterView.swift */; };
 		CA27372327856F0D00DE14A3 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27372227856F0D00DE14A3 /* Routes.swift */; };
-		CA60748E277EFA6A00C3E78A /* BlocProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60748D277EFA6A00C3E78A /* BlocProvider.swift */; };
 		CEB69978CA8F5B85D7C9C3FC /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2C28CA47A678102258317 /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +148,7 @@
 		A6D814662782DFE600D1A3DF /* ContactServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactServiceTests.swift; sourceTree = "<group>"; };
 		A6DBC38D277B076D00F90A05 /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		A6DBC390277B079700F90A05 /* ContactServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactServiceImpl.swift; sourceTree = "<group>"; };
+		B9582F834E8EC4A0D784E95F /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F6579F3AB5B6AEFB312177 /* Pods-boilerplate-swiftui-bloc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc.release.xcconfig"; sourceTree = "<group>"; };
 		CA27371027856E0400DE14A3 /* OnDismantle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDismantle.swift; sourceTree = "<group>"; };
 		CA27371127856E0400DE14A3 /* NavigationRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRoute.swift; sourceTree = "<group>"; };
@@ -159,9 +159,7 @@
 		CA27371727856E0400DE14A3 /* RouterLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterLink.swift; sourceTree = "<group>"; };
 		CA27371827856E0400DE14A3 /* RouterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		CA27372227856F0D00DE14A3 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
-		CA60748D277EFA6A00C3E78A /* BlocProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlocProvider.swift; sourceTree = "<group>"; };
 		CE112867221D3CD80C94A050 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.release.xcconfig"; sourceTree = "<group>"; };
-		DAF7914AACE3E78797DAFC61 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB029C75E985894AEBCBBECB /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,7 +170,7 @@
 			files = (
 				A6376FE327818CEA00DFC0D9 /* Storybook.framework in Frameworks */,
 				A663729E277BFD600017BD47 /* Repository.framework in Frameworks */,
-				58B3D86735B9055FE68B918F /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */,
+				30DBA42DB15FB67317351C62 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +445,6 @@
 				A66372C2277C1B2E0017BD47 /* LoadList */,
 				A66372B9277C0CD60017BD47 /* BaseBloc.swift */,
 				A66372BB277C0D080017BD47 /* BlocManager.swift */,
-				CA60748D277EFA6A00C3E78A /* BlocProvider.swift */,
 				A66372D0277C57610017BD47 /* Blocs.swift */,
 				A66372D2277C57F80017BD47 /* Keys.swift */,
 			);
@@ -496,7 +493,7 @@
 				A663724C277B10910017BD47 /* librepository.a */,
 				927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */,
 				3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */,
-				DAF7914AACE3E78797DAFC61 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */,
+				B9582F834E8EC4A0D784E95F /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -560,7 +557,7 @@
 				A640711127799CA100F3A9CC /* Frameworks */,
 				A640711227799CA100F3A9CC /* Resources */,
 				A66372A0277BFD600017BD47 /* Embed Frameworks */,
-				5A6EDF4740336F0EF082813E /* [CP] Embed Pods Frameworks */,
+				C3AF7C7CB9B118B41CA83511 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -741,7 +738,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A6EDF4740336F0EF082813E /* [CP] Embed Pods Frameworks */ = {
+		99FE6F5DEA503D7B4B250059 /* Clean Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Clean Mockingbird Mocks";
+			outputPaths = (
+				"/tmp/Mockingbird-E581045A-0951-49CF-9793-D742EB0B1269",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $RANDOM > '/tmp/Mockingbird-E581045A-0951-49CF-9793-D742EB0B1269'\n";
+		};
+		C3AF7C7CB9B118B41CA83511 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -757,21 +769,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		99FE6F5DEA503D7B4B250059 /* Clean Mockingbird Mocks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Clean Mockingbird Mocks";
-			outputPaths = (
-				"/tmp/Mockingbird-E581045A-0951-49CF-9793-D742EB0B1269",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo $RANDOM > '/tmp/Mockingbird-E581045A-0951-49CF-9793-D742EB0B1269'\n";
 		};
 		DDD046460448414D800F667A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -850,7 +847,6 @@
 				CA27371B27856E0400DE14A3 /* NavigationRouteLink.swift in Sources */,
 				A61AC657277EE42F00246A64 /* ContactBloc.swift in Sources */,
 				CA27371F27856E0400DE14A3 /* RouterLink.swift in Sources */,
-				CA60748E277EFA6A00C3E78A /* BlocProvider.swift in Sources */,
 				A6DBC391277B079700F90A05 /* ContactServiceImpl.swift in Sources */,
 				A66372C4277C1B510017BD47 /* LoadListService.swift in Sources */,
 				A66372CB277C21C70017BD47 /* LoadListBloc.swift in Sources */,

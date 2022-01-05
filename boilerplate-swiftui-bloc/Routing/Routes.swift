@@ -7,6 +7,7 @@
 
 import Repository
 import SwiftUI
+import SwiftBloc
 
 extension NavigationRouteLink {
     static var splash: NavigationRouteLink { "/splash" }
@@ -26,19 +27,17 @@ extension Array where Element == NavigationRoute {
         let storyBook = NavigationRoute(path: "/storyBook", destination: Storybook())
         
         let contactList = NavigationRoute(path: "/contactList") {
-            BlocProvider (builder: {
-                ContactListView()
-            }, create: {
-                Blocs().contactListBloc()
-            })
+            ContactListView()
+                .provideBloc(create: {
+                    Blocs().contactListBloc()
+                })
         }
         
         let contactDetails = NavigationRoute(path: "/contact/{id}") { route in
-            BlocProvider(builder: {
-                ContactDetailView()
-            }, create: {
-                route.link.meta["bloc"] as! ContactBloc
-            })
+            ContactDetailView()
+                .provideBloc(create: {
+                    route.link.meta["bloc"] as! ContactBloc
+                })
         }
         
         return [splash, storyBook, contactList, contactDetails]
