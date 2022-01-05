@@ -26,11 +26,6 @@ struct ContactListView: View {
             return $0.id
         }
         .navigationTitle("Contacts")
-        .onAppear {
-            print("Contact List appeared!")
-        }.onDisappear {
-            print("Contact List disappeared!")
-        }
     }
 }
 
@@ -45,7 +40,9 @@ struct ContactRowItem: View {
                     AvatarView(avatar: contact.avatar, size: 32)
                     VStack(alignment: .leading) {
                         Text(contact.fullName())
+                            .primaryBold(fontSize: 15)
                         Text("age: \(contact.age())")
+                            .secondaryRegular(color: .gray)
                     }
                     .foregroundColor(.black)
                     Spacer()

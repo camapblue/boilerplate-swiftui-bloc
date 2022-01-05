@@ -31,6 +31,7 @@
 		A640712A27799CA500F3A9CC /* boilerplate_swiftui_blocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640712927799CA500F3A9CC /* boilerplate_swiftui_blocTests.swift */; };
 		A640713527799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640713427799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift */; };
 		A645C85027858E440064ABD8 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645C84F27858E440064ABD8 /* Text.swift */; };
+		A645C852278594AB0064ABD8 /* StyleDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645C851278594AB0064ABD8 /* StyleDictionary.swift */; };
 		A663729E277BFD600017BD47 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A663729D277BFD600017BD47 /* Repository.framework */; };
 		A663729F277BFD600017BD47 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A663729D277BFD600017BD47 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A66372BA277C0CD60017BD47 /* BaseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372B9277C0CD60017BD47 /* BaseBloc.swift */; };
@@ -130,6 +131,7 @@
 		A640713427799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boilerplate_swiftui_blocUITests.swift; sourceTree = "<group>"; };
 		A640713627799CA500F3A9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A645C84F27858E440064ABD8 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		A645C851278594AB0064ABD8 /* StyleDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleDictionary.swift; sourceTree = "<group>"; };
 		A663724C277B10910017BD47 /* librepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = librepository.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A663729D277BFD600017BD47 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66372B9277C0CD60017BD47 /* BaseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBloc.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				A645C84F27858E440064ABD8 /* Text.swift */,
+				A645C851278594AB0064ABD8 /* StyleDictionary.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -867,6 +870,7 @@
 				A66372C4277C1B510017BD47 /* LoadListService.swift in Sources */,
 				A66372CB277C21C70017BD47 /* LoadListBloc.swift in Sources */,
 				A6DBC38E277B076D00F90A05 /* ContactService.swift in Sources */,
+				A645C852278594AB0064ABD8 /* StyleDictionary.swift in Sources */,
 				A6376FEC278191CE00DFC0D9 /* AvataryViewStory.swift in Sources */,
 				A66372BF277C0D400017BD47 /* SplashView.swift in Sources */,
 				A66372C7277C1F540017BD47 /* String+Extenstion.swift in Sources */,

@@ -22,7 +22,7 @@ struct ContactDetailView: View {
                     AvatarView(avatar: contact.avatar, size: 128)
                     Rectangle().fill(Color.clear).frame(height: 44)
                     Text(contact.fullName())
-                        .primaryRegular()
+                        .primaryBold(fontSize: 20)
                     Rectangle().fill(Color.clear).frame(height: 44)
                     HStack(alignment: .firstTextBaseline) {
                         Text("address:")
