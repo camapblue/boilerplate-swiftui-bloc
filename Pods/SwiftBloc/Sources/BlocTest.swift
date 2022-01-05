@@ -8,41 +8,51 @@
 import Foundation
 import Combine
 
+public typealias BlocAction<S: Equatable, B: Base<S>> = ((B) -> Void)
+public typealias BlocExpect<S: Equatable> = (() -> [S])
+public typealias BlocVerifying = ((Bool, String) -> Void)
+
 /**
  BlocTest
  */
 final public class BlocTest<S: Equatable, B: Base<S>> {
+    var bloc: B
+    var cancellables = Set<AnyCancellable>()
+    var states = [S]()
+    
+    public init(bloc: B) {
+        self.bloc = bloc
+        
+        self.bloc.$state
+            .sink(receiveValue: { [unowned self] value in
+                self.states.append(value)
+            })
+            .store(in: &cancellables)
+    }
+    
     /// Executes event - state testing
     /// - Parameters:
     ///   - build: the **Bloc** object closure
     ///   - act: all potentially happening events should be described here
     ///   - wait: a delay before listening to state change
     ///   - expect: all expected states based on incoming events
-    ///   - verify: verify bloc for matching expectations of incoming events successfully mapped to expected states
-    public static func execute(
-        build: () -> B,
-        act: ((B) -> Void)?,
-        wait: TimeInterval? = 0,
-        expect: (() -> Any)?,
-        verify: ((Bool, String) -> Void)
-    ) {
-        var areEqual = false
-        var states = [S]()
-        let bloc = build()
-        let scheduler = ImmediateScheduler.shared
-        let cancellable = bloc.$state
-            .subscribe(on: scheduler)
-            .delay(for: .seconds(wait ?? 0), scheduler: scheduler)
-            .sink(receiveValue: { value in
-                states.append(value)
-            })
+    
+    public func execute(
+        act: BlocAction<S, B>?,
+        wait: Int = 1,
+        expect: @escaping BlocExpect<S>
+    ) -> AnyPublisher<(Bool, [S]), Never> {
         act?(bloc)
-        if expect != nil {
-            let expected = expect!()
-            areEqual = "\(states)" == "\(expected)"
-            let message = "State received: \(states). \nStates expected: \(expected)"
-            verify(areEqual, message)
-        }
-        cancellable.cancel()
+        
+        return Just(true)
+            .delay(for: .seconds(wait), scheduler: RunLoop.main)
+            .map { _ in
+                let expected = expect()
+                let areEqual = "\(self.states)" == "\(expected)"
+                let message = "State received: \(self.states). \nStates expected: \(expected)"
+                print(message)
+                return (areEqual, self.states)
+            }
+            .eraseToAnyPublisher()
     }
 }

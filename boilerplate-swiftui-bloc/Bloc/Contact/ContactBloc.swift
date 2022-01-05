@@ -30,7 +30,6 @@ public class ContactBloc: BaseBloc<ContactEvent, ContactState> {
         emitter.send(ContactEditInProgress(contact: state.contact))
         
         self.contactService.edit(contact: event.contact)
-            .delay(for: 2, scheduler: RunLoop.main)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
                 switch completion {

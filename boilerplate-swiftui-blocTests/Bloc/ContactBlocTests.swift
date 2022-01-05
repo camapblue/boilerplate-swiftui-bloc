@@ -9,6 +9,7 @@ import XCTest
 import Repository
 import Mockingbird
 import Combine
+import SwiftBloc
 import boilerplate_swiftui_bloc
 
 class ContactBlocTests: XCTestCase {
@@ -16,6 +17,7 @@ class ContactBlocTests: XCTestCase {
     private var contactService: ContactServiceMock!
     private var contactBloc: ContactBloc!
     private var cancellables: Set<AnyCancellable>!
+    private var blocTesting: BlocTest<ContactState, ContactBloc>!
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,6 +29,7 @@ class ContactBlocTests: XCTestCase {
             contact: Contact.fakeContact(),
             service: contactService
         )
+        blocTesting = BlocTest(bloc: contactBloc)
     }
 
     override func tearDownWithError() throws {
@@ -51,4 +54,35 @@ class ContactBlocTests: XCTestCase {
         XCTAssert(currentContact.id == "test_contact_id")
     }
 
+    func testEditSuccess() {
+        let editedContact = Contact.fakeContact(id: "test_contact_id", birthday: Date())
+        given(contactService.edit(contact: any())).willReturn(
+            Future { promise in
+                promise(.success(editedContact))
+            }
+        )
+        
+        let expectation = self.expectation(description: "Awaiting publisher")
+        var success = false
+        blocTesting.execute(
+                act: { bloc in
+                    bloc.add(event: ContactEdited(contact: editedContact))
+                },
+                expect: {
+                    [
+                        ContactInitial(contact: Contact.fakeContact(id: "test_contact_id")),
+                        ContactEditInProgress(contact: Contact.fakeContact(id: "test_contact_id")),
+                        ContactEditSuccess(contact: Contact.fakeContact(id: "test_contact_id"))
+                    ]
+                }
+            )
+        .sink { result, states in
+            success = result
+            expectation.fulfill()
+        }
+        .store(in: &cancellables)
+        waitForExpectations(timeout: 10)
+        
+        XCTAssertTrue(success)
+    }
 }
