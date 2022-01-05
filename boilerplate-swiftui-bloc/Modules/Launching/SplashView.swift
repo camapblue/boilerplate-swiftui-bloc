@@ -9,24 +9,19 @@ import SwiftUI
 import Repository
 
 struct SplashView: View {
+    @Environment(\.router) var router
+    
     var body: some View {
-        NavigationView {
-            ZStack {
-                VStack {
-                    Text("Splash View")
-                    NavigationLink(
-                        destination: LazyView(
-                            ContactListView()
-                        )
-                    ) {
-                        Text("Contact List")
-                    }
-                    .navigationTitle("Splash")
+        ZStack {
+            VStack {
+                Text("Splash View")
+                Button("Contact List") {
+                    router.push(link: .contactList)
                 }
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 0)
+                .navigationTitle("Splash")
             }
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 0)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {
             print("Splash Screen Appear")
         }

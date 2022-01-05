@@ -10,31 +10,22 @@ import SwiftBloc
 import Repository
 
 struct ContactListView: View {
+    @Environment(\.router) var router
+    
     var body: some View {
-        BlocProvider {
-            LoadListView<Contact>(pullToRefresh: true, isLoadMore: false) { contact in
-                let bloc = Blocs().contactBloc(contact: contact)
-                return AnyView(
-                    BlocProvider {
-                        NavigationLink(
-                            destination: LazyView(
-                                ContactDetailView()
-                                    .environmentObject(bloc)
-                            )
-                        ) {
-                            ContactRowItem(contactId: contact.id)
-                        }
-                    } create: {
-                        bloc
-                    }
-                )
-            } itemKey: {
-                return $0.id
-            }
-            .navigationTitle("Contacts")
-        } create: {
-            Blocs().contactListBloc()
+        LoadListView<Contact>(pullToRefresh: true, isLoadMore: false) { contact in
+            let bloc = Blocs().contactBloc(contact: contact)
+            return AnyView(
+                Button(action: {
+                    router.push(link: .contactDetails(with: bloc))
+                }, label: {
+                    ContactRowItem(contactId: contact.id)
+                })
+            )
+        } itemKey: {
+            return $0.id
         }
+        .navigationTitle("Contacts")
         .onAppear {
             print("Contact List appeared!")
         }.onDisappear {
@@ -56,6 +47,7 @@ struct ContactRowItem: View {
                         Text(contact.fullName())
                         Text("age: \(contact.age())")
                     }
+                    .foregroundColor(.black)
                     Spacer()
                 }
                 .frame(minHeight: 44, maxHeight: 44, alignment: .center)

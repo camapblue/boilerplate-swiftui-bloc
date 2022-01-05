@@ -50,6 +50,15 @@
 		A6D814672782DFE600D1A3DF /* ContactServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D814662782DFE600D1A3DF /* ContactServiceTests.swift */; };
 		A6DBC38E277B076D00F90A05 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBC38D277B076D00F90A05 /* ContactService.swift */; };
 		A6DBC391277B079700F90A05 /* ContactServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBC390277B079700F90A05 /* ContactServiceImpl.swift */; };
+		CA27371927856E0400DE14A3 /* OnDismantle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371027856E0400DE14A3 /* OnDismantle.swift */; };
+		CA27371A27856E0400DE14A3 /* NavigationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371127856E0400DE14A3 /* NavigationRoute.swift */; };
+		CA27371B27856E0400DE14A3 /* NavigationRouteLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371227856E0400DE14A3 /* NavigationRouteLink.swift */; };
+		CA27371C27856E0400DE14A3 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371327856E0400DE14A3 /* NavigationRouter.swift */; };
+		CA27371D27856E0400DE14A3 /* ResolvedRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371427856E0400DE14A3 /* ResolvedRoute.swift */; };
+		CA27371E27856E0400DE14A3 /* NextRoutableModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371627856E0400DE14A3 /* NextRoutableModifier.swift */; };
+		CA27371F27856E0400DE14A3 /* RouterLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371727856E0400DE14A3 /* RouterLink.swift */; };
+		CA27372027856E0400DE14A3 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371827856E0400DE14A3 /* RouterView.swift */; };
+		CA27372327856F0D00DE14A3 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27372227856F0D00DE14A3 /* Routes.swift */; };
 		CA60748E277EFA6A00C3E78A /* BlocProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60748D277EFA6A00C3E78A /* BlocProvider.swift */; };
 		CEB69978CA8F5B85D7C9C3FC /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2C28CA47A678102258317 /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift */; };
 /* End PBXBuildFile section */
@@ -141,6 +150,15 @@
 		A6DBC38D277B076D00F90A05 /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		A6DBC390277B079700F90A05 /* ContactServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactServiceImpl.swift; sourceTree = "<group>"; };
 		C2F6579F3AB5B6AEFB312177 /* Pods-boilerplate-swiftui-bloc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc.release.xcconfig"; sourceTree = "<group>"; };
+		CA27371027856E0400DE14A3 /* OnDismantle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDismantle.swift; sourceTree = "<group>"; };
+		CA27371127856E0400DE14A3 /* NavigationRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRoute.swift; sourceTree = "<group>"; };
+		CA27371227856E0400DE14A3 /* NavigationRouteLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRouteLink.swift; sourceTree = "<group>"; };
+		CA27371327856E0400DE14A3 /* NavigationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		CA27371427856E0400DE14A3 /* ResolvedRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolvedRoute.swift; sourceTree = "<group>"; };
+		CA27371627856E0400DE14A3 /* NextRoutableModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextRoutableModifier.swift; sourceTree = "<group>"; };
+		CA27371727856E0400DE14A3 /* RouterLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterLink.swift; sourceTree = "<group>"; };
+		CA27371827856E0400DE14A3 /* RouterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		CA27372227856F0D00DE14A3 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		CA60748D277EFA6A00C3E78A /* BlocProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlocProvider.swift; sourceTree = "<group>"; };
 		CE112867221D3CD80C94A050 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DAF7914AACE3E78797DAFC61 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +311,7 @@
 		A640711627799CA100F3A9CC /* boilerplate-swiftui-bloc */ = {
 			isa = PBXGroup;
 			children = (
+				CA27372127856EEF00DE14A3 /* Routing */,
 				A6376FF12781A3C300DFC0D9 /* Constant */,
 				A6376FE82781919A00DFC0D9 /* Storybook */,
 				A61AC64A277EB47700246A64 /* Model */,
@@ -303,6 +322,7 @@
 				A6DBC387277AEACC00F90A05 /* Service */,
 				A6DBC386277AEAC400F90A05 /* Bloc */,
 				A6DBC385277AE9E600F90A05 /* Modules */,
+				CA27370D27856E0400DE14A3 /* 3rdParty */,
 				A640711727799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift */,
 				A640711B27799CA400F3A9CC /* Assets.xcassets */,
 				A640712027799CA400F3A9CC /* Info.plist */,
@@ -479,6 +499,53 @@
 				DAF7914AACE3E78797DAFC61 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA27370D27856E0400DE14A3 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				CA27370E27856E0400DE14A3 /* SwiftUIRouter */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		CA27370E27856E0400DE14A3 /* SwiftUIRouter */ = {
+			isa = PBXGroup;
+			children = (
+				CA27371527856E0400DE14A3 /* UI */,
+				CA27370F27856E0400DE14A3 /* Extensions */,
+				CA27371127856E0400DE14A3 /* NavigationRoute.swift */,
+				CA27371227856E0400DE14A3 /* NavigationRouteLink.swift */,
+				CA27371327856E0400DE14A3 /* NavigationRouter.swift */,
+				CA27371427856E0400DE14A3 /* ResolvedRoute.swift */,
+			);
+			path = SwiftUIRouter;
+			sourceTree = "<group>";
+		};
+		CA27370F27856E0400DE14A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA27371027856E0400DE14A3 /* OnDismantle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA27371527856E0400DE14A3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA27371627856E0400DE14A3 /* NextRoutableModifier.swift */,
+				CA27371727856E0400DE14A3 /* RouterLink.swift */,
+				CA27371827856E0400DE14A3 /* RouterView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CA27372127856EEF00DE14A3 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				CA27372227856F0D00DE14A3 /* Routes.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -760,20 +827,29 @@
 				A61AC654277EE3FB00246A64 /* ContactDetailView.swift in Sources */,
 				A66372BC277C0D080017BD47 /* BlocManager.swift in Sources */,
 				A66372DA277C5EFB0017BD47 /* LoadingView.swift in Sources */,
+				CA27371C27856E0400DE14A3 /* NavigationRouter.swift in Sources */,
+				CA27371D27856E0400DE14A3 /* ResolvedRoute.swift in Sources */,
 				A66372D7277C59380017BD47 /* LoadListView.swift in Sources */,
 				A66372D3277C57F80017BD47 /* Keys.swift in Sources */,
+				CA27371927856E0400DE14A3 /* OnDismantle.swift in Sources */,
 				A66372CD277C21D30017BD47 /* LoadListEvent.swift in Sources */,
 				A61AC663277EEC3700246A64 /* ContactExtension.swift in Sources */,
 				A61AC670278054C300246A64 /* Array+Extension.swift in Sources */,
 				A66372CF277C21DD0017BD47 /* LoadListState.swift in Sources */,
+				CA27372327856F0D00DE14A3 /* Routes.swift in Sources */,
 				A61AC64F277EC5C300246A64 /* ContactListView.swift in Sources */,
 				A6376FF02781A14400DFC0D9 /* Storybook.swift in Sources */,
 				A66372C1277C0DB80017BD47 /* Services.swift in Sources */,
+				CA27371E27856E0400DE14A3 /* NextRoutableModifier.swift in Sources */,
+				CA27372027856E0400DE14A3 /* RouterView.swift in Sources */,
 				A61AC661277EE97C00246A64 /* AvatarView.swift in Sources */,
 				A61AC666277EECED00246A64 /* Date+Extension.swift in Sources */,
 				A61AC659277EE43900246A64 /* ContactEvent.swift in Sources */,
 				A61AC65B277EE44300246A64 /* ContactState.swift in Sources */,
+				CA27371A27856E0400DE14A3 /* NavigationRoute.swift in Sources */,
+				CA27371B27856E0400DE14A3 /* NavigationRouteLink.swift in Sources */,
 				A61AC657277EE42F00246A64 /* ContactBloc.swift in Sources */,
+				CA27371F27856E0400DE14A3 /* RouterLink.swift in Sources */,
 				CA60748E277EFA6A00C3E78A /* BlocProvider.swift in Sources */,
 				A6DBC391277B079700F90A05 /* ContactServiceImpl.swift in Sources */,
 				A66372C4277C1B510017BD47 /* LoadListService.swift in Sources */,
