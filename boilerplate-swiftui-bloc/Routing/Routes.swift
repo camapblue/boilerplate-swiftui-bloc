@@ -24,7 +24,15 @@ extension Array where Element == NavigationRoute {
     static var all: [NavigationRoute] {
         let splash = NavigationRoute(path: "/splash", destination: SplashView())
         let storyBook = NavigationRoute(path: "/storyBook", destination: Storybook())
-        let contactList = NavigationRoute(path: "/contactList", destination: ContactListView())
+        
+        let contactList = NavigationRoute(path: "/contactList") {
+            BlocProvider (builder: {
+                ContactListView()
+            }, create: {
+                Blocs().contactListBloc()
+            })
+        }
+        
         let contactDetails = NavigationRoute(path: "/contact/{id}") { route in
             BlocProvider(builder: {
                 ContactDetailView()

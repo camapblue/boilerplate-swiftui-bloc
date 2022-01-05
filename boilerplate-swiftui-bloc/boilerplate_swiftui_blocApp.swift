@@ -9,20 +9,18 @@ import SwiftUI
 
 @main
 struct boilerplate_swiftui_blocApp: App {
+    let router = NavigationRouter(routes: .all)
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 RouterView(
-                    router: .main,
+                    router: router,
                     root: Configs.shared.isStorybook ? .storyBook : .splash
                 )
             }
-            .environment(\.router, .main)
+            .environment(\.router, router)
             .navigationViewStyle(StackNavigationViewStyle())
         }
     }
-}
-
-extension NavigationRouter {
-  static var main = NavigationRouter(routes: .all)
 }
