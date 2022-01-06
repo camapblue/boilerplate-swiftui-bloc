@@ -20,7 +20,6 @@
 		A61AC666277EECED00246A64 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC665277EECED00246A64 /* Date+Extension.swift */; };
 		A61AC670278054C300246A64 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC66F278054C300246A64 /* Array+Extension.swift */; };
 		A6376FE327818CEA00DFC0D9 /* Storybook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6376FE227818CEA00DFC0D9 /* Storybook.framework */; };
-		A6376FE427818CEA00DFC0D9 /* Storybook.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6376FE227818CEA00DFC0D9 /* Storybook.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6376FEC278191CE00DFC0D9 /* AvataryViewStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6376FEB278191CE00DFC0D9 /* AvataryViewStory.swift */; };
 		A6376FF02781A14400DFC0D9 /* Storybook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6376FEF2781A14400DFC0D9 /* Storybook.swift */; };
 		A640711827799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640711727799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift */; };
@@ -30,8 +29,6 @@
 		A640713527799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640713427799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift */; };
 		A645C85027858E440064ABD8 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645C84F27858E440064ABD8 /* Text.swift */; };
 		A645C852278594AB0064ABD8 /* StyleDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645C851278594AB0064ABD8 /* StyleDictionary.swift */; };
-		A663729E277BFD600017BD47 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A663729D277BFD600017BD47 /* Repository.framework */; };
-		A663729F277BFD600017BD47 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A663729D277BFD600017BD47 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A66372BA277C0CD60017BD47 /* BaseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372B9277C0CD60017BD47 /* BaseBloc.swift */; };
 		A66372BC277C0D080017BD47 /* BlocManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372BB277C0D080017BD47 /* BlocManager.swift */; };
 		A66372BF277C0D400017BD47 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372BE277C0D400017BD47 /* SplashView.swift */; };
@@ -64,6 +61,9 @@
 		CA7350122785ABEB0090CD80 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73500D2785ABEB0090CD80 /* AppEnvironment.swift */; };
 		CA7350132785ABEB0090CD80 /* PROD.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CA73500E2785ABEB0090CD80 /* PROD.xcconfig */; };
 		CA7350142785ABEB0090CD80 /* QC.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CA73500F2785ABEB0090CD80 /* QC.xcconfig */; };
+		CAA44C992786C854004B25A6 /* Storybook.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6376FE227818CEA00DFC0D9 /* Storybook.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAA44C9E2786C9DE004B25A6 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA44C9D2786C9DE004B25A6 /* Repository.framework */; };
+		CAA44C9F2786C9E5004B25A6 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAA44C9D2786C9DE004B25A6 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEB69978CA8F5B85D7C9C3FC /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2C28CA47A678102258317 /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift */; };
 		FFA290C4330D3437E3BC6A36 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46CD9FD99821B0F2582D797 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */; };
 /* End PBXBuildFile section */
@@ -92,8 +92,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A663729F277BFD600017BD47 /* Repository.framework in Embed Frameworks */,
-				A6376FE427818CEA00DFC0D9 /* Storybook.framework in Embed Frameworks */,
+				CAA44C9F2786C9E5004B25A6 /* Repository.framework in Embed Frameworks */,
+				CAA44C992786C854004B25A6 /* Storybook.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +140,6 @@
 		A645C84F27858E440064ABD8 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		A645C851278594AB0064ABD8 /* StyleDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleDictionary.swift; sourceTree = "<group>"; };
 		A663724C277B10910017BD47 /* librepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = librepository.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A663729D277BFD600017BD47 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66372B9277C0CD60017BD47 /* BaseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBloc.swift; sourceTree = "<group>"; };
 		A66372BB277C0D080017BD47 /* BlocManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocManager.swift; sourceTree = "<group>"; };
 		A66372BE277C0D400017BD47 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -173,6 +172,7 @@
 		CA73500D2785ABEB0090CD80 /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		CA73500E2785ABEB0090CD80 /* PROD.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = PROD.xcconfig; sourceTree = "<group>"; };
 		CA73500F2785ABEB0090CD80 /* QC.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QC.xcconfig; sourceTree = "<group>"; };
+		CAA44C9D2786C9DE004B25A6 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D34FFFABB30A2A465EC8F334 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.qc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.qc.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.qc.xcconfig"; sourceTree = "<group>"; };
 		E46CD9FD99821B0F2582D797 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79CFB8E0FB00CF1BDC91D9E /* Pods-boilerplate-swiftui-blocTests.qc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-blocTests.qc.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests.qc.xcconfig"; sourceTree = "<group>"; };
@@ -184,8 +184,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA44C9E2786C9DE004B25A6 /* Repository.framework in Frameworks */,
 				A6376FE327818CEA00DFC0D9 /* Storybook.framework in Frameworks */,
-				A663729E277BFD600017BD47 /* Repository.framework in Frameworks */,
 				FFA290C4330D3437E3BC6A36 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,8 +510,8 @@
 		C82AB96B7BAE02FF0B29DD79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAA44C9D2786C9DE004B25A6 /* Repository.framework */,
 				A6376FE227818CEA00DFC0D9 /* Storybook.framework */,
-				A663729D277BFD600017BD47 /* Repository.framework */,
 				A663724C277B10910017BD47 /* librepository.a */,
 				927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */,
 				3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */,
@@ -573,8 +573,8 @@
 				CA73500B2785ABEB0090CD80 /* Configs.swift */,
 				CA73500D2785ABEB0090CD80 /* AppEnvironment.swift */,
 				CA73500C2785ABEB0090CD80 /* DEV.xcconfig */,
-				CA73500E2785ABEB0090CD80 /* PROD.xcconfig */,
 				CA73500F2785ABEB0090CD80 /* QC.xcconfig */,
+				CA73500E2785ABEB0090CD80 /* PROD.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";

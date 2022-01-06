@@ -16,6 +16,7 @@ enum ConfigKey: String {
 
     ///
     case isStorybook = "isStorybook"
+    case apiEndpointUrl = "apiEndpointUrl"
 }
 
 /// The environment
@@ -49,6 +50,11 @@ enum AppEnvironment: String {
     /// Is Storybook
     static var isStorybook: Bool {
         return readStringFromConfig(key: .isStorybook) == "YES"
+    }
+    
+    /// Get api endpoint url
+    static var apiEndpointUrl: String {
+        return readStringFromConfig(key: .apiEndpointUrl)
     }
     
     /// A private method to wrap up the reading confign from the main bundle

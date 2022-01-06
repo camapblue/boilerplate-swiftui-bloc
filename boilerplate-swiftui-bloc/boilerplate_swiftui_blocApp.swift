@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import Repository
 
 @main
 struct boilerplate_swiftui_blocApp: App {
     let router = NavigationRouter(routes: .all)
+    
+    init() {
+        RepositoryConstants.setup(with: Bundle.main)
+    }
     
     var body: some Scene {
         WindowGroup {

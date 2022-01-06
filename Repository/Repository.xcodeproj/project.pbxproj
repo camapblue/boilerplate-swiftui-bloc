@@ -24,7 +24,6 @@
 		A6D8145C278299F300D1A3DF /* ContactDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D8145B278299F300D1A3DF /* ContactDaoTests.swift */; };
 		A6D8145E27829D8000D1A3DF /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D8145D27829D8000D1A3DF /* BaseDao.swift */; };
 		A6D814612782A5ED00D1A3DF /* ContactRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D814602782A5ED00D1A3DF /* ContactRepositoryTests.swift */; };
-		CAA44C8F27869CE7004B25A6 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA44C8E27869CE7004B25A6 /* AppEnvironment.swift */; };
 		CAA44C9127869CF9004B25A6 /* RepositoryConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA44C9027869CF9004B25A6 /* RepositoryConstants.swift */; };
 		CAA44C9327869E86004B25A6 /* ContactEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA44C9227869E86004B25A6 /* ContactEndpoints.swift */; };
 /* End PBXBuildFile section */
@@ -62,10 +61,6 @@
 		A6D8145B278299F300D1A3DF /* ContactDaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDaoTests.swift; sourceTree = "<group>"; };
 		A6D8145D27829D8000D1A3DF /* BaseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
 		A6D814602782A5ED00D1A3DF /* ContactRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepositoryTests.swift; sourceTree = "<group>"; };
-		CAA44C8B27869CC0004B25A6 /* DEV.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DEV.xcconfig; sourceTree = "<group>"; };
-		CAA44C8C27869CCD004B25A6 /* QC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QC.xcconfig; sourceTree = "<group>"; };
-		CAA44C8D27869CD8004B25A6 /* PROD.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PROD.xcconfig; sourceTree = "<group>"; };
-		CAA44C8E27869CE7004B25A6 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		CAA44C9027869CF9004B25A6 /* RepositoryConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryConstants.swift; sourceTree = "<group>"; };
 		CAA44C9227869E86004B25A6 /* ContactEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactEndpoints.swift; path = Repository/Configurations/ContactEndpoints.swift; sourceTree = SOURCE_ROOT; };
 		CE18537DF6DAB5B5E10254B6 /* Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-RepositoryTests/Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig"; sourceTree = "<group>"; };
@@ -247,10 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				CAA44C9027869CF9004B25A6 /* RepositoryConstants.swift */,
-				CAA44C8E27869CE7004B25A6 /* AppEnvironment.swift */,
-				CAA44C8B27869CC0004B25A6 /* DEV.xcconfig */,
-				CAA44C8C27869CCD004B25A6 /* QC.xcconfig */,
-				CAA44C8D27869CD8004B25A6 /* PROD.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -469,7 +460,6 @@
 				A66372B2277BFD970017BD47 /* ContactDao.swift in Sources */,
 				A66372B7277BFD970017BD47 /* ContactRepository.swift in Sources */,
 				A66372B3277BFD970017BD47 /* ContactApiImpl.swift in Sources */,
-				CAA44C8F27869CE7004B25A6 /* AppEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +487,6 @@
 /* Begin XCBuildConfiguration section */
 		A6637298277BFD270017BD47 /* Dev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAA44C8B27869CC0004B25A6 /* DEV.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -562,7 +551,6 @@
 		};
 		A6637299277BFD270017BD47 /* Prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAA44C8D27869CD8004B25A6 /* PROD.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -708,7 +696,6 @@
 		};
 		CA73501A2785B3E50090CD80 /* QC */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAA44C8C27869CCD004B25A6 /* QC.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

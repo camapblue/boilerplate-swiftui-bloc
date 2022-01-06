@@ -50,5 +50,7 @@
 	<string>${IS_STORYBOOK}</string>
 	<key>Environment</key>
 	<string>${ENVIRONMENT}</string>
+	<key>apiEndpointUrl</key>
+	<string>${API_ENDPOINT_URL}</string>
 </dict>
 </plist>
