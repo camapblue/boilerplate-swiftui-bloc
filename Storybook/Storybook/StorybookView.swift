@@ -15,13 +15,10 @@ public struct StorybookView<V: View>: View {
     }
     
     public var body: some View {
-        NavigationView {
-            List(stories, id: \.title) { item in
-                StoryRowItem(story: item)
-            }
-            .navigationTitle("Storybook")
+        List(stories, id: \.title) { item in
+            StoryRowItem(story: item)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Storybook")
     }
 }
 

@@ -10,7 +10,7 @@ import Combine
 
 public class ContactApiImpl: ContactApi {
     public func fetchContacts(withSize size: Int = 5) -> Future<[Contact], Error> {
-        let url = URL(string: "https://randomuser.me/api/?results=\(size)")!
+        let url = ContactEndpoints.fetchContacts(size: size).url
         return Future { [weak self] promise in
             guard self != nil else {
                 promise(.success([Contact]()))

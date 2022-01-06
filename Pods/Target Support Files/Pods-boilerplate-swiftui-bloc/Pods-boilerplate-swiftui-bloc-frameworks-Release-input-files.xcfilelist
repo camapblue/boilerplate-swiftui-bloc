@@ -1,5 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Introspect/Introspect.framework
-${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
-${BUILT_PRODUCTS_DIR}/SwiftBloc/SwiftBloc.framework
-${BUILT_PRODUCTS_DIR}/SwiftUIRefresh/SwiftUIRefresh.framework
