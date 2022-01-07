@@ -16,8 +16,12 @@ public class Repository {
     }
     
     // Api
+    func baseUrl() -> BaseUrl {
+        return BaseUrl(apiEndpointUrl: RepositoryConfigs.shared.apiEndpointUrl)
+    }
+    
     func contactApi() -> ContactApi {
-        return ContactApiImpl()
+        return ContactApiImpl(baseUrl: baseUrl())
     }
     
     // Dao

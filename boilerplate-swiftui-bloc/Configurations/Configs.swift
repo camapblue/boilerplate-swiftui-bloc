@@ -10,7 +10,9 @@ import Foundation
 final class Configs {
     static let shared = Configs()
     
-    var isStorybook: Bool {
-        AppEnvironment.isStorybook
+    var isStorybook: Bool
+    
+    init() {
+        isStorybook = AppEnvironment.isStorybook
     }
 }

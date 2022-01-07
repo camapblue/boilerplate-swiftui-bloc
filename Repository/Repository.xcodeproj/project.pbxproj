@@ -24,8 +24,8 @@
 		A6D8145C278299F300D1A3DF /* ContactDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D8145B278299F300D1A3DF /* ContactDaoTests.swift */; };
 		A6D8145E27829D8000D1A3DF /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D8145D27829D8000D1A3DF /* BaseDao.swift */; };
 		A6D814612782A5ED00D1A3DF /* ContactRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D814602782A5ED00D1A3DF /* ContactRepositoryTests.swift */; };
-		CAA44C9127869CF9004B25A6 /* RepositoryConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA44C9027869CF9004B25A6 /* RepositoryConstants.swift */; };
-		CAA44C9327869E86004B25A6 /* ContactEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA44C9227869E86004B25A6 /* ContactEndpoints.swift */; };
+		CA6696332787EB2B0074A4BF /* BaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6696322787EB2B0074A4BF /* BaseUrl.swift */; };
+		CAA44C9127869CF9004B25A6 /* RepositoryConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA44C9027869CF9004B25A6 /* RepositoryConfigs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		A6D8145B278299F300D1A3DF /* ContactDaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDaoTests.swift; sourceTree = "<group>"; };
 		A6D8145D27829D8000D1A3DF /* BaseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
 		A6D814602782A5ED00D1A3DF /* ContactRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepositoryTests.swift; sourceTree = "<group>"; };
-		CAA44C9027869CF9004B25A6 /* RepositoryConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryConstants.swift; sourceTree = "<group>"; };
-		CAA44C9227869E86004B25A6 /* ContactEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactEndpoints.swift; path = Repository/Configurations/ContactEndpoints.swift; sourceTree = SOURCE_ROOT; };
+		CA6696322787EB2B0074A4BF /* BaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseUrl.swift; path = Repository/Api/BaseUrl.swift; sourceTree = SOURCE_ROOT; };
+		CAA44C9027869CF9004B25A6 /* RepositoryConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryConfigs.swift; sourceTree = "<group>"; };
 		CE18537DF6DAB5B5E10254B6 /* Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-RepositoryTests/Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +166,7 @@
 			children = (
 				A66372A6277BFD960017BD47 /* impl */,
 				A66372A8277BFD960017BD47 /* ContactApi.swift */,
+				CA6696322787EB2B0074A4BF /* BaseUrl.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -181,7 +182,6 @@
 		A66372A9277BFD960017BD47 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				CAA44C9227869E86004B25A6 /* ContactEndpoints.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 		CAA44C8A27869C8D004B25A6 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				CAA44C9027869CF9004B25A6 /* RepositoryConstants.swift */,
+				CAA44C9027869CF9004B25A6 /* RepositoryConfigs.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -450,11 +450,11 @@
 			files = (
 				A66372B6277BFD970017BD47 /* ContactRepositoryImpl.swift in Sources */,
 				A66372B1277BFD970017BD47 /* ContactDaoImpl.swift in Sources */,
+				CA6696332787EB2B0074A4BF /* BaseUrl.swift in Sources */,
 				A66372B4277BFD970017BD47 /* ContactApi.swift in Sources */,
 				A6D8145E27829D8000D1A3DF /* BaseDao.swift in Sources */,
 				A66372B8277BFD970017BD47 /* Repository.swift in Sources */,
-				CAA44C9127869CF9004B25A6 /* RepositoryConstants.swift in Sources */,
-				CAA44C9327869E86004B25A6 /* ContactEndpoints.swift in Sources */,
+				CAA44C9127869CF9004B25A6 /* RepositoryConfigs.swift in Sources */,
 				A66372B5277BFD970017BD47 /* Contact.swift in Sources */,
 				A61AC65E277EE7D900246A64 /* ApiError.swift in Sources */,
 				A66372B2277BFD970017BD47 /* ContactDao.swift in Sources */,

@@ -52,11 +52,6 @@ enum AppEnvironment: String {
         return readStringFromConfig(key: .isStorybook) == "YES"
     }
     
-    /// Get api endpoint url
-    static var apiEndpointUrl: String {
-        return readStringFromConfig(key: .apiEndpointUrl)
-    }
-    
     /// A private method to wrap up the reading confign from the main bundle
     ///
     /// - Parameter key: the key we need to get the string out

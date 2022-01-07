@@ -1,5 +1,5 @@
 //
-//  RepositoryConstants.swift
+//  RepositoryConfigs.swift
 //  Repository
 //
 //  Created by Hao Tran Thien on 06/01/2022.
@@ -11,21 +11,11 @@ enum ConfigKey: String {
     case apiEndpointUrl = "apiEndpointUrl"
 }
 
-public class RepositoryConstants {
-    private(set) static var shared: RepositoryConstants!
+class RepositoryConfigs {
+    static let shared = RepositoryConfigs()
     
-    private var bundle: Bundle!
-    
-    private init(bundle: Bundle) {
-        self.bundle = bundle
-    }
-    
-    public static func setup(with bundle: Bundle) {
-        shared = RepositoryConstants(bundle: bundle)
-    }
-    
-    public var apiEndpointUrl: String {
-        return bundle.readStringFromConfig(key: .apiEndpointUrl)
+    var apiEndpointUrl: String {
+        return Bundle.main.readStringFromConfig(key: .apiEndpointUrl)
     }
 }
 
