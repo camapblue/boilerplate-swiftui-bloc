@@ -9,8 +9,14 @@ import Foundation
 import Combine
 
 public class ContactApiImpl: ContactApi {
+    private let baseUrl: BaseUrl
+    
+    init(baseUrl: BaseUrl) {
+        self.baseUrl = baseUrl
+    }
+    
     public func fetchContacts(withSize size: Int = 5) -> Future<[Contact], Error> {
-        let url = URL(string: "https://randomuser.me/api/?results=\(size)")!
+        let url = baseUrl.getUrl(of: .fetchContacts(size: 5))
         return Future { [weak self] promise in
             guard self != nil else {
                 promise(.success([Contact]()))

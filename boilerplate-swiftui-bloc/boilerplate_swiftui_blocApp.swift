@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Repository
 
 @main
 struct boilerplate_swiftui_blocApp: App {
