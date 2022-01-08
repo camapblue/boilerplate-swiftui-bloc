@@ -38,6 +38,7 @@ class ContactRepositoryTests: XCTestCase {
                 let items = [Contact.fakeContact()]
                 promise(.success(items))
             }
+            .eraseToAnyPublisher()
         )
         
         given(contactDao.getCachedContacts()).willReturn(nil)

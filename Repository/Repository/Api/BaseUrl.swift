@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Endpoints {
+public enum Endpoints {
     case fetchContacts(size: Int)
 }
 
@@ -18,14 +18,18 @@ public class BaseUrl {
         self.apiEndpointUrl = apiEndpointUrl
     }
     
-    private func path(for endpoint: Endpoints) -> String {
+    public convenience init() {
+        self.init(apiEndpointUrl: "https://test.com")
+    }
+    
+    public func path(for endpoint: Endpoints) -> String {
         switch endpoint {
         case .fetchContacts(let size):
             return "/?results=\(size)"
         }
     }
     
-    func getUrl(of endpoint: Endpoints) -> URL {
+    public func getUrl(of endpoint: Endpoints) -> URL {
         return URL(string: "\(apiEndpointUrl)\(path(for: endpoint))")!
     }
 }

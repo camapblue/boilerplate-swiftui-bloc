@@ -55,6 +55,7 @@ class ContactBlocTests: XCTestCase {
     }
 
     func testEditSuccess() {
+        // when
         let editedContact = Contact.fakeContact(id: "test_contact_id", birthday: Date())
         given(contactService.edit(contact: any())).willReturn(
             Future { promise in
@@ -62,6 +63,7 @@ class ContactBlocTests: XCTestCase {
             }
         )
         
+        // given
         let expectation = self.expectation(description: "Awaiting publisher")
         var success = false
         blocTesting.execute(
@@ -83,6 +85,7 @@ class ContactBlocTests: XCTestCase {
         .store(in: &cancellables)
         waitForExpectations(timeout: 10)
         
+        // then
         XCTAssertTrue(success)
     }
 }

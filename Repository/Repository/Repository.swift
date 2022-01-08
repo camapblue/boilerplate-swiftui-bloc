@@ -8,6 +8,11 @@
 public class Repository {
     public static let shared = Repository()
     
+    private let baseUrl: BaseUrl
+    init() {
+        self.baseUrl = BaseUrl(apiEndpointUrl: RepositoryConfigs.shared.apiEndpointUrl)
+    }
+    
     // Repository
     public func contactRepository() -> ContactRepository {
         return ContactRepositoryImpl(
@@ -16,12 +21,8 @@ public class Repository {
     }
     
     // Api
-    func baseUrl() -> BaseUrl {
-        return BaseUrl(apiEndpointUrl: RepositoryConfigs.shared.apiEndpointUrl)
-    }
-    
     func contactApi() -> ContactApi {
-        return ContactApiImpl(baseUrl: baseUrl())
+        return ContactApiImpl(baseUrl: baseUrl)
     }
     
     // Dao

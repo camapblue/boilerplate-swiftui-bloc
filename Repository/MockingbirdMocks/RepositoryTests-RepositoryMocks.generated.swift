@@ -25,30 +25,30 @@ public final class ContactApiMock: ContactApi, Mockingbird.Mock {
   }
 
   // MARK: Mocked `fetchContacts`(withSize `size`: Int)
-  public func `fetchContacts`(withSize `size`: Int) -> Future<[Contact], Error> {
-    return self.mockingbirdContext.mocking.didInvoke(Mockingbird.SwiftInvocation(selectorName: "`fetchContacts`(withSize `size`: Int) -> Future<[Contact], Error>", selectorType: Mockingbird.SelectorType.method, arguments: [Mockingbird.ArgumentMatcher(`size`)], returnType: Swift.ObjectIdentifier((Future<[Contact], Error>).self))) {
+  public func `fetchContacts`(withSize `size`: Int) -> AnyPublisher<[Contact], Error> {
+    return self.mockingbirdContext.mocking.didInvoke(Mockingbird.SwiftInvocation(selectorName: "`fetchContacts`(withSize `size`: Int) -> AnyPublisher<[Contact], Error>", selectorType: Mockingbird.SelectorType.method, arguments: [Mockingbird.ArgumentMatcher(`size`)], returnType: Swift.ObjectIdentifier((AnyPublisher<[Contact], Error>).self))) {
       self.mockingbirdContext.recordInvocation($0)
       let mkbImpl = self.mockingbirdContext.stubbing.implementation(for: $0)
-      if let mkbImpl = mkbImpl as? (Int) -> Future<[Contact], Error> { return mkbImpl(`size`) }
-      if let mkbImpl = mkbImpl as? () -> Future<[Contact], Error> { return mkbImpl() }
+      if let mkbImpl = mkbImpl as? (Int) -> AnyPublisher<[Contact], Error> { return mkbImpl(`size`) }
+      if let mkbImpl = mkbImpl as? () -> AnyPublisher<[Contact], Error> { return mkbImpl() }
       for mkbTargetBox in self.mockingbirdContext.proxy.targets(for: $0) {
         switch mkbTargetBox.target {
         case .super:
           break
         case .object(let mkbObject):
           guard var mkbObject = mkbObject as? MockingbirdSupertype else { break }
-          let mkbValue: Future<[Contact], Error> = mkbObject.`fetchContacts`(withSize: `size`)
+          let mkbValue: AnyPublisher<[Contact], Error> = mkbObject.`fetchContacts`(withSize: `size`)
           self.mockingbirdContext.proxy.updateTarget(&mkbObject, in: mkbTargetBox)
           return mkbValue
         }
       }
-      if let mkbValue = self.mockingbirdContext.stubbing.defaultValueProvider.value.provideValue(for: (Future<[Contact], Error>).self) { return mkbValue }
+      if let mkbValue = self.mockingbirdContext.stubbing.defaultValueProvider.value.provideValue(for: (AnyPublisher<[Contact], Error>).self) { return mkbValue }
       self.mockingbirdContext.stubbing.failTest(for: $0, at: self.mockingbirdContext.sourceLocation)
     }
   }
 
-  public func `fetchContacts`(withSize `size`: @autoclosure () -> Int) -> Mockingbird.Mockable<Mockingbird.FunctionDeclaration, (Int) -> Future<[Contact], Error>, Future<[Contact], Error>> {
-    return Mockingbird.Mockable<Mockingbird.FunctionDeclaration, (Int) -> Future<[Contact], Error>, Future<[Contact], Error>>(mock: self, invocation: Mockingbird.SwiftInvocation(selectorName: "`fetchContacts`(withSize `size`: Int) -> Future<[Contact], Error>", selectorType: Mockingbird.SelectorType.method, arguments: [Mockingbird.resolve(`size`)], returnType: Swift.ObjectIdentifier((Future<[Contact], Error>).self)))
+  public func `fetchContacts`(withSize `size`: @autoclosure () -> Int) -> Mockingbird.Mockable<Mockingbird.FunctionDeclaration, (Int) -> AnyPublisher<[Contact], Error>, AnyPublisher<[Contact], Error>> {
+    return Mockingbird.Mockable<Mockingbird.FunctionDeclaration, (Int) -> AnyPublisher<[Contact], Error>, AnyPublisher<[Contact], Error>>(mock: self, invocation: Mockingbird.SwiftInvocation(selectorName: "`fetchContacts`(withSize `size`: Int) -> AnyPublisher<[Contact], Error>", selectorType: Mockingbird.SelectorType.method, arguments: [Mockingbird.resolve(`size`)], returnType: Swift.ObjectIdentifier((AnyPublisher<[Contact], Error>).self)))
   }
 }
 

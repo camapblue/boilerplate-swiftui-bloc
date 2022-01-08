@@ -10,26 +10,38 @@ import Combine
 typealias JsonResponse = Dictionary<String, Any>
 
 public class BaseApi {
-    let baseUrl: BaseUrl
+    private let baseUrl: BaseUrl
+    private let urlSession: URLSession
+    private let retryTimes: Int
     
-    public init(_ baseUrl: BaseUrl) {
+    public init(_ baseUrl: BaseUrl, urlSession: URLSession = URLSession.shared, retryTimes: Int = 3) {
         self.baseUrl = baseUrl
+        self.urlSession = urlSession
+        self.retryTimes = retryTimes
     }
     
     func get(path: Endpoints) -> AnyPublisher<JsonResponse, Error> {
         let url = baseUrl.getUrl(of: path)
         
-        return Future { [weak self] promise in
-            guard self != nil else {
+        return Deferred  {
+            Future { [weak self] promise in
+            guard let self = self else {
                 promise(.success(JsonResponse()))
                 return
             }
-            let task = URLSession.shared
-                .dataTask(with: url) { data, _, error in
+                let task = self.urlSession
+                .dataTask(with: url) { data, response, error in
                     if error == nil {
-                        if let json = try! JSONSerialization.jsonObject(with: data ?? Data(), options: []) as? [String: Any] {
-                            promise(.success(json))
-                            return
+                        if let httpResponse = response as? HTTPURLResponse {
+                            if httpResponse.statusCode == 200 {
+                                if let json = try! JSONSerialization.jsonObject(with: data ?? Data(), options: []) as? [String: Any] {
+                                    promise(.success(json))
+                                    return
+                                }
+                            } else if httpResponse.statusCode == 401 {
+                                promise(.failure(UnauthorizedError.tokenExpired))
+                                return
+                            }
                         }
                         promise(.success(JsonResponse()))
                     } else {
@@ -38,6 +50,12 @@ public class BaseApi {
                 }
             task.resume()
         }
+        }.retry(times: retryTimes, if: { error in
+            if error is UnauthorizedError {
+                return true
+            }
+            return false
+        })
         .eraseToAnyPublisher()
     }
 }

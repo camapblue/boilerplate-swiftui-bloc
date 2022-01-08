@@ -25,6 +25,9 @@
 		A6D8145E27829D8000D1A3DF /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D8145D27829D8000D1A3DF /* BaseDao.swift */; };
 		A6D814612782A5ED00D1A3DF /* ContactRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D814602782A5ED00D1A3DF /* ContactRepositoryTests.swift */; };
 		A6E35DF327897E2800FEF4E7 /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35DF227897E2800FEF4E7 /* BaseApi.swift */; };
+		A6E35DF627898D8D00FEF4E7 /* Publisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35DF527898D8D00FEF4E7 /* Publisher+Extension.swift */; };
+		A6E35DF927898F6B00FEF4E7 /* ContactApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35DF827898F6B00FEF4E7 /* ContactApiTests.swift */; };
+		A6E35DFB2789993B00FEF4E7 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35DFA2789993B00FEF4E7 /* MockURLProtocol.swift */; };
 		CA6696332787EB2B0074A4BF /* BaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6696322787EB2B0074A4BF /* BaseUrl.swift */; };
 		CAA44C9127869CF9004B25A6 /* RepositoryConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA44C9027869CF9004B25A6 /* RepositoryConfigs.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +66,9 @@
 		A6D8145D27829D8000D1A3DF /* BaseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
 		A6D814602782A5ED00D1A3DF /* ContactRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepositoryTests.swift; sourceTree = "<group>"; };
 		A6E35DF227897E2800FEF4E7 /* BaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
+		A6E35DF527898D8D00FEF4E7 /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
+		A6E35DF827898F6B00FEF4E7 /* ContactApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactApiTests.swift; sourceTree = "<group>"; };
+		A6E35DFA2789993B00FEF4E7 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		CA6696322787EB2B0074A4BF /* BaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseUrl.swift; path = Repository/Api/BaseUrl.swift; sourceTree = SOURCE_ROOT; };
 		CAA44C9027869CF9004B25A6 /* RepositoryConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryConfigs.swift; sourceTree = "<group>"; };
 		CE18537DF6DAB5B5E10254B6 /* Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-RepositoryTests/Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 		A6637294277BFD270017BD47 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A6E35DF427898D7000FEF4E7 /* Extension */,
 				CAA44C8A27869C8D004B25A6 /* Configurations */,
 				A61AC65C277EE7AD00246A64 /* Exception */,
 				A66372A5277BFD960017BD47 /* Api */,
@@ -217,6 +224,7 @@
 		A6D81450278298EA00D1A3DF /* RepositoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				A6E35DF727898F5500FEF4E7 /* Api */,
 				A6D8145F2782A5D800D1A3DF /* Repository */,
 				A6D8145A278299D800D1A3DF /* Dao */,
 				A6D81451278298EA00D1A3DF /* RepositoryTests.swift */,
@@ -239,6 +247,23 @@
 				A6D814602782A5ED00D1A3DF /* ContactRepositoryTests.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		A6E35DF427898D7000FEF4E7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A6E35DF527898D8D00FEF4E7 /* Publisher+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A6E35DF727898F5500FEF4E7 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				A6E35DF827898F6B00FEF4E7 /* ContactApiTests.swift */,
+				A6E35DFA2789993B00FEF4E7 /* MockURLProtocol.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		CAA44C8A27869C8D004B25A6 /* Configurations */ = {
@@ -453,6 +478,7 @@
 			files = (
 				A66372B6277BFD970017BD47 /* ContactRepositoryImpl.swift in Sources */,
 				A66372B1277BFD970017BD47 /* ContactDaoImpl.swift in Sources */,
+				A6E35DF627898D8D00FEF4E7 /* Publisher+Extension.swift in Sources */,
 				CA6696332787EB2B0074A4BF /* BaseUrl.swift in Sources */,
 				A66372B4277BFD970017BD47 /* ContactApi.swift in Sources */,
 				A6D8145E27829D8000D1A3DF /* BaseDao.swift in Sources */,
@@ -472,6 +498,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6D81452278298EA00D1A3DF /* RepositoryTests.swift in Sources */,
+				A6E35DFB2789993B00FEF4E7 /* MockURLProtocol.swift in Sources */,
+				A6E35DF927898F6B00FEF4E7 /* ContactApiTests.swift in Sources */,
 				A6D8145C278299F300D1A3DF /* ContactDaoTests.swift in Sources */,
 				A6D814612782A5ED00D1A3DF /* ContactRepositoryTests.swift in Sources */,
 				53D84E287387D22E13616FB0 /* RepositoryTests-RepositoryMocks.generated.swift in Sources */,
