@@ -8,7 +8,7 @@
 import Repository
 
 public class ContactState: State {
-    public var contact: Contact
+    public let contact: Contact
     public init(contact: Contact) {
         self.contact = contact
     }

@@ -28,6 +28,7 @@ public class ContactBloc: BaseBloc<ContactEvent, ContactState> {
     
     private func onContactEditedEvent(event: ContactEdited, emitter: Emitter<ContactState>) {
         emitter.send(ContactEditInProgress(contact: state.contact))
+        // showAppLoading()
         
         self.contactService.edit(contact: event.contact)
             .receive(on: DispatchQueue.main)
@@ -37,6 +38,8 @@ public class ContactBloc: BaseBloc<ContactEvent, ContactState> {
                     break
                 case .failure(_):
                     if let self = self {
+                        // handleException()
+                        
                         emitter.send(ContactEditFailure(contact: self.state.contact))
                     }
                 }

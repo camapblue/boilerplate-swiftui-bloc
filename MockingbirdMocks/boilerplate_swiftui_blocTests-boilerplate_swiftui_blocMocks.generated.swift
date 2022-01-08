@@ -17,6 +17,7 @@ import Swift
 import SwiftBloc
 import SwiftUI
 import SwiftUIRefresh
+import UIKit
 private let genericStaticMockContext = Mockingbird.GenericStaticMockContext()
 
 // MARK: - Mocked ContactService
