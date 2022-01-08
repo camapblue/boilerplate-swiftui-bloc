@@ -9,6 +9,6 @@ import Foundation
 import Combine
 
 public protocol ContactApi {
-    func fetchContacts(withSize size: Int) -> Future<[Contact], Error>
+    func fetchContacts(withSize size: Int) -> AnyPublisher<[Contact], Error>
 }
 

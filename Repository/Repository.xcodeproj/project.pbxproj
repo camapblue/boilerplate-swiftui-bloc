@@ -24,6 +24,7 @@
 		A6D8145C278299F300D1A3DF /* ContactDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D8145B278299F300D1A3DF /* ContactDaoTests.swift */; };
 		A6D8145E27829D8000D1A3DF /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D8145D27829D8000D1A3DF /* BaseDao.swift */; };
 		A6D814612782A5ED00D1A3DF /* ContactRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D814602782A5ED00D1A3DF /* ContactRepositoryTests.swift */; };
+		A6E35DF327897E2800FEF4E7 /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35DF227897E2800FEF4E7 /* BaseApi.swift */; };
 		CA6696332787EB2B0074A4BF /* BaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6696322787EB2B0074A4BF /* BaseUrl.swift */; };
 		CAA44C9127869CF9004B25A6 /* RepositoryConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA44C9027869CF9004B25A6 /* RepositoryConfigs.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		A6D8145B278299F300D1A3DF /* ContactDaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDaoTests.swift; sourceTree = "<group>"; };
 		A6D8145D27829D8000D1A3DF /* BaseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
 		A6D814602782A5ED00D1A3DF /* ContactRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepositoryTests.swift; sourceTree = "<group>"; };
+		A6E35DF227897E2800FEF4E7 /* BaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
 		CA6696322787EB2B0074A4BF /* BaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseUrl.swift; path = Repository/Api/BaseUrl.swift; sourceTree = SOURCE_ROOT; };
 		CAA44C9027869CF9004B25A6 /* RepositoryConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryConfigs.swift; sourceTree = "<group>"; };
 		CE18537DF6DAB5B5E10254B6 /* Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-RepositoryTests/Pods-boilerplate-swiftui-bloc-RepositoryTests.qc.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				A66372A6277BFD960017BD47 /* impl */,
 				A66372A8277BFD960017BD47 /* ContactApi.swift */,
 				CA6696322787EB2B0074A4BF /* BaseUrl.swift */,
+				A6E35DF227897E2800FEF4E7 /* BaseApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				A66372B5277BFD970017BD47 /* Contact.swift in Sources */,
 				A61AC65E277EE7D900246A64 /* ApiError.swift in Sources */,
 				A66372B2277BFD970017BD47 /* ContactDao.swift in Sources */,
+				A6E35DF327897E2800FEF4E7 /* BaseApi.swift in Sources */,
 				A66372B7277BFD970017BD47 /* ContactRepository.swift in Sources */,
 				A66372B3277BFD970017BD47 /* ContactApiImpl.swift in Sources */,
 			);

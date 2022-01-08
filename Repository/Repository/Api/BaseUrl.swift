@@ -11,7 +11,7 @@ enum Endpoints {
     case fetchContacts(size: Int)
 }
 
-class BaseUrl {
+public class BaseUrl {
     let apiEndpointUrl: String
     
     init(apiEndpointUrl: String) {
