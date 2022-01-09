@@ -1,16 +1,8 @@
-//
-//  Synchronized.swift
-//  Mockingbird
-//
-//  Created by Andrew Chang on 8/10/19.
-//  Copyright © 2019 Bird Rides, Inc. All rights reserved.
-//
-
 import Foundation
 
-class Synchronized<T> {
-  private(set) var unsafeValue: T
-  var value: T {
+public class Synchronized<T> {
+  private(set) public var unsafeValue: T
+  public var value: T {
     get {
       var value: T!
       queue.sync { value = unsafeValue }
@@ -22,20 +14,20 @@ class Synchronized<T> {
   }
   private let queue = DispatchQueue(label: "co.bird.mockingbird.synchronized")
   
-  init(_ value: T) {
+  public init(_ value: T) {
     self.unsafeValue = value
   }
   
-  func update(_ block: (inout T) throws -> Void) rethrows {
+  public func update(_ block: (inout T) throws -> Void) rethrows {
     try queue.sync { try block(&unsafeValue) }
   }
   
   @discardableResult
-  func update<R>(_ block: (inout T) throws -> R) rethrows -> R {
+  public func update<R>(_ block: (inout T) throws -> R) rethrows -> R {
     return try queue.sync { try block(&unsafeValue) }
   }
   
-  func read<R>(_ block: (T) throws -> R) rethrows -> R {
+  public func read<R>(_ block: (T) throws -> R) rethrows -> R {
     var value: R!
     try queue.sync { value = try block(unsafeValue) }
     return value

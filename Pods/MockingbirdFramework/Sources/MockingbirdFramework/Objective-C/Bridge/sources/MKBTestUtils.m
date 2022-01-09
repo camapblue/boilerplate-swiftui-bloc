@@ -1,10 +1,3 @@
-//
-//  MKBTestUtils.m
-//  MockingbirdFramework
-//
-//  Created by typealias on 7/25/21.
-//
-
 #import "../include/MKBTestUtils.h"
 
 void MKBStopTest(NSString *reason)
@@ -28,4 +21,9 @@ NSException *_Nullable MKBTryBlock(void(^_Nonnull NS_NOESCAPE block)(void))
     return exception;
   }
   return nil;
+}
+
+bool MKBCheckIfTypeErasedNil(id _Nullable value)
+{
+  return value == [NSNull null];
 }

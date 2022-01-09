@@ -1,10 +1,3 @@
-//
-//  AsyncVerification.swift
-//  MockingbirdFramework
-//
-//  Created by Andrew Chang on 3/8/20.
-//
-
 import Foundation
 import XCTest
 
@@ -13,17 +6,19 @@ import XCTest
 /// Mocked methods that are invoked asynchronously can be verified using an `eventually` block which
 /// returns an `XCTestExpectation`.
 ///
-///     DispatchQueue.main.async {
-///       Tree(with: bird).shake()
-///     }
+/// ```swift
+/// DispatchQueue.main.async {
+///   Tree(with: bird).shake()
+/// }
 ///
-///     let expectation =
-///       eventually {
-///         verify(bird.fly()).wasCalled()
-///         verify(bird.chirp()).wasCalled()
-///       }
+/// let expectation =
+///   eventually {
+///     verify(bird.fly()).wasCalled()
+///     verify(bird.chirp()).wasCalled()
+///   }
 ///
-///     wait(for: [expectation], timeout: 1.0)
+/// wait(for: [expectation], timeout: 1.0)
+/// ```
 ///
 /// - Parameters:
 ///   - description: An optional description for the created `XCTestExpectation`.

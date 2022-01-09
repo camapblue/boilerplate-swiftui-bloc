@@ -1,10 +1,3 @@
-//
-//  MKBObjectInvocationHandler.m
-//  MockingbirdFramework
-//
-//  Created by typealias on 7/19/21.
-//
-
 #import "MKBObjectInvocationHandler.h"
 #import "MKBComparator.h"
 #if MKB_SWIFTPM
@@ -29,8 +22,8 @@
   [invocation getArgument:&value atIndex:index];
   
   // Unwrapped boxed types within type facades.
-  if ([[value class] isSubclassOfClass:[MKBTypeFacade class]]) {
-    value = ((MKBTypeFacade *)value).boxedObject;
+  if ([value respondsToSelector:@selector(mkb_isTypeFacade)]) {
+    value = ((MKBTypeFacade *)value).mkb_boxedObject;
   }
   
   // Use argument matchers directly.
@@ -47,6 +40,13 @@
 
 - (void)deserializeReturnValue:(id)returnValue forInvocation:(NSInvocation *)invocation
 {
+  // Handle nil values from Swift.
+  if ([returnValue isKindOfClass:[MKBNilValue class]]) {
+    id _Nullable nilReturnValue = nil;
+    [invocation setReturnValue:&nilReturnValue];
+    return;
+  }
+  
   [invocation setReturnValue:&returnValue];
 }
 

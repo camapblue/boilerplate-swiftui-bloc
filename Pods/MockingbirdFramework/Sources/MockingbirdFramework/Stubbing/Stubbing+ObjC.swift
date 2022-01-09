@@ -1,25 +1,22 @@
-//
-//  Stubbing+ObjC.swift
-//  MockingbirdFramework
-//
-//  Created by typealias on 7/28/21.
-//
-
 import Foundation
 
-/// Stub a mocked method or property by returning a single value.
+/// Stub a mocked Objective-C method or property by returning a single value.
 ///
 /// Stubbing allows you to define custom behavior for mocks to perform.
 ///
-///     given(bird.doMethod()) ~> someValue
-///     given(bird.property) ~> someValue
+/// ```swift
+/// given(bird.doMethod()) ~> someValue
+/// given(bird.property) ~> someValue
+/// ```
 ///
 /// Match exact or wildcard argument values when stubbing methods with parameters. Stubs added
 /// later have a higher precedence, so add stubs with specific matchers last.
 ///
-///     given(bird.canChirp(volume: any())) ~> true     // Any volume
-///     given(bird.canChirp(volume: notNil())) ~> true  // Any non-nil volume
-///     given(bird.canChirp(volume: 10)) ~> true        // Volume = 10
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> true     // Any volume
+/// given(bird.canChirp(volume: notNil())) ~> true  // Any non-nil volume
+/// given(bird.canChirp(volume: 10)) ~> true        // Volume = 10
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -34,13 +31,15 @@ public func ~> <ReturnType>(
 
 // MARK: - Non-throwing
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -54,13 +53,15 @@ public func ~> <ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -75,13 +76,15 @@ public func ~> <P0,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -96,13 +99,15 @@ public func ~> <P0,P1,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -117,13 +122,15 @@ public func ~> <P0,P1,P2,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -138,13 +145,15 @@ public func ~> <P0,P1,P2,P3,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -159,13 +168,15 @@ public func ~> <P0,P1,P2,P3,P4,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -180,13 +191,15 @@ public func ~> <P0,P1,P2,P3,P4,P5,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -202,13 +215,15 @@ public func ~> <P0,P1,P2,P3,P4,P5,P6,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -224,13 +239,15 @@ public func ~> <P0,P1,P2,P3,P4,P5,P6,P7,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -246,13 +263,15 @@ public func ~> <P0,P1,P2,P3,P4,P5,P6,P7,P8,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -272,13 +291,15 @@ public func ~> <P0,P1,P2,P3,P4,P5,P6,P7,P8,P9,ReturnType>(
 
 // MARK: - Throwing
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -292,13 +313,15 @@ public func ~> <ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -313,13 +336,15 @@ public func ~> <P0,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -334,13 +359,15 @@ public func ~> <P0,P1,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -355,13 +382,15 @@ public func ~> <P0,P1,P2,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -376,13 +405,15 @@ public func ~> <P0,P1,P2,P3,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -397,13 +428,15 @@ public func ~> <P0,P1,P2,P3,P4,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -418,13 +451,15 @@ public func ~> <P0,P1,P2,P3,P4,P5,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -440,13 +475,15 @@ public func ~> <P0,P1,P2,P3,P4,P5,P6,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -462,13 +499,15 @@ public func ~> <P0,P1,P2,P3,P4,P5,P6,P7,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.
@@ -484,13 +523,15 @@ public func ~> <P0,P1,P2,P3,P4,P5,P6,P7,P8,ReturnType>(
   })
 }
 
-/// Stub a mocked method or property with a closure implementation.
+/// Stub a mocked Objective-C method or property with a closure implementation.
 ///
 /// Use a closure to implement stubs that contain logic, interact with arguments, or throw errors.
 ///
-///     given(bird.canChirp(volume: any())) ~> { volume in
-///       return volume < 42
-///     }
+/// ```swift
+/// given(bird.canChirp(volume: any())) ~> { volume in
+///   return volume < 42
+/// }
+/// ```
 ///
 /// - Parameters:
 ///   - manager: A stubbing manager containing declaration and argument metadata for stubbing.

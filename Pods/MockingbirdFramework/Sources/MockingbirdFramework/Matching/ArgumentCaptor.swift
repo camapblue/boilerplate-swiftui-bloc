@@ -1,10 +1,3 @@
-//
-//  ArgumentCaptor.swift
-//  Mockingbird
-//
-//  Created by Andrew Chang on 7/29/19.
-//
-
 import Foundation
 
 /// Captures method arguments passed during mock invocations.
@@ -12,12 +5,14 @@ import Foundation
 /// An argument captor extracts received argument values which can be used in other parts of the
 /// test.
 ///
-///     let bird = mock(Bird.self)
-///     bird.name = "Ryan"
+/// ```swift
+/// let bird = mock(Bird.self)
+/// bird.name = "Ryan"
 ///
-///     let nameCaptor = ArgumentCaptor<String>()
-///     verify(bird.name = any()).wasCalled()
-///     print(nameCaptor.value)  // Prints "Ryan"
+/// let nameCaptor = ArgumentCaptor<String>()
+/// verify(bird.name = any()).wasCalled()
+/// print(nameCaptor.value)  // Prints "Ryan"
+/// ```
 public class ArgumentCaptor<ParameterType>: ArgumentMatcher {
   final class WeakBox<A: AnyObject> {
     weak var value: A?

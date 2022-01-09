@@ -9,9 +9,9 @@ import Foundation
 import Combine
 import Repository
 
-class ContactListServiceImpl: LoadListService<Contact> {
+public class ContactListServiceImpl: LoadListService<Contact> {
     private var contactRepository: ContactRepository
-    init(contactRepository: ContactRepository) {
+    public init(contactRepository: ContactRepository) {
         self.contactRepository = contactRepository
     }
     
@@ -19,11 +19,11 @@ class ContactListServiceImpl: LoadListService<Contact> {
         contactRepository.clearCachedDataIfNeeded()
     }
     
-    override func loadItems() throws -> Future<[Contact], Error> {
+    public override func loadItems() throws -> Future<[Contact], Error> {
         return contactRepository.fetchContacts()
     }
     
-    override func loadItems(params: [String: Any]?) throws -> Future<[Contact], Error> {
+    public override func loadItems(params: [String: Any]?) throws -> Future<[Contact], Error> {
         // TODO: Add params
         return contactRepository
             .fetchContacts(size: 20)

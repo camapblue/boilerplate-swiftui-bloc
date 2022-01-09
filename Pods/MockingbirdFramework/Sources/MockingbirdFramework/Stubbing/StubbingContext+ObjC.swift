@@ -1,10 +1,3 @@
-//
-//  StubbingContext+ObjC.swift
-//  MockingbirdFramework
-//
-//  Created by typealias on 7/20/21.
-//
-
 import Foundation
 
 /// Used to forward errors thrown from stubbed implementations to the Objective-C runtime.
@@ -12,6 +5,7 @@ import Foundation
   // There's some weird bridging errors with Swift errors, so ErrorBox is just an abstract class
   // that the Obj-C runtime can (responsibly) pull errors from using `performSelector:`.
 }
+
 /// Holds Swift errors which are bridged to `NSErrors`.
 @objc(MKBSwiftErrorBox) public class SwiftErrorBox: ErrorBox {
   @objc public let error: Error
@@ -19,6 +13,7 @@ import Foundation
     self.error = error
   }
 }
+
 /// Holds Objective-C `NSError` objects.
 @objc(MKBObjCErrorBox) public class ObjCErrorBox: ErrorBox {
   @objc public let error: NSError?
@@ -26,6 +21,9 @@ import Foundation
     self.error = error
   }
 }
+
+/// Represents `nil` return values to prevent Swift from implicitly bridging to `NSNull`.
+@objc(MKBNilValue) public class NilValue: NSObject {}
 
 extension StubbingContext {
   /// Used to indicate that no implementation exists for a given invocation.
@@ -40,9 +38,16 @@ extension StubbingContext {
   @objc public func evaluateReturnValue(for invocation: ObjCInvocation) -> Any? {
     let impl = implementation(for: invocation as Invocation)
     do {
-      return try applyInvocation(invocation, to: impl)
+      let value = try applyInvocation(invocation, to: impl)
         ?? applyThrowingInvocation(invocation, to: impl)
         ?? Self.noImplementation
+      // It's possible to stub `NSNull` as a return value, so we need to check that this is an
+      // actual nil Swift value before creating a `NilValue` representation for Obj-C.
+      if !(value is NSNull) && MKBCheckIfTypeErasedNil(value) {
+        return NilValue()
+      } else {
+        return value
+      }
     } catch let err as NSError {
       return ObjCErrorBox(err)
     } catch let err {

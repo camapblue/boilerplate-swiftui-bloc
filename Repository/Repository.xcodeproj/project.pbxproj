@@ -428,7 +428,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eu\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-400750FC-497E-46C7-B40E-E0DD8D25373F'\n\nmockingbird generate \\\n  --targets 'Repository' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/RepositoryTests-RepositoryMocks.generated.swift\" \\\n  --support \"${SRCROOT}/MockingbirdSupport\"";
+			shellScript = "set -eu\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-400750FC-497E-46C7-B40E-E0DD8D25373F'\n\nmockingbird generate \\\n  --targets 'Repository' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/RepositoryTests-RepositoryMocks.generated.swift\" \\\n  --support \"${SRCROOT}/MockingbirdSupport\"\n";
 		};
 		6ED119D65634E651421B10E1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

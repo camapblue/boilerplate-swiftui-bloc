@@ -8,10 +8,10 @@
 import Foundation
 import Combine
 
-open class LoadListService<Item: Equatable> {
+public class LoadListService<Item: Equatable> {
     func forceToRefresh() { }
     
-    func loadItems() throws -> Future<[Item], Error> { throw "not implemented yet" }
+    public func loadItems() throws -> Future<[Item], Error> { throw "not implemented yet" }
     
-    func loadItems(params: [String: Any]?) throws -> Future<[Item], Error> { throw "not implemented yet" }
+    public func loadItems(params: [String: Any]?) throws -> Future<[Item], Error> { throw "not implemented yet" }
 }
