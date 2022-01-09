@@ -28,7 +28,7 @@
 		A640711F27799CA400F3A9CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A640711E27799CA400F3A9CC /* Preview Assets.xcassets */; };
 		A640713527799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640713427799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift */; };
 		A645C85027858E440064ABD8 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645C84F27858E440064ABD8 /* Text.swift */; };
-		A645C852278594AB0064ABD8 /* StyleDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645C851278594AB0064ABD8 /* StyleDictionary.swift */; };
+		A645C852278594AB0064ABD8 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645C851278594AB0064ABD8 /* DesignTokens.swift */; };
 		A66372BA277C0CD60017BD47 /* BaseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372B9277C0CD60017BD47 /* BaseBloc.swift */; };
 		A66372BC277C0D080017BD47 /* BlocManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372BB277C0D080017BD47 /* BlocManager.swift */; };
 		A66372BF277C0D400017BD47 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372BE277C0D400017BD47 /* SplashView.swift */; };
@@ -44,6 +44,11 @@
 		A66372D7277C59380017BD47 /* LoadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372D6277C59380017BD47 /* LoadListView.swift */; };
 		A66372DA277C5EFB0017BD47 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372D9277C5EFB0017BD47 /* LoadingView.swift */; };
 		A665B24F278A711E005D6E92 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A665B24E278A711E005D6E92 /* Repository.framework */; };
+		A6C7B9D3278AD58D00F4E5DC /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9D2278AD58D00F4E5DC /* ButtonView.swift */; };
+		A6C7B9D5278AD79A00F4E5DC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9D4278AD79A00F4E5DC /* Color.swift */; };
+		A6C7B9D7278AD88C00F4E5DC /* ButtonViewStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9D6278AD88C00F4E5DC /* ButtonViewStory.swift */; };
+		A6C7B9D9278AEF6700F4E5DC /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9D8278AEF6700F4E5DC /* View+Extension.swift */; };
+		A6C7B9DC278B0DA700F4E5DC /* SpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9DB278B0DA700F4E5DC /* SpacerView.swift */; };
 		A6D814642782DFAF00D1A3DF /* ContactBlocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D814632782DFAF00D1A3DF /* ContactBlocTests.swift */; };
 		A6D814672782DFE600D1A3DF /* ContactServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D814662782DFE600D1A3DF /* ContactServiceTests.swift */; };
 		A6DBC38E277B076D00F90A05 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBC38D277B076D00F90A05 /* ContactService.swift */; };
@@ -139,7 +144,7 @@
 		A640713427799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boilerplate_swiftui_blocUITests.swift; sourceTree = "<group>"; };
 		A640713627799CA500F3A9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A645C84F27858E440064ABD8 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
-		A645C851278594AB0064ABD8 /* StyleDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleDictionary.swift; sourceTree = "<group>"; };
+		A645C851278594AB0064ABD8 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
 		A663724C277B10910017BD47 /* librepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = librepository.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66372B9277C0CD60017BD47 /* BaseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBloc.swift; sourceTree = "<group>"; };
 		A66372BB277C0D080017BD47 /* BlocManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocManager.swift; sourceTree = "<group>"; };
@@ -157,6 +162,11 @@
 		A66372D9277C5EFB0017BD47 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A665B24C278A6E09005D6E92 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A665B24E278A711E005D6E92 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C7B9D2278AD58D00F4E5DC /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		A6C7B9D4278AD79A00F4E5DC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A6C7B9D6278AD88C00F4E5DC /* ButtonViewStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewStory.swift; sourceTree = "<group>"; };
+		A6C7B9D8278AEF6700F4E5DC /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		A6C7B9DB278B0DA700F4E5DC /* SpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerView.swift; sourceTree = "<group>"; };
 		A6D814632782DFAF00D1A3DF /* ContactBlocTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBlocTests.swift; sourceTree = "<group>"; };
 		A6D814662782DFE600D1A3DF /* ContactServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactServiceTests.swift; sourceTree = "<group>"; };
 		A6DBC38D277B076D00F90A05 /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
@@ -295,6 +305,7 @@
 			children = (
 				A6376FEB278191CE00DFC0D9 /* AvataryViewStory.swift */,
 				A6376FEF2781A14400DFC0D9 /* Storybook.swift */,
+				A6C7B9D6278AD88C00F4E5DC /* ButtonViewStory.swift */,
 			);
 			path = Storybook;
 			sourceTree = "<group>";
@@ -377,7 +388,8 @@
 			isa = PBXGroup;
 			children = (
 				A645C84F27858E440064ABD8 /* Text.swift */,
-				A645C851278594AB0064ABD8 /* StyleDictionary.swift */,
+				A645C851278594AB0064ABD8 /* DesignTokens.swift */,
+				A6C7B9D4278AD79A00F4E5DC /* Color.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -406,6 +418,7 @@
 				A66372C6277C1F540017BD47 /* String+Extenstion.swift */,
 				A61AC665277EECED00246A64 /* Date+Extension.swift */,
 				A61AC66F278054C300246A64 /* Array+Extension.swift */,
+				A6C7B9D8278AEF6700F4E5DC /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,6 +426,8 @@
 		A66372D4277C58D50017BD47 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				A6C7B9DA278B0D8100F4E5DC /* SpacerView */,
+				A6C7B9D1278AD57700F4E5DC /* ButtonView */,
 				A61AC65F277EE96F00246A64 /* AvatarView */,
 				A61AC650277EDC3200246A64 /* LazyView */,
 				A66372D8277C5EEB0017BD47 /* Loading */,
@@ -435,6 +450,22 @@
 				A66372D9277C5EFB0017BD47 /* LoadingView.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		A6C7B9D1278AD57700F4E5DC /* ButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				A6C7B9D2278AD58D00F4E5DC /* ButtonView.swift */,
+			);
+			path = ButtonView;
+			sourceTree = "<group>";
+		};
+		A6C7B9DA278B0D8100F4E5DC /* SpacerView */ = {
+			isa = PBXGroup;
+			children = (
+				A6C7B9DB278B0DA700F4E5DC /* SpacerView.swift */,
+			);
+			path = SpacerView;
 			sourceTree = "<group>";
 		};
 		A6D814622782DF9000D1A3DF /* Bloc */ = {
@@ -863,15 +894,18 @@
 				A66372C9277C1FB40017BD47 /* ContactListServiceImpl.swift in Sources */,
 				A640711827799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift in Sources */,
 				A66372BA277C0CD60017BD47 /* BaseBloc.swift in Sources */,
+				A6C7B9DC278B0DA700F4E5DC /* SpacerView.swift in Sources */,
 				A61AC654277EE3FB00246A64 /* ContactDetailView.swift in Sources */,
 				A66372BC277C0D080017BD47 /* BlocManager.swift in Sources */,
 				A66372DA277C5EFB0017BD47 /* LoadingView.swift in Sources */,
 				CA27371C27856E0400DE14A3 /* NavigationRouter.swift in Sources */,
 				CA27371D27856E0400DE14A3 /* ResolvedRoute.swift in Sources */,
+				A6C7B9D7278AD88C00F4E5DC /* ButtonViewStory.swift in Sources */,
 				A66372D7277C59380017BD47 /* LoadListView.swift in Sources */,
 				A66372D3277C57F80017BD47 /* Keys.swift in Sources */,
 				CA27371927856E0400DE14A3 /* OnDismantle.swift in Sources */,
 				A66372CD277C21D30017BD47 /* LoadListEvent.swift in Sources */,
+				A6C7B9D5278AD79A00F4E5DC /* Color.swift in Sources */,
 				A61AC663277EEC3700246A64 /* ContactExtension.swift in Sources */,
 				A61AC670278054C300246A64 /* Array+Extension.swift in Sources */,
 				A645C85027858E440064ABD8 /* Text.swift in Sources */,
@@ -879,6 +913,7 @@
 				CA27372327856F0D00DE14A3 /* Routes.swift in Sources */,
 				A61AC64F277EC5C300246A64 /* ContactListView.swift in Sources */,
 				A6376FF02781A14400DFC0D9 /* Storybook.swift in Sources */,
+				A6C7B9D9278AEF6700F4E5DC /* View+Extension.swift in Sources */,
 				A66372C1277C0DB80017BD47 /* Services.swift in Sources */,
 				CA27371E27856E0400DE14A3 /* NextRoutableModifier.swift in Sources */,
 				CA27372027856E0400DE14A3 /* RouterView.swift in Sources */,
@@ -894,8 +929,9 @@
 				CA7350122785ABEB0090CD80 /* AppEnvironment.swift in Sources */,
 				A66372C4277C1B510017BD47 /* LoadListService.swift in Sources */,
 				A66372CB277C21C70017BD47 /* LoadListBloc.swift in Sources */,
+				A6C7B9D3278AD58D00F4E5DC /* ButtonView.swift in Sources */,
 				A6DBC38E277B076D00F90A05 /* ContactService.swift in Sources */,
-				A645C852278594AB0064ABD8 /* StyleDictionary.swift in Sources */,
+				A645C852278594AB0064ABD8 /* DesignTokens.swift in Sources */,
 				A6376FEC278191CE00DFC0D9 /* AvataryViewStory.swift in Sources */,
 				A66372BF277C0D400017BD47 /* SplashView.swift in Sources */,
 				A66372C7277C1F540017BD47 /* String+Extenstion.swift in Sources */,
@@ -1066,6 +1102,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B0EF6DDCE40B5B72C118081 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.dev.xcconfig */;
 			buildSettings = {
+				APP_BUNDLE_ID = "ptc.tech.boilerplate-swiftui-bloc.dev";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1088,6 +1125,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D34FFFABB30A2A465EC8F334 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.qc.xcconfig */;
 			buildSettings = {
+				APP_BUNDLE_ID = "ptc.tech.boilerplate-swiftui-bloc.qc";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1250,6 +1288,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2556A6E0745B5DFD32182E98 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.prod.xcconfig */;
 			buildSettings = {
+				APP_BUNDLE_ID = "ptc.tech.boilerplate-swiftui-bloc";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

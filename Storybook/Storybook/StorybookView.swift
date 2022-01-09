@@ -21,4 +21,3 @@ public struct StorybookView<V: View>: View {
         .navigationTitle("Storybook")
     }
 }
-

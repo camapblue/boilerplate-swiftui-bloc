@@ -11,7 +11,8 @@ import Storybook
 struct Storybook: View {
     var body: some View {
         StorybookView(stories: [
-            Story("Avatar View") { AvatarViewStory() }
+            Story("Avatar View") { AnyView(AvatarViewStory()) },
+            Story("Button View") { AnyView(ButtonViewStory()) }
         ])
     }
 }
