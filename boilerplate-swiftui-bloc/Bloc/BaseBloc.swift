@@ -34,6 +34,22 @@ public class BaseBloc<E: Equatable, S: Equatable>: Bloc<E, S> {
         super.init(initialState: inititalState)
     }
     
+    public func showAppLoading() {
+        BlocManager.shared.event(
+            LoadingBloc.self,
+            key: Keys.Bloc.loadingBloc,
+            event: LoadingShowed()
+        )
+    }
+    
+    public func hideAppLoading() {
+        BlocManager.shared.event(
+            LoadingBloc.self,
+            key: Keys.Bloc.loadingBloc,
+            event: LoadingHide()
+        )
+    }
+    
     deinit {
         BlocManager.shared.disposeBloc(key: key)
     }

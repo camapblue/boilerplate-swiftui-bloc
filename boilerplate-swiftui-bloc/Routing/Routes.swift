@@ -23,7 +23,7 @@ extension NavigationRouteLink {
 
 extension Array where Element == NavigationRoute {
     static var all: [NavigationRoute] {
-        let splash = NavigationRoute(path: "/splash", destination: SplashView())
+        let splash = NavigationRoute(path: "/splash", destination: SplashScreen())
         let storyBook = NavigationRoute(path: "/storyBook", destination: Storybook())
         
         let contactList = NavigationRoute(path: "/contactList") {

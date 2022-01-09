@@ -11,6 +11,7 @@ struct ButtonView: View {
     var title: String
     var backgroundColor: Color = DesignTokens.colorBaseOrange.color()
     var highlightColor: Color = DesignTokens.colorBaseRed.color()
+    var disabledColor: Color = DesignTokens.colorBaseGrayLight.color()
     var textSize: CGFloat = 17
     var textColor: Color = DesignTokens.colorBaseGrayDark.color()
     
@@ -19,6 +20,7 @@ struct ButtonView: View {
     var width: CGFloat?
     var height: CGFloat = 44
     var padding: EdgeInsets?
+    var disabled: Bool = false
     var action: () -> Void
     
     @SwiftUI.State private var isPressed = false
@@ -27,7 +29,10 @@ struct ButtonView: View {
         ZStack {
             ZStack {
                 Text(title)
-                    .primaryBold(fontSize: textSize, color: textColor)
+                    .primaryBold(
+                        fontSize: textSize,
+                        color: textColor.opacity(disabled ? 0.5 : 1)
+                    )
                     
             }
             .if (padding != nil) { view in
@@ -45,7 +50,10 @@ struct ButtonView: View {
                         .disabled(true)
                 )
             }
-            .background(isPressed ? highlightColor : backgroundColor)
+            .background(
+                disabled ? disabledColor
+                    : isPressed ? highlightColor : backgroundColor
+            )
             .cornerRadius(cornerRadius)
         }
         .simultaneousGesture(
@@ -62,11 +70,11 @@ struct ButtonView: View {
 }
 
 extension ButtonView {
-    static func primary(_ title: String, width: CGFloat? = nil, padding: EdgeInsets? = nil, action: @escaping () -> Void) -> ButtonView {
-        return ButtonView(title: title, width: width, padding: padding, action: action)
+    static func primary(_ title: String, width: CGFloat? = nil, padding: EdgeInsets? = nil, disabled: Bool = false, action: @escaping () -> Void) -> ButtonView {
+        return ButtonView(title: title, width: width, padding: padding, disabled: disabled, action: action)
     }
     
-    static func secondary(_ title: String, width: CGFloat? = nil, padding: EdgeInsets? = nil, action: @escaping () -> Void) -> ButtonView {
+    static func secondary(_ title: String, width: CGFloat? = nil, padding: EdgeInsets? = nil, disabled: Bool = false, action: @escaping () -> Void) -> ButtonView {
         return ButtonView(
             title: title,
             backgroundColor: Color.gray.opacity(0),
@@ -74,6 +82,7 @@ extension ButtonView {
             border: DesignTokens.colorBaseGrayDark.color(),
             width: width,
             padding: padding,
+            disabled: disabled,
             action: action
         )
     }

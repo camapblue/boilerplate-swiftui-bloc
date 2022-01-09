@@ -47,6 +47,13 @@ class BlocManager {
         return nil
     }
     
+    func event<B: BaseBloc<E, S>, E: Event, S: State>(_ type: B.Type, key: String, event: E) {
+        if let blocFound = blocs.object(forKey: key as NSString) as? B {
+            print("BLOC EVENT = \(event)")
+            blocFound.add(event: event)
+        }
+    }
+    
     func disposeBloc(key: String) {
         disposingQueue.async { [unowned self] in
             // print("DEPENDENT BLOC = \(self.dependentBlocs)")

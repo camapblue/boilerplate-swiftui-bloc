@@ -28,9 +28,11 @@ public class ContactBloc: BaseBloc<ContactEvent, ContactState> {
     
     private func onContactEditedEvent(event: ContactEdited, emitter: Emitter<ContactState>) {
         emitter.send(ContactEditInProgress(contact: state.contact))
-        // showAppLoading()
+        print("CONTACT EDIT")
+        showAppLoading()
         
         self.contactService.edit(contact: event.contact)
+            .delay(for: 2, scheduler: RunLoop.main)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
                 switch completion {
@@ -43,6 +45,7 @@ public class ContactBloc: BaseBloc<ContactEvent, ContactState> {
                         emitter.send(ContactEditFailure(contact: self.state.contact))
                     }
                 }
+                self?.hideAppLoading()
             }, receiveValue: { updatedContact in
                 let nextState = ContactEditSuccess(contact: updatedContact)
                 emitter.send(nextState)

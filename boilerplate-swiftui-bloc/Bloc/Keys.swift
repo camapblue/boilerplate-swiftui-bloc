@@ -10,6 +10,9 @@ import Foundation
 class Keys {
     
     class Bloc {
+        // common
+        static let loadingBloc = "loading_bloc_key"
+        
         // list
         static let contactList = "contact_list_bloc_key"
         

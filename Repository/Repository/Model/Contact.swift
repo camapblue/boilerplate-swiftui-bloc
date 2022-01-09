@@ -8,20 +8,20 @@
 import Foundation
 
 public class Contact: Codable, Equatable {
-    public private(set) var id: String
+    public internal(set) var id: String
     
-    public private(set) var firstName: String
-    public private(set) var lastName: String
+    public internal(set) var firstName: String
+    public internal(set) var lastName: String
     
-    public private(set) var street: String
-    public private(set) var city: String
-    public private(set) var state: String
-    public private(set) var country: String
+    public internal(set) var street: String
+    public internal(set) var city: String
+    public internal(set) var state: String
+    public internal(set) var country: String
     
-    public private(set) var birthday: Date?
+    public internal(set) var birthday: Date?
     
-    public private(set) var avatar: String
-    public private(set) var nationality: String
+    public internal(set) var avatar: String
+    public internal(set) var nationality: String
     
     public static func fakeContact(id: String = "fake_id", birthday date: Date? = nil) -> Contact {
         let dic = [

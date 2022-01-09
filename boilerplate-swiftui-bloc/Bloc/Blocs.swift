@@ -8,9 +8,13 @@
 import Foundation
 import Repository
 
-
-
 class Blocs {
+    // Common
+    func loadingBloc() -> LoadingBloc {
+        return BlocManager.shared.newBloc(key: Keys.Bloc.loadingBloc) {
+            return LoadingBloc(key: Keys.Bloc.loadingBloc)
+        }
+    }
     
     // Single
     func contactBloc(contact: Contact) -> ContactBloc {

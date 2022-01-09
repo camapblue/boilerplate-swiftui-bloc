@@ -8,7 +8,7 @@
 import SwiftUI
 import Repository
 
-struct SplashView: View {
+struct SplashScreen: View {
     @Environment(\.router) var router
     
     var body: some View {
@@ -28,8 +28,8 @@ struct SplashView: View {
     }
 }
 
-struct SplashView_Previews: PreviewProvider {
+struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView()
+        SplashScreen()
     }
 }
