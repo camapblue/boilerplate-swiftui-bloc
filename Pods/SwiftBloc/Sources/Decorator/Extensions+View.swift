@@ -12,7 +12,9 @@ extension View {
         base: B,
         action: BlocViewAction<B, S>?
     ) -> some View {
-        action?(base)
+        DispatchQueue.main.async {
+            action?(base)
+        }
         return self
     }
 }

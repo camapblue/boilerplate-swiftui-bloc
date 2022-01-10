@@ -22,7 +22,9 @@ struct AppShowing: View {
             }
             .environment(\.router, router)
             .navigationViewStyle(StackNavigationViewStyle())
-            .loadingOverlay(isLoading: bloc.state.isLoading)
+            .if(bloc.state.isLoading) { view in
+                view.overlay(LoadingOverlay())
+            }
         }, base: bloc)
     }
 }

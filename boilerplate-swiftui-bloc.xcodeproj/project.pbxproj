@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F0E8266B00A053D9296416E /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE5587F7A46C4FC31BCA871 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */; };
 		8C39492B2ACC67FD39218881 /* Pods_boilerplate_swiftui_blocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */; };
 		8FAB86C475C7BE245E2A7DF1 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */; };
 		A61AC64F277EC5C300246A64 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC64E277EC5C300246A64 /* ContactListView.swift */; };
@@ -76,6 +75,7 @@
 		CAA44C9E2786C9DE004B25A6 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA44C9D2786C9DE004B25A6 /* Repository.framework */; };
 		CAA44C9F2786C9E5004B25A6 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAA44C9D2786C9DE004B25A6 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEB69978CA8F5B85D7C9C3FC /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2C28CA47A678102258317 /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift */; };
+		F4087A6F0118383A062B2749 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E10652264B53FFA79043A9D /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,7 +116,7 @@
 		2556A6E0745B5DFD32182E98 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.prod.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.prod.xcconfig"; sourceTree = "<group>"; };
 		3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_blocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA2C28CA47A678102258317 /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift"; path = "MockingbirdMocks/boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift"; sourceTree = "<group>"; };
-		5FE5587F7A46C4FC31BCA871 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E10652264B53FFA79043A9D /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61287E70FD8CBC8940198DC2 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.prod.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.prod.xcconfig"; sourceTree = "<group>"; };
 		7B0EF6DDCE40B5B72C118081 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.dev.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.dev.xcconfig"; sourceTree = "<group>"; };
 		7B9D01F4F9AC23D4B7805FAB /* Pods-boilerplate-swiftui-bloc.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc.dev.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc.dev.xcconfig"; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 			files = (
 				CAA44C9E2786C9DE004B25A6 /* Repository.framework in Frameworks */,
 				A6376FE327818CEA00DFC0D9 /* Storybook.framework in Frameworks */,
-				6F0E8266B00A053D9296416E /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */,
+				F4087A6F0118383A062B2749 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +572,7 @@
 				A663724C277B10910017BD47 /* librepository.a */,
 				927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */,
 				3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */,
-				5FE5587F7A46C4FC31BCA871 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */,
+				5E10652264B53FFA79043A9D /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -648,7 +648,7 @@
 				A640711127799CA100F3A9CC /* Frameworks */,
 				A640711227799CA100F3A9CC /* Resources */,
 				A66372A0277BFD600017BD47 /* Embed Frameworks */,
-				E203FB1AFE29E877C49E911E /* [CP] Embed Pods Frameworks */,
+				3E3E4A6A4DF72D06F43EEC3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -663,8 +663,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A640713C27799CA500F3A9CC /* Build configuration list for PBXNativeTarget "boilerplate-swiftui-blocTests" */;
 			buildPhases = (
-				A640712227799CA500F3A9CC /* Frameworks */,
 				1CC4A05CBC169E31D0D50604 /* [CP] Check Pods Manifest.lock */,
+				A640712227799CA500F3A9CC /* Frameworks */,
 				99FE6F5DEA503D7B4B250059 /* Clean Mockingbird Mocks */,
 				09468DB0D9031CF2D2BABCD0 /* Generate Mockingbird Mocks */,
 				A640712127799CA500F3A9CC /* Sources */,
@@ -832,6 +832,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3E3E4A6A4DF72D06F43EEC3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		99FE6F5DEA503D7B4B250059 /* Clean Mockingbird Mocks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -862,23 +879,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-blocTests/Pods-boilerplate-swiftui-blocTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E203FB1AFE29E877C49E911E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E2D37DFD2A995D4A42BCAD74 /* [CP] Check Pods Manifest.lock */ = {

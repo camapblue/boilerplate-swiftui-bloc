@@ -56,6 +56,21 @@ public class Contact: Codable, Equatable {
         return contact
     }
     
+    init(id: String, firstName: String, lastName: String, street: String,
+         city: String, state: String, country: String, birthday: Date?,
+         avatar: String, nationality: String) {
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
+        self.street = street
+        self.city = city
+        self.state = state
+        self.country = country
+        self.birthday = birthday
+        self.avatar = avatar
+        self.nationality = nationality
+    }
+    
     init(dictionary dic: Dictionary<String, Any>) {
         self.id = dic["phone"] as! String
         
@@ -79,6 +94,21 @@ public class Contact: Codable, Equatable {
         self.avatar = pictureDic["medium"] as! String
         
         self.nationality = dic["nat"] as! String
+    }
+    
+    public func copyWith(firstName: String?, lastName: String?) -> Contact {
+        return Contact(
+            id: self.id,
+            firstName: firstName ?? self.firstName,
+            lastName: lastName ?? self.lastName,
+            street: self.street,
+            city: self.city,
+            state: self.state,
+            country: self.country,
+            birthday: self.birthday,
+            avatar: self.avatar,
+            nationality: self.nationality
+        )
     }
     
     public static func ==(lhs: Contact, rhs: Contact) -> Bool {

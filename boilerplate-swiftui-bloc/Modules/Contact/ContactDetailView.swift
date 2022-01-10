@@ -11,7 +11,8 @@ import SwiftBloc
 
 struct ContactDetailView: View {
     @EnvironmentObject private var bloc: ContactBloc
-    @SwiftUI.State private var editingFullName: String = ""
+    @SwiftUI.State private var editingFirstName: String = ""
+    @SwiftUI.State private var editingLastName: String = ""
     
     var body: some View {
         BlocView(builder: { (bloc) in
@@ -23,23 +24,34 @@ struct ContactDetailView: View {
                     AvatarView(avatar: contact.avatar, size: 128)
                     Rectangle().fill(Color.clear).frame(height: 44)
                     HStack {
-                        SpacerView(width: 64)
-                        if editingFullName.isEmpty {
+                        SpacerView(width: 48)
+                        if editingFirstName.isEmpty && editingLastName.isEmpty {
                             Text(contact.fullName())
                                 .primaryBold(fontSize: 20)
                         } else {
-                            TextField("Input name", text: $editingFullName)
-                                .padding()
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0))
-                                )
-                                .padding()
+                            HStack {
+                                TextField("Input first name", text: $editingFirstName)
+                                    .padding(4)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0))
+                                    )
+                                    .padding(4)
+                                SpacerView(width: 16)
+                                TextField("Input last name", text: $editingLastName)
+                                    .padding(4)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0))
+                                    )
+                                    .padding(4)
+                            }
                         }
-                        SpacerView(width: 32)
-                        if editingFullName.isEmpty {
+                        SpacerView(width: 16)
+                        if editingFirstName.isEmpty && editingLastName.isEmpty {
                             Button(action: {
-                                editingFullName = contact.fullName()
+                                editingFirstName = contact.firstName
+                                editingLastName = contact.lastName
                             }) {
                                 Image("ico_edit")
                                     .renderingMode(.original)
@@ -73,13 +85,12 @@ struct ContactDetailView: View {
                     }
                     .frame(minWidth: 0, maxWidth: .infinity)
                     Spacer()
-                    ButtonView.primary("Primary Button", disabled: editingFullName == contact.fullName() || editingFullName.isEmpty) {
+                    ButtonView.primary("Update Contact", disabled: (editingFirstName == contact.firstName || editingFirstName.isEmpty) && (editingLastName == contact.lastName || editingLastName.isEmpty)) {
                         let blocKey = Keys.Bloc.contactBlocById(id: contact.id)
-                        print("BLOC KEY = \(blocKey)")
                         BlocManager.shared.event(
                             ContactBloc.self,
                             key: blocKey,
-                            event: ContactEdited(contact: contact)
+                            event: ContactEdited(contact: contact.copyWith(firstName: editingFirstName, lastName: editingLastName))
                         )
                     }
                     .padding(.horizontal, 32)
@@ -87,6 +98,11 @@ struct ContactDetailView: View {
                 }
             }
             .navigationTitle(contact.firstName)
+        }, action: { bloc in
+            if bloc.state is ContactEditSuccess {
+                self.editingFirstName = ""
+                self.editingLastName = ""
+            }
         }, base: self.bloc)
     }
 }

@@ -1,13 +1,8 @@
 PODS:
   - Introspect (0.1.3)
   - Kingfisher (7.1.2)
-  - MockingbirdFramework (0.19.0):
-    - MockingbirdFramework/Common (= 0.19.0)
-    - MockingbirdFramework/Core (= 0.19.0)
-  - MockingbirdFramework/Common (0.19.0)
-  - MockingbirdFramework/Core (0.19.0):
-    - MockingbirdFramework/Common
-  - SwiftBloc (1.0.9)
+  - MockingbirdFramework (0.19.1)
+  - SwiftBloc (1.0.10)
   - SwiftUIRefresh (0.0.3):
     - Introspect (~> 0.1.0)
 
@@ -35,7 +30,7 @@ CHECKOUT OPTIONS:
     :commit: 15dde451f97a8ae18ea4f94969b7c8546f034b37
     :git: https://github.com/onevcat/Kingfisher.git
   SwiftBloc:
-    :commit: 8b1722f3cbf3fd6d0c0b2646a8a85726d03bc7b4
+    :commit: 5be86dceb983685953f8f4b5d14593ed46ac34f6
     :git: https://github.com/camapblue/SwiftBloc
   SwiftUIRefresh:
     :commit: fa8fac7b5eb5c729983a8bef65f094b5e0d12014
@@ -44,8 +39,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Introspect: 2be020f30f084ada52bb4387fff83fa52c5c400e
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
-  MockingbirdFramework: 66022442a239b4c48493cb206d517d3e42a8756e
-  SwiftBloc: e97925ca6c2469dbb76aefcb28e9cd616e650e3a
+  MockingbirdFramework: c85c2e2ec44890c5ec609a11398795cb2fe474a1
+  SwiftBloc: 3be74d207a4896aca2ac3e76ec0f800b9b253f14
   SwiftUIRefresh: ca6ae2718d25aad5dd68bbf5d2ae36ef6ade98bf
 
 PODFILE CHECKSUM: 9c0258c266c03e0c0ecb0f633a10899546fb1c4f
