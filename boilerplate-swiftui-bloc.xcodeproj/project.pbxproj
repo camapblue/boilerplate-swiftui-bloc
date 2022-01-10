@@ -10,9 +10,9 @@
 		41D6E8E3B3F65127FEC9FFAC /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE086FBA64F62D446617972 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */; };
 		8C39492B2ACC67FD39218881 /* Pods_boilerplate_swiftui_blocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */; };
 		8FAB86C475C7BE245E2A7DF1 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */; };
-		A61AC64F277EC5C300246A64 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC64E277EC5C300246A64 /* ContactListView.swift */; };
+		A61AC64F277EC5C300246A64 /* ContactListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC64E277EC5C300246A64 /* ContactListScreen.swift */; };
 		A61AC652277EDC4100246A64 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC651277EDC4100246A64 /* LazyView.swift */; };
-		A61AC654277EE3FB00246A64 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC653277EE3FB00246A64 /* ContactDetailView.swift */; };
+		A61AC654277EE3FB00246A64 /* ContactDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC653277EE3FB00246A64 /* ContactDetailScreen.swift */; };
 		A61AC657277EE42F00246A64 /* ContactBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC656277EE42F00246A64 /* ContactBloc.swift */; };
 		A61AC659277EE43900246A64 /* ContactEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC658277EE43900246A64 /* ContactEvent.swift */; };
 		A61AC65B277EE44300246A64 /* ContactState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC65A277EE44300246A64 /* ContactState.swift */; };
@@ -124,9 +124,9 @@
 		9220C70943F2111819FDFB94 /* Pods-boilerplate-swiftui-bloc.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc.prod.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc.prod.xcconfig"; sourceTree = "<group>"; };
 		927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20AD0EF952E247A9FD6651E /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.qc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.qc.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.qc.xcconfig"; sourceTree = "<group>"; };
-		A61AC64E277EC5C300246A64 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
+		A61AC64E277EC5C300246A64 /* ContactListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListScreen.swift; sourceTree = "<group>"; };
 		A61AC651277EDC4100246A64 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
-		A61AC653277EE3FB00246A64 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		A61AC653277EE3FB00246A64 /* ContactDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailScreen.swift; sourceTree = "<group>"; };
 		A61AC656277EE42F00246A64 /* ContactBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBloc.swift; sourceTree = "<group>"; };
 		A61AC658277EE43900246A64 /* ContactEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEvent.swift; sourceTree = "<group>"; };
 		A61AC65A277EE44300246A64 /* ContactState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactState.swift; sourceTree = "<group>"; };
@@ -277,8 +277,8 @@
 		A61AC64D277EC5AE00246A64 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				A61AC64E277EC5C300246A64 /* ContactListView.swift */,
-				A61AC653277EE3FB00246A64 /* ContactDetailView.swift */,
+				A61AC64E277EC5C300246A64 /* ContactListScreen.swift */,
+				A61AC653277EE3FB00246A64 /* ContactDetailScreen.swift */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -915,7 +915,7 @@
 				A640711827799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift in Sources */,
 				A66372BA277C0CD60017BD47 /* BaseBloc.swift in Sources */,
 				A6C7B9DC278B0DA700F4E5DC /* SpacerView.swift in Sources */,
-				A61AC654277EE3FB00246A64 /* ContactDetailView.swift in Sources */,
+				A61AC654277EE3FB00246A64 /* ContactDetailScreen.swift in Sources */,
 				A66372BC277C0D080017BD47 /* BlocManager.swift in Sources */,
 				A66372DA277C5EFB0017BD47 /* LoadingView.swift in Sources */,
 				CA27371C27856E0400DE14A3 /* NavigationRouter.swift in Sources */,
@@ -934,7 +934,7 @@
 				A645C85027858E440064ABD8 /* Text.swift in Sources */,
 				A66372CF277C21DD0017BD47 /* LoadListState.swift in Sources */,
 				CA27372327856F0D00DE14A3 /* Routes.swift in Sources */,
-				A61AC64F277EC5C300246A64 /* ContactListView.swift in Sources */,
+				A61AC64F277EC5C300246A64 /* ContactListScreen.swift in Sources */,
 				A6376FF02781A14400DFC0D9 /* Storybook.swift in Sources */,
 				A6C7B9D9278AEF6700F4E5DC /* View+Extension.swift in Sources */,
 				A66372C1277C0DB80017BD47 /* Services.swift in Sources */,

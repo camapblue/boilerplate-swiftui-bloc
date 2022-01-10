@@ -1,5 +1,5 @@
 //
-//  ContactDetailView.swift
+//  ContactDetailScreen.swift
 //  boilerplate-swiftui-bloc
 //
 //  Created by @camapblue on 12/31/21.
@@ -9,7 +9,7 @@ import SwiftUI
 import Repository
 import SwiftBloc
 
-struct ContactDetailView: View {
+struct ContactDetailScreen: View {
     @EnvironmentObject private var bloc: ContactBloc
     @SwiftUI.State private var editingFirstName: String = ""
     @SwiftUI.State private var editingLastName: String = ""
@@ -107,12 +107,12 @@ struct ContactDetailView: View {
     }
 }
 
-struct ContactDetailView_Previews: PreviewProvider {
+struct ContactDetailScreen_Previews: PreviewProvider {
     static var contact = Contact.fakeContact()
     
     static var previews: some View {
         return BlocProvider {
-            ContactDetailView()
+            ContactDetailScreen()
         } create: {
             Blocs().contactBloc(contact: contact)
         }

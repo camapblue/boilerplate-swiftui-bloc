@@ -41,7 +41,7 @@ struct ButtonView: View {
             .if (padding == nil) { view in
                 view.frame(maxWidth: width ?? .infinity)
             }
-            .frame(height: height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(height: height, alignment: .center)
             .if (border != nil && !isPressed) { view in
                 view.overlay(
                     RoundedRectangle(cornerRadius: cornerRadius)
@@ -56,16 +56,18 @@ struct ButtonView: View {
             )
             .cornerRadius(cornerRadius)
         }
-        .simultaneousGesture(
-            DragGesture(minimumDistance: 0)
-                .onChanged { _ in
-                    isPressed = true
-                }
-                .onEnded { _ in
-                    isPressed = false
-                    action()
-                }
-        )
+        .if(!disabled) { view in
+            view.simultaneousGesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged { _ in
+                        isPressed = true
+                    }
+                    .onEnded { _ in
+                        isPressed = false
+                        action()
+                    }
+            )
+        }
     }
 }
 

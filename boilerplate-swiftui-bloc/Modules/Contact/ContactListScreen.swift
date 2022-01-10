@@ -1,5 +1,5 @@
 //
-//  ContactListView.swift
+//  ContactListScreen.swift
 //  boilerplate-swiftui-bloc
 //
 //  Created by @camapblue on 12/31/21.
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftBloc
 import Repository
 
-struct ContactListView: View {
+struct ContactListScreen: View {
     @Environment(\.router) var router
     
     var body: some View {
@@ -51,8 +51,8 @@ struct ContactRowItem: View {
     }
 }
 
-struct ContactListView_Previews: PreviewProvider {
+struct ContactListScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ContactListView()
+        ContactListScreen()
     }
 }

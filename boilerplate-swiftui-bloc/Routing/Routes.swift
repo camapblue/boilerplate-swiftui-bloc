@@ -27,14 +27,14 @@ extension Array where Element == NavigationRoute {
         let storyBook = NavigationRoute(path: "/storyBook", destination: Storybook())
         
         let contactList = NavigationRoute(path: "/contactList") {
-            ContactListView()
+            ContactListScreen()
                 .provideBloc(create: {
                     Blocs().contactListBloc()
                 })
         }
         
         let contactDetails = NavigationRoute(path: "/contact/{id}") { route in
-            ContactDetailView()
+            ContactDetailScreen()
                 .provideBloc(create: {
                     BlocManager.shared.blocByKey(
                         key: Keys.Bloc.contactBlocById(id: route.link.meta["contactId"] as! String)
