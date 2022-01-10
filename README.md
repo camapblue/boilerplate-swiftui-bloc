@@ -17,9 +17,9 @@ This project is a iOS app of Boilerplate that building by Swift.
 
 Apply Clean Architecture + BloC pattern 
 ```
-|-----------------  Layers  -----------------|
-| Presentations | Business Logic | Data Layer|
-|:------------------------------------------:|
+|-----------------  Layers  ------------------|
+| Presentations | Business Logic | Data Layer |
+|:-------------------------------------------:|
 
 |--------------------------  Actual  ---------------------------|
 | Presentations  |      Business Logic    |         Data        |
@@ -37,19 +37,24 @@ Apply Clean Architecture + BloC pattern
 
 Examples of a standard view that build based on bloc states:
 ```swift
-    private var contactListBloc: LoadListBloc<Contact>
-    
-    init(contactListBloc: LoadListBloc<Contact>) {
-        self.contactListBloc = contactListBloc
-        contactListBloc.add(event: LoadListStarted())
-    }
+    @EnvironmentObject var contactBloc: ContactBloc
     
     var body: some View {
-        NavigationView {
-            LoadListView<Contact, Text>(bloc: contactListBloc) { contact in
-                Text(contact.firstName)
-            } itemKey: { $0.id }
-        }
+        BlocView(builder: { (bloc) in
+            let contact = bloc.state.contact
+            HStack(alignment: .center) {
+                AvatarView(avatar: contact.avatar, size: 32)
+                VStack(alignment: .leading) {
+                    Text(contact.fullName())
+                        .primaryBold(fontSize: 15)
+                    Text("age: \(contact.age())")
+                        .secondaryRegular(color: .gray)
+                }
+                .foregroundColor(.black)
+                Spacer()
+            }
+            .frame(minHeight: 44, maxHeight: 44, alignment: .center)
+        }, base: contactBloc)
     }
 ```
 
@@ -78,9 +83,14 @@ Example of Bloc new instance:
     }
 ```
 
-and the constructor in DI class:
+and provide Bloc into View in Route:
 ```swift
-    SplashView(contactListBloc: Blocs().contactListBloc())
+    let contactList = NavigationRoute(path: "/contactList") {
+        ContactListView()
+            .provideBloc(create: {
+                Blocs().contactListBloc()
+            })
+    }
 ```
 
 ### Service
@@ -151,9 +161,18 @@ and the constructor in DI class:
 
 ## Dependencies Injection
 - There are 3 kinds of class to support construct instance for DI, BlocManager, Services and Repository
-- BlocManager is a singleton class that not only work as a bloc manager but also support to provider bloc instance. All constructor of bloc should be function inside Bloc class for easy to maintain.
+- Blocs provide the instance of Bloc
 - Services is a singleton class that provide the instance of service.
 - Repository is a singleton class that provide the instance of repository, api & dao
+
+* All initialization of Bloc MUST be from BlocManager. It's a singleton that responsibility to manage all Blocs by Key/Value. It's not only handle all life cycle of Bloc, but also provide the fast way to get instance or proceed Event of Bloc by Key
+```swift
+    func loadingBloc() -> LoadingBloc {
+        return BlocManager.shared.newBloc(key: Keys.Bloc.loadingBloc) {
+            return LoadingBloc(key: Keys.Bloc.loadingBloc)
+        }
+    }
+```
 
 ## Code Structure
 Here is list all of key folders or files in code structure:
@@ -171,6 +190,10 @@ Here is list all of key folders or files in code structure:
 |   |           |-- language_event.dart     *define all Event class, must follow the naming convention strongly*
 |   |           |-- language_state.dart     *define all State class that extends of Equatable, must follow the naming convention*
 |   |           |-- language.dart           *the index file that export all files in bloc folder*
+|   |   |-- Configurations                  *All configurations needed for each environment
+|   |       |-- DEV.xcconfig                    *Configurations for Development environment
+|   |       |-- QC.xcconfig                     *Configurations for QA environment
+|   |       |-- PROD.xcconfig                   *Configurations for Production environment
 |   |   |-- Extensions                      *All foundation extensions class, such as String, Int, Date, ...
 |   |   |-- Routing                         *define all Routers in application
 |   |   |-- Theme                           *includes Design Tokens to manage all Styles such as font, size, color, spacing
@@ -183,7 +206,7 @@ Here is list all of key folders or files in code structure:
 |   |   |-- CommonUI                        *define all common Views and can use across modules but not use bloc inside*
 |   |   |-- 3rdParty                        *includes 3rd party that need to customize such as SwiftUIRouter
 |   |   |-- boilerplate_swiftui_blocApp.swift                       *the main class that app launch from*
-|   |-- boilerplate-swiftui-blocTests
+|   |-- boilerplate-swiftui-blocTests       *unit testing for Bloc & Service
 |-- Repository
 |   |-- Repository
 |   |   |-- Api                         *define all api classes*
@@ -192,7 +215,7 @@ Here is list all of key folders or files in code structure:
 |   |   |-- Model                       *define all basic entities*
 |   |   |-- Repository                  *define all repository classes*
 |   |   |-- Repository.swift            *Repository class, singleton class that support DI for data layer*
-|   |-- RepositoryTests                 *unit testing for repository, require testing for repositorry only*
+|   |-- RepositoryTests                 *unit testing for repository (Repository, Dao, API, ...), require testing for repositorry only*
 ```
 
 ## Storybook
@@ -202,33 +225,48 @@ How to add view into storybook:
 
 Create a story file to add view into. A story file should cover all states of the view, not only the happy case.
 ```swift
-    struct AvatarViewStory: View {
-        var body: some View {
-            VStack {
-                Rectangle().fill(Color.clear).frame(height: 128)
-                AvatarView(avatar: "https://randomuser.me/api/portraits/med/women/92.jpg", size: 92)
-                Rectangle().fill(Color.clear).frame(height: 128)
-                AvatarView(avatar: "https://randomuser.me/api/portraits/med/women/64.jpg", size: 64)
-                Rectangle().fill(Color.clear).frame(height: 128)
-                AvatarView(avatar: "https://randomuser.me/api/portraits/med/women/32.jpg", size: 32)
-                Rectangle().fill(Color.clear).frame(height: 128)
-                AvatarView(avatar: "https://randomuser.me/api/portraits/med/women/16.jpg", size: 16)
-                Rectangle().fill(Color.clear).frame(height: 128)
+    struct ButtonViewStory: View {
+    var body: some View {
+        VStack {
+            SpacerView(height: 128)
+            ButtonView.primary("Primary Button") {
+                print("Primary Action Now!")
             }
+            .padding(.horizontal, 32)
+            SpacerView(height: 128)
+            ButtonView.primary("Padding Button", padding: EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)) {
+                print("Padding Action Now!")
+            }
+            SpacerView(height: 128)
+            ButtonView.secondary("Secondary Button") {
+                print("Secondary Action Now!")
+            }
+            .padding(.horizontal, 32)
+            SpacerView(height: 128)
+            ButtonView.secondary("Secondary Padding", padding: EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)) {
+                print("Secondary Padding Now!")
+            }
+            SpacerView(height: 128)
         }
     }
+}
 ```
 
 Add new story into Storybook.swift in Storybook folder:
 ```swift
-     StorybookView(stories: [
-        Story("Avatar View") { AvatarViewStory() }
+    StorybookView(stories: [
+        Story("Avatar View") { AnyView(AvatarViewStory()) },
+        Story("Button View") { AnyView(ButtonViewStory()) }
     ])
 ```
 
 Change configuration to run Storybook in Configs.swift in Constant folder:
 ```swift
-    var isStorybook: Bool { true }
+    var isStorybook: Bool
+    
+    init() {
+        isStorybook = AppEnvironment.isStorybook
+    }
 ```
 
 then, run app to enjoy Storybook
@@ -272,8 +310,90 @@ Navigate to new screen:
     })
 ```
 
-## Environment
+## Design System
+Handle all Design System in Theme folder. DesignTokens is generated by Design System that we DO NOT ALLOW to edit it.
+```swift
+    public class DesignTokens {
+        public static let colorBaseGrayDark = UIColor(red: 0.067, green: 0.067, blue: 0.067, alpha: 1)
+        public static let colorBaseGrayLight = UIColor(red: 0.800, green: 0.800, blue: 0.800, alpha: 1)
+        public static let colorBaseGrayMedium = UIColor(red: 0.600, green: 0.600, blue: 0.600, alpha: 1)
+        public static let colorBaseGreen = UIColor(red: 0.000, green: 1.000, blue: 0.000, alpha: 1)
+        public static let colorBaseOrange = UIColor(red: 1.000, green: 0.647, blue: 0.000, alpha: 1)
+        public static let colorBaseRed = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 1)
+        public static let colorFontBase = UIColor(red: 0.000, green: 1.000, blue: 0.000, alpha: 1)
+        public static let colorFontSecondary = UIColor(red: 0.000, green: 1.000, blue: 0.000, alpha: 1)
+        public static let colorFontTertiary = UIColor(red: 0.800, green: 0.800, blue: 0.800, alpha: 1)
 
+        public static let sizeFontBase = CGFloat(16.00) /* the base size of the font */
+        public static let sizeFontLarge = CGFloat(32.00) /* the large size of the font */
+        public static let sizeFontMedium = CGFloat(16.00) /* the medium size of the font */
+        public static let sizeFontSmall = CGFloat(12.00) /* the small size of the font */
+
+        public static let fontFamilyPrimary = "Helvetica"
+        public static let fontFamilySecondary = "Arial"
+    }
+```
+
+We use DesignTokens to define all Styles in application such as Color, Text, Spacing, ...
+```swift
+    extension Text {
+        public func primaryRegular(fontSize: CGFloat =  13, color: Color = Color.primaryTextColor) -> Text {
+            return self.font(
+                    .custom(DesignTokens.fontFamilyPrimary, size: fontSize)
+                )
+                .foregroundColor(color)
+        }
+
+        public func primaryBold(fontSize: CGFloat =  13, color: Color = Color.primaryTextColor) -> Text {
+            return self.primaryRegular(fontSize: fontSize, color: color)
+                .fontWeight(.bold)
+        }
+
+        public func secondaryRegular(fontSize: CGFloat =  13, color: Color = Color.primaryTextColor) -> Text {
+            return self.font(
+                    .custom(DesignTokens.fontFamilySecondary, size: fontSize)
+                )
+                .foregroundColor(color)
+        }
+    }
+```
+
+then, ONLY using all styles in application through by all defined-styles
+```swift
+    Text("\(contact.age())")
+        .primaryRegular(fontSize: 17)
+        .foregroundColor(.black)
+```
+
+## Environment
+All environments are configured in Configurations folder. Use .xcconfig to defines all parameters needed in application
+
+```xcconfig
+    ENVIRONMENT = DEV
+    APP_NAME = SwiftUI Bloc Dev
+    APP_BUNDLE_ID = ptc.tech.SwiftUIBloc.dev
+    APP_VERSION = 1.0
+
+    //
+
+    IS_STORYBOOK = YES
+
+    //-- Endpoint
+    API_ENDPOINT_URL = https:/$()/randomuser.me/api/
+```
+
+And match parameter from .xcconfig in Configs class, a singleton class stores all configurations. All parameters are read from AppEnvironment class.
+```swift
+    final class Configs {
+        static let shared = Configs()
+
+        var isStorybook: Bool
+
+        init() {
+            isStorybook = AppEnvironment.isStorybook
+        }
+    }
+```
 
 ## Testing
 - All Blocs **MUST** have unit testing for all Events and StreamSubscriptions, except static constructor.
