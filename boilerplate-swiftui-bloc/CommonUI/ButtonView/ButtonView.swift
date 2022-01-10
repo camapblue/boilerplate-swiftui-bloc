@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ButtonView: View {
     var title: String
-    var backgroundColor: Color = DesignTokens.colorBaseOrange.color()
-    var highlightColor: Color = DesignTokens.colorBaseRed.color()
-    var disabledColor: Color = DesignTokens.colorBaseGrayLight.color()
+    var backgroundColor: Color = Color.primaryButtonColor
+    var highlightColor: Color = Color.primaryHighlightColor
+    var disabledColor: Color = Color.primaryDisableColor
     var textSize: CGFloat = 17
-    var textColor: Color = DesignTokens.colorBaseGrayDark.color()
+    var textColor: Color = Color.primaryTextColor
     
     var cornerRadius: CGFloat = 8
     var border: Color?
@@ -78,8 +78,8 @@ extension ButtonView {
         return ButtonView(
             title: title,
             backgroundColor: Color.gray.opacity(0),
-            highlightColor: DesignTokens.colorBaseGrayLight.color(),
-            border: DesignTokens.colorBaseGrayDark.color(),
+            highlightColor: Color.secondaryButtonColor,
+            border: Color.borderButtonColor,
             width: width,
             padding: padding,
             disabled: disabled,
