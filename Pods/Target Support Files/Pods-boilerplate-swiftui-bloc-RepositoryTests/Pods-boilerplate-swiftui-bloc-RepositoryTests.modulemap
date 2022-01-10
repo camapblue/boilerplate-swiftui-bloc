@@ -1,6 +1,0 @@
-framework module Pods_boilerplate_swiftui_bloc_RepositoryTests {
-  umbrella header "Pods-boilerplate-swiftui-bloc-RepositoryTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
