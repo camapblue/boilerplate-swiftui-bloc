@@ -178,10 +178,6 @@ and provide Bloc into View in Route:
 Here is list all of key folders or files in code structure:
 ```
 .
-|-- environments                        *setup all configs that based on the environment, using .ENV file*
-|   |-- dev                             *Development environment*
-|   |-- prod                            *Production environment*
-|   |-- qc                              *Testing environment*
 |-- boilerplate-swiftui-bloc            *store all assets that are font, icon, image, video or animation*
 |   |-- boilerplate-swiftui-bloc
 |   |   |-- Bloc                            *all blocs that need in project*
