@@ -20,6 +20,6 @@ struct AvatarView: View {
                 .resizing(referenceSize: CGSize(width: size, height: size), mode: .aspectFit)
                 .clipShape(Circle())
         }
-        .frame(width: size, height: size, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        .frame(width: size, height: size, alignment: .center)
     }
 }

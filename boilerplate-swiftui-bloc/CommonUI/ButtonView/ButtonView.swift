@@ -79,7 +79,7 @@ extension ButtonView {
     static func secondary(_ title: String, width: CGFloat? = nil, padding: EdgeInsets? = nil, disabled: Bool = false, action: @escaping () -> Void) -> ButtonView {
         return ButtonView(
             title: title,
-            backgroundColor: Color.gray.opacity(0),
+            backgroundColor: Color.secondaryButtonColor.opacity(0.8),
             highlightColor: Color.secondaryButtonColor,
             border: Color.borderButtonColor,
             width: width,
