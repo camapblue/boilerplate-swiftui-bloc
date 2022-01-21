@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftBloc
+import POC_Common_UI_iOS
 
 struct AppShowing: View {
     @EnvironmentObject private var bloc: LoadingBloc

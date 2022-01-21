@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "POC_Common_UI_iOS",
+        "repositoryURL": "https://github.com/tranthienhao/common-ui-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "83d3dd8c65f61e8ea0c4eb04725ac03b7bc1e05f",
+          "version": "1.0.1"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "0c02c46cfdc0656ce74fd0963a75e5000a0b7f23",
+          "version": "7.1.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

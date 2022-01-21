@@ -8,6 +8,7 @@
 import Repository
 import SwiftUI
 import SwiftBloc
+import POC_Common_UI_iOS
 
 extension NavigationRouteLink {
     static var splash: NavigationRouteLink { "/splash" }
@@ -24,7 +25,7 @@ extension NavigationRouteLink {
 extension Array where Element == NavigationRoute {
     static var all: [NavigationRoute] {
         let splash = NavigationRoute(path: "/splash", destination: SplashScreen())
-        let storyBook = NavigationRoute(path: "/storyBook", destination: Storybook())
+        let storyBook = NavigationRoute(path: "/storyBook", destination: CommonUIStorybook())
         
         let contactList = NavigationRoute(path: "/contactList") {
             ContactListScreen()

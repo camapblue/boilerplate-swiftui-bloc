@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftBloc
 import Repository
+import POC_Common_UI_iOS
 
 struct ContactListScreen: View {
     @Environment(\.router) var router

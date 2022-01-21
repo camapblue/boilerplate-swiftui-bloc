@@ -8,6 +8,7 @@
 import SwiftUI
 import Repository
 import SwiftBloc
+import POC_Common_UI_iOS
 
 struct ContactDetailScreen: View {
     @EnvironmentObject private var bloc: ContactBloc

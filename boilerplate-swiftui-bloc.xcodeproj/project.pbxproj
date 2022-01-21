@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41D6E8E3B3F65127FEC9FFAC /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE086FBA64F62D446617972 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */; };
 		8C39492B2ACC67FD39218881 /* Pods_boilerplate_swiftui_blocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */; };
 		8FAB86C475C7BE245E2A7DF1 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */; };
 		A61AC64F277EC5C300246A64 /* ContactListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC64E277EC5C300246A64 /* ContactListScreen.swift */; };
@@ -16,19 +15,13 @@
 		A61AC657277EE42F00246A64 /* ContactBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC656277EE42F00246A64 /* ContactBloc.swift */; };
 		A61AC659277EE43900246A64 /* ContactEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC658277EE43900246A64 /* ContactEvent.swift */; };
 		A61AC65B277EE44300246A64 /* ContactState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC65A277EE44300246A64 /* ContactState.swift */; };
-		A61AC661277EE97C00246A64 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC660277EE97C00246A64 /* AvatarView.swift */; };
 		A61AC663277EEC3700246A64 /* ContactExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC662277EEC3700246A64 /* ContactExtension.swift */; };
 		A61AC666277EECED00246A64 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC665277EECED00246A64 /* Date+Extension.swift */; };
 		A61AC670278054C300246A64 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AC66F278054C300246A64 /* Array+Extension.swift */; };
-		A6376FE327818CEA00DFC0D9 /* Storybook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6376FE227818CEA00DFC0D9 /* Storybook.framework */; };
-		A6376FEC278191CE00DFC0D9 /* AvataryViewStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6376FEB278191CE00DFC0D9 /* AvataryViewStory.swift */; };
-		A6376FF02781A14400DFC0D9 /* Storybook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6376FEF2781A14400DFC0D9 /* Storybook.swift */; };
 		A640711827799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640711727799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift */; };
 		A640711C27799CA400F3A9CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A640711B27799CA400F3A9CC /* Assets.xcassets */; };
 		A640711F27799CA400F3A9CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A640711E27799CA400F3A9CC /* Preview Assets.xcassets */; };
 		A640713527799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A640713427799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift */; };
-		A645C85027858E440064ABD8 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645C84F27858E440064ABD8 /* Text.swift */; };
-		A645C852278594AB0064ABD8 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = A645C851278594AB0064ABD8 /* DesignTokens.swift */; };
 		A66372BA277C0CD60017BD47 /* BaseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372B9277C0CD60017BD47 /* BaseBloc.swift */; };
 		A66372BC277C0D080017BD47 /* BlocManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372BB277C0D080017BD47 /* BlocManager.swift */; };
 		A66372BF277C0D400017BD47 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372BE277C0D400017BD47 /* SplashScreen.swift */; };
@@ -44,11 +37,6 @@
 		A66372D7277C59380017BD47 /* LoadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372D6277C59380017BD47 /* LoadListView.swift */; };
 		A66372DA277C5EFB0017BD47 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66372D9277C5EFB0017BD47 /* LoadingView.swift */; };
 		A665B24F278A711E005D6E92 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A665B24E278A711E005D6E92 /* Repository.framework */; };
-		A6C7B9D3278AD58D00F4E5DC /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9D2278AD58D00F4E5DC /* ButtonView.swift */; };
-		A6C7B9D5278AD79A00F4E5DC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9D4278AD79A00F4E5DC /* Color.swift */; };
-		A6C7B9D7278AD88C00F4E5DC /* ButtonViewStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9D6278AD88C00F4E5DC /* ButtonViewStory.swift */; };
-		A6C7B9D9278AEF6700F4E5DC /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9D8278AEF6700F4E5DC /* View+Extension.swift */; };
-		A6C7B9DC278B0DA700F4E5DC /* SpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9DB278B0DA700F4E5DC /* SpacerView.swift */; };
 		A6C7B9DF278B1A8A00F4E5DC /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9DE278B1A8A00F4E5DC /* LoadingState.swift */; };
 		A6C7B9E1278B1A9600F4E5DC /* LoadingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9E0278B1A9600F4E5DC /* LoadingEvent.swift */; };
 		A6C7B9E3278B1AA100F4E5DC /* LoadingContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7B9E2278B1AA100F4E5DC /* LoadingContact.swift */; };
@@ -67,15 +55,16 @@
 		CA27371F27856E0400DE14A3 /* RouterLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371727856E0400DE14A3 /* RouterLink.swift */; };
 		CA27372027856E0400DE14A3 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27371827856E0400DE14A3 /* RouterView.swift */; };
 		CA27372327856F0D00DE14A3 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27372227856F0D00DE14A3 /* Routes.swift */; };
+		CA2C5B2D279ABF67004179D4 /* POC_Common_UI_iOS in Frameworks */ = {isa = PBXBuildFile; productRef = CA2C5B2C279ABF67004179D4 /* POC_Common_UI_iOS */; };
 		CA7350102785ABEB0090CD80 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73500B2785ABEB0090CD80 /* Configs.swift */; };
 		CA7350112785ABEB0090CD80 /* DEV.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CA73500C2785ABEB0090CD80 /* DEV.xcconfig */; };
 		CA7350122785ABEB0090CD80 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73500D2785ABEB0090CD80 /* AppEnvironment.swift */; };
 		CA7350132785ABEB0090CD80 /* PROD.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CA73500E2785ABEB0090CD80 /* PROD.xcconfig */; };
 		CA7350142785ABEB0090CD80 /* QC.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CA73500F2785ABEB0090CD80 /* QC.xcconfig */; };
-		CAA44C992786C854004B25A6 /* Storybook.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6376FE227818CEA00DFC0D9 /* Storybook.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CAA44C9E2786C9DE004B25A6 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA44C9D2786C9DE004B25A6 /* Repository.framework */; };
 		CAA44C9F2786C9E5004B25A6 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAA44C9D2786C9DE004B25A6 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEB69978CA8F5B85D7C9C3FC /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2C28CA47A678102258317 /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift */; };
+		DBD954D14D603E1CA478C924 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C4AF87853846021749F4B8 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +92,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CAA44C9F2786C9E5004B25A6 /* Repository.framework in Embed Frameworks */,
-				CAA44C992786C854004B25A6 /* Storybook.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,11 +104,11 @@
 		2556A6E0745B5DFD32182E98 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.prod.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.prod.xcconfig"; sourceTree = "<group>"; };
 		3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_blocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA2C28CA47A678102258317 /* boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift"; path = "MockingbirdMocks/boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift"; sourceTree = "<group>"; };
-		4AE086FBA64F62D446617972 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61287E70FD8CBC8940198DC2 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.prod.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.prod.xcconfig"; sourceTree = "<group>"; };
 		7B0EF6DDCE40B5B72C118081 /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.dev.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc.dev.xcconfig"; sourceTree = "<group>"; };
 		7B9D01F4F9AC23D4B7805FAB /* Pods-boilerplate-swiftui-bloc.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc.dev.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc.dev.xcconfig"; sourceTree = "<group>"; };
 		80FF141A17B396CF5000057B /* Pods-boilerplate-swiftui-bloc.qc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc.qc.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc.qc.xcconfig"; sourceTree = "<group>"; };
+		91C4AF87853846021749F4B8 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9220C70943F2111819FDFB94 /* Pods-boilerplate-swiftui-bloc.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc.prod.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc.prod.xcconfig"; sourceTree = "<group>"; };
 		927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20AD0EF952E247A9FD6651E /* Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.qc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.qc.xcconfig"; path = "Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-blocUITests.qc.xcconfig"; sourceTree = "<group>"; };
@@ -130,13 +118,9 @@
 		A61AC656277EE42F00246A64 /* ContactBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBloc.swift; sourceTree = "<group>"; };
 		A61AC658277EE43900246A64 /* ContactEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEvent.swift; sourceTree = "<group>"; };
 		A61AC65A277EE44300246A64 /* ContactState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactState.swift; sourceTree = "<group>"; };
-		A61AC660277EE97C00246A64 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		A61AC662277EEC3700246A64 /* ContactExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactExtension.swift; sourceTree = "<group>"; };
 		A61AC665277EECED00246A64 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		A61AC66F278054C300246A64 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
-		A6376FE227818CEA00DFC0D9 /* Storybook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Storybook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6376FEB278191CE00DFC0D9 /* AvataryViewStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvataryViewStory.swift; sourceTree = "<group>"; };
-		A6376FEF2781A14400DFC0D9 /* Storybook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storybook.swift; sourceTree = "<group>"; };
 		A640711427799CA100F3A9CC /* boilerplate-swiftui-bloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "boilerplate-swiftui-bloc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A640711727799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boilerplate_swiftui_blocApp.swift; sourceTree = "<group>"; };
 		A640711B27799CA400F3A9CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,8 +131,6 @@
 		A640713027799CA500F3A9CC /* boilerplate-swiftui-blocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "boilerplate-swiftui-blocUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A640713427799CA500F3A9CC /* boilerplate_swiftui_blocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boilerplate_swiftui_blocUITests.swift; sourceTree = "<group>"; };
 		A640713627799CA500F3A9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A645C84F27858E440064ABD8 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
-		A645C851278594AB0064ABD8 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
 		A663724C277B10910017BD47 /* librepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = librepository.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66372B9277C0CD60017BD47 /* BaseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBloc.swift; sourceTree = "<group>"; };
 		A66372BB277C0D080017BD47 /* BlocManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocManager.swift; sourceTree = "<group>"; };
@@ -166,11 +148,6 @@
 		A66372D9277C5EFB0017BD47 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A665B24C278A6E09005D6E92 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A665B24E278A711E005D6E92 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6C7B9D2278AD58D00F4E5DC /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		A6C7B9D4278AD79A00F4E5DC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		A6C7B9D6278AD88C00F4E5DC /* ButtonViewStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewStory.swift; sourceTree = "<group>"; };
-		A6C7B9D8278AEF6700F4E5DC /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
-		A6C7B9DB278B0DA700F4E5DC /* SpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerView.swift; sourceTree = "<group>"; };
 		A6C7B9DE278B1A8A00F4E5DC /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		A6C7B9E0278B1A9600F4E5DC /* LoadingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingEvent.swift; sourceTree = "<group>"; };
 		A6C7B9E2278B1AA100F4E5DC /* LoadingContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingContact.swift; sourceTree = "<group>"; };
@@ -206,8 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAA44C9E2786C9DE004B25A6 /* Repository.framework in Frameworks */,
-				A6376FE327818CEA00DFC0D9 /* Storybook.framework in Frameworks */,
-				41D6E8E3B3F65127FEC9FFAC /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */,
+				CA2C5B2D279ABF67004179D4 /* POC_Common_UI_iOS in Frameworks */,
+				DBD954D14D603E1CA478C924 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,24 +278,6 @@
 			path = Contact;
 			sourceTree = "<group>";
 		};
-		A61AC65F277EE96F00246A64 /* AvatarView */ = {
-			isa = PBXGroup;
-			children = (
-				A61AC660277EE97C00246A64 /* AvatarView.swift */,
-			);
-			path = AvatarView;
-			sourceTree = "<group>";
-		};
-		A6376FE82781919A00DFC0D9 /* Storybook */ = {
-			isa = PBXGroup;
-			children = (
-				A6376FEB278191CE00DFC0D9 /* AvataryViewStory.swift */,
-				A6376FEF2781A14400DFC0D9 /* Storybook.swift */,
-				A6C7B9D6278AD88C00F4E5DC /* ButtonViewStory.swift */,
-			);
-			path = Storybook;
-			sourceTree = "<group>";
-		};
 		A640710B27799CA100F3A9CC = {
 			isa = PBXGroup;
 			children = (
@@ -345,10 +304,8 @@
 		A640711627799CA100F3A9CC /* boilerplate-swiftui-bloc */ = {
 			isa = PBXGroup;
 			children = (
-				A645C84E27858E2D0064ABD8 /* Theme */,
 				CA27372127856EEF00DE14A3 /* Routing */,
 				CA73500A2785ABEB0090CD80 /* Configurations */,
-				A6376FE82781919A00DFC0D9 /* Storybook */,
 				A61AC64A277EB47700246A64 /* Model */,
 				A66372D4277C58D50017BD47 /* CommonUI */,
 				A66372C5277C1F3B0017BD47 /* Extensions */,
@@ -393,16 +350,6 @@
 			path = "boilerplate-swiftui-blocUITests";
 			sourceTree = "<group>";
 		};
-		A645C84E27858E2D0064ABD8 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				A645C84F27858E440064ABD8 /* Text.swift */,
-				A645C851278594AB0064ABD8 /* DesignTokens.swift */,
-				A6C7B9D4278AD79A00F4E5DC /* Color.swift */,
-			);
-			path = Theme;
-			sourceTree = "<group>";
-		};
 		A66372BD277C0D400017BD47 /* Launching */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,7 +374,6 @@
 				A66372C6277C1F540017BD47 /* String+Extenstion.swift */,
 				A61AC665277EECED00246A64 /* Date+Extension.swift */,
 				A61AC66F278054C300246A64 /* Array+Extension.swift */,
-				A6C7B9D8278AEF6700F4E5DC /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -435,9 +381,6 @@
 		A66372D4277C58D50017BD47 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
-				A6C7B9DA278B0D8100F4E5DC /* SpacerView */,
-				A6C7B9D1278AD57700F4E5DC /* ButtonView */,
-				A61AC65F277EE96F00246A64 /* AvatarView */,
 				A61AC650277EDC3200246A64 /* LazyView */,
 				A66372D8277C5EEB0017BD47 /* Loading */,
 				A66372D5277C59280017BD47 /* LoadList */,
@@ -459,22 +402,6 @@
 				A66372D9277C5EFB0017BD47 /* LoadingView.swift */,
 			);
 			path = Loading;
-			sourceTree = "<group>";
-		};
-		A6C7B9D1278AD57700F4E5DC /* ButtonView */ = {
-			isa = PBXGroup;
-			children = (
-				A6C7B9D2278AD58D00F4E5DC /* ButtonView.swift */,
-			);
-			path = ButtonView;
-			sourceTree = "<group>";
-		};
-		A6C7B9DA278B0D8100F4E5DC /* SpacerView */ = {
-			isa = PBXGroup;
-			children = (
-				A6C7B9DB278B0DA700F4E5DC /* SpacerView.swift */,
-			);
-			path = SpacerView;
 			sourceTree = "<group>";
 		};
 		A6C7B9DD278B1A6D00F4E5DC /* Loading */ = {
@@ -568,11 +495,10 @@
 				A665B24E278A711E005D6E92 /* Repository.framework */,
 				A665B24C278A6E09005D6E92 /* Repository.framework */,
 				CAA44C9D2786C9DE004B25A6 /* Repository.framework */,
-				A6376FE227818CEA00DFC0D9 /* Storybook.framework */,
 				A663724C277B10910017BD47 /* librepository.a */,
 				927DFB6AFCCB569265E945E3 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_blocUITests.framework */,
 				3D2B0C1E9DA4E61C961F1DC4 /* Pods_boilerplate_swiftui_blocTests.framework */,
-				4AE086FBA64F62D446617972 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */,
+				91C4AF87853846021749F4B8 /* Pods_boilerplate_swiftui_bloc_boilerplate_swiftui_bloc.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -648,13 +574,16 @@
 				A640711127799CA100F3A9CC /* Frameworks */,
 				A640711227799CA100F3A9CC /* Resources */,
 				A66372A0277BFD600017BD47 /* Embed Frameworks */,
-				4F8E07FB5B8BAD3E653AC6A7 /* [CP] Embed Pods Frameworks */,
+				FA4BF340A01043062DF87B08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "boilerplate-swiftui-bloc";
+			packageProductDependencies = (
+				CA2C5B2C279ABF67004179D4 /* POC_Common_UI_iOS */,
+			);
 			productName = "boilerplate-swiftui-bloc";
 			productReference = A640711427799CA100F3A9CC /* boilerplate-swiftui-bloc.app */;
 			productType = "com.apple.product-type.application";
@@ -731,6 +660,9 @@
 				Base,
 			);
 			mainGroup = A640710B27799CA100F3A9CC;
+			packageReferences = (
+				CA2C5B2B279ABF67004179D4 /* XCRemoteSwiftPackageReference "common-ui-ios" */,
+			);
 			productRefGroup = A640711527799CA100F3A9CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -786,7 +718,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eu\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-E581045A-0951-49CF-9793-D742EB0B1269'\n\nmockingbird generate \\\n  --targets 'boilerplate-swiftui-bloc' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift\" \\\n  --support \"${SRCROOT}/MockingbirdSupport\"\n  \nmockingbird generate \\\n  --targets 'Repository' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/boilerplate_swiftui_blocTests-RepositoryMocks.generated.swift\" \\\n  --support \"${SRCROOT}/MockingbirdSupport\"\n";
+			shellScript = "set -eu\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-E581045A-0951-49CF-9793-D742EB0B1269'\n\nmockingbird generate \\\n  --targets 'boilerplate-swiftui-bloc' 'Repository' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/boilerplate_swiftui_blocTests-boilerplate_swiftui_blocMocks.generated.swift\" \\\n  --support \"${SRCROOT}/MockingbirdSupport\"\n";
 		};
 		16976B83421FC67C6FB8DF4D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -830,23 +762,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4F8E07FB5B8BAD3E653AC6A7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		99FE6F5DEA503D7B4B250059 /* Clean Mockingbird Mocks */ = {
@@ -903,6 +818,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA4BF340A01043062DF87B08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc/Pods-boilerplate-swiftui-bloc-boilerplate-swiftui-bloc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -914,13 +846,11 @@
 				A66372C9277C1FB40017BD47 /* ContactListServiceImpl.swift in Sources */,
 				A640711827799CA100F3A9CC /* boilerplate_swiftui_blocApp.swift in Sources */,
 				A66372BA277C0CD60017BD47 /* BaseBloc.swift in Sources */,
-				A6C7B9DC278B0DA700F4E5DC /* SpacerView.swift in Sources */,
 				A61AC654277EE3FB00246A64 /* ContactDetailScreen.swift in Sources */,
 				A66372BC277C0D080017BD47 /* BlocManager.swift in Sources */,
 				A66372DA277C5EFB0017BD47 /* LoadingView.swift in Sources */,
 				CA27371C27856E0400DE14A3 /* NavigationRouter.swift in Sources */,
 				CA27371D27856E0400DE14A3 /* ResolvedRoute.swift in Sources */,
-				A6C7B9D7278AD88C00F4E5DC /* ButtonViewStory.swift in Sources */,
 				A66372D7277C59380017BD47 /* LoadListView.swift in Sources */,
 				A6C7B9DF278B1A8A00F4E5DC /* LoadingState.swift in Sources */,
 				A66372D3277C57F80017BD47 /* Keys.swift in Sources */,
@@ -928,19 +858,14 @@
 				A66372CD277C21D30017BD47 /* LoadListEvent.swift in Sources */,
 				A6C7B9E1278B1A9600F4E5DC /* LoadingEvent.swift in Sources */,
 				A6C7B9E3278B1AA100F4E5DC /* LoadingContact.swift in Sources */,
-				A6C7B9D5278AD79A00F4E5DC /* Color.swift in Sources */,
 				A61AC663277EEC3700246A64 /* ContactExtension.swift in Sources */,
 				A61AC670278054C300246A64 /* Array+Extension.swift in Sources */,
-				A645C85027858E440064ABD8 /* Text.swift in Sources */,
 				A66372CF277C21DD0017BD47 /* LoadListState.swift in Sources */,
 				CA27372327856F0D00DE14A3 /* Routes.swift in Sources */,
 				A61AC64F277EC5C300246A64 /* ContactListScreen.swift in Sources */,
-				A6376FF02781A14400DFC0D9 /* Storybook.swift in Sources */,
-				A6C7B9D9278AEF6700F4E5DC /* View+Extension.swift in Sources */,
 				A66372C1277C0DB80017BD47 /* Services.swift in Sources */,
 				CA27371E27856E0400DE14A3 /* NextRoutableModifier.swift in Sources */,
 				CA27372027856E0400DE14A3 /* RouterView.swift in Sources */,
-				A61AC661277EE97C00246A64 /* AvatarView.swift in Sources */,
 				A61AC666277EECED00246A64 /* Date+Extension.swift in Sources */,
 				A61AC659277EE43900246A64 /* ContactEvent.swift in Sources */,
 				A61AC65B277EE44300246A64 /* ContactState.swift in Sources */,
@@ -953,10 +878,7 @@
 				CA7350122785ABEB0090CD80 /* AppEnvironment.swift in Sources */,
 				A66372C4277C1B510017BD47 /* LoadListService.swift in Sources */,
 				A66372CB277C21C70017BD47 /* LoadListBloc.swift in Sources */,
-				A6C7B9D3278AD58D00F4E5DC /* ButtonView.swift in Sources */,
 				A6DBC38E277B076D00F90A05 /* ContactService.swift in Sources */,
-				A645C852278594AB0064ABD8 /* DesignTokens.swift in Sources */,
-				A6376FEC278191CE00DFC0D9 /* AvataryViewStory.swift in Sources */,
 				A66372BF277C0D400017BD47 /* SplashScreen.swift in Sources */,
 				A66372C7277C1F540017BD47 /* String+Extenstion.swift in Sources */,
 				A66372D1277C57610017BD47 /* Blocs.swift in Sources */,
@@ -1418,6 +1340,25 @@
 			defaultConfigurationName = QC;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA2C5B2B279ABF67004179D4 /* XCRemoteSwiftPackageReference "common-ui-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tranthienhao/common-ui-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA2C5B2C279ABF67004179D4 /* POC_Common_UI_iOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA2C5B2B279ABF67004179D4 /* XCRemoteSwiftPackageReference "common-ui-ios" */;
+			productName = POC_Common_UI_iOS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A640710C27799CA100F3A9CC /* Project object */;
 }
