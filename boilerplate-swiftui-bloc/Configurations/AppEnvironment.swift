@@ -15,7 +15,6 @@ enum ConfigKey: String {
     case appName = "CFBundleName"
 
     ///
-    case isStorybook = "isStorybook"
     case apiEndpointUrl = "apiEndpointUrl"
 }
 
@@ -45,11 +44,6 @@ enum AppEnvironment: String {
     /// Build Number
     static var buildNumber: String {
         return readStringFromConfig(key: .buildNumber)
-    }
-    
-    /// Is Storybook
-    static var isStorybook: Bool {
-        return readStringFromConfig(key: .isStorybook) == "YES"
     }
     
     /// A private method to wrap up the reading confign from the main bundle

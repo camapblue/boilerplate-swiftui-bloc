@@ -18,7 +18,7 @@ struct AppShowing: View {
             NavigationView {
                 RouterView(
                     router: router,
-                    root: Configs.shared.isStorybook ? .storyBook : .splash
+                    root: .splash
                 )
             }
             .environment(\.router, router)

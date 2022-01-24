@@ -46,8 +46,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>isStorybook</key>
-	<string>${IS_STORYBOOK}</string>
 	<key>Environment</key>
 	<string>${ENVIRONMENT}</string>
 	<key>apiEndpointUrl</key>

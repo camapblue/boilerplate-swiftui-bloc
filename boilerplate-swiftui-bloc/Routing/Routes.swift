@@ -12,7 +12,6 @@ import POC_Common_UI_iOS
 
 extension NavigationRouteLink {
     static var splash: NavigationRouteLink { "/splash" }
-    static var storyBook: NavigationRouteLink { "/storyBook" }
     static var contactList: NavigationRouteLink { "/contactList" }
     
     static func contactDetails(with contactId: String) -> NavigationRouteLink {
@@ -25,7 +24,6 @@ extension NavigationRouteLink {
 extension Array where Element == NavigationRoute {
     static var all: [NavigationRoute] {
         let splash = NavigationRoute(path: "/splash", destination: SplashScreen())
-        let storyBook = NavigationRoute(path: "/storyBook", destination: CommonUIStorybook())
         
         let contactList = NavigationRoute(path: "/contactList") {
             ContactListScreen()
@@ -43,6 +41,6 @@ extension Array where Element == NavigationRoute {
                 })
         }
         
-        return [splash, storyBook, contactList, contactDetails]
+        return [splash, contactList, contactDetails]
     }
 }
